@@ -43,10 +43,10 @@
         }
 
         @keyframes boot {
-            from { opacity: 0; transform: translateY(12px); filter: blur(4px); }
+            from { opacity: 0; transform: translateY(16px); filter: blur(6px); }
             to   { opacity: 1; transform: translateY(0);   filter: blur(0);   }
         }
-        .boot { animation: boot 0.6s cubic-bezier(0.16,1,0.3,1) both; }
+        .boot { animation: boot 0.65s cubic-bezier(0.16,1,0.3,1) both; }
 
         .industrial-card {
             background:
@@ -68,21 +68,21 @@
 
         .section-title {
             color: var(--emerald);
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             font-weight: 800;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.13em;
             text-transform: uppercase;
-            font-family: ui-monospace, monospace;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         }
 
         .skill-pill {
             border: 1px solid rgba(255,255,255,0.1);
             background: rgba(16, 185, 129, 0.1);
             color: #d1fae5;
-            border-radius: 0.4rem;
-            padding: 0.5rem 0.75rem;
-            font-size: 0.7rem;
-            font-family: ui-monospace, monospace;
+            border-radius: 0.5rem;
+            padding: 0.55rem 0.8rem;
+            font-size: 0.72rem;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         }
 
         .timeline-line { position: relative; }
@@ -97,238 +97,499 @@
         }
 
         .dot {
-            width: 1.1rem; height: 1.1rem;
+            width: 1.15rem; height: 1.15rem;
             border-radius: 999px;
             border: 2px solid var(--emerald);
             background: #020617;
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 0 24px rgba(16, 185, 129, 0.28);
             flex: 0 0 auto;
         }
 
         .brand-glow {
             background: linear-gradient(135deg, var(--emerald), var(--teal));
-            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
+            box-shadow: 0 28px 90px rgba(16, 185, 129, 0.20);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
         }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-emerald-500 selection:text-white">
 
-    <nav class="sticky top-0 z-50 border-b border-emerald-500/10 bg-[#020617]/90 backdrop-blur-md">
+    <nav class="sticky top-0 z-40 border-b border-emerald-500/20 bg-[#020617]/86 backdrop-blur-xl">
         <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
             <a href="#top" class="flex items-center gap-3">
-                <span class="flex h-9 w-9 items-center justify-center rounded bg-emerald-500 text-sm font-black text-white">NT</span>
-                <span class="font-mono text-sm font-black tracking-tighter text-white">SISR<span class="text-emerald-400">.</span>CORE</span>
+                <span class="flex h-9 w-9 items-center justify-center rounded-md bg-white text-sm font-black text-emerald-600">NT</span>
+                <span class="font-mono text-sm font-black tracking-wide text-white">SISR<span class="text-emerald-500">.</span>Portfolio</span>
             </a>
-            <div class="hidden items-center gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-400 md:flex">
-                <a class="transition hover:text-emerald-400" href="#profil">Profil</a>
-                <a class="transition hover:text-emerald-400" href="#experience">Expérience</a>
-                <a class="transition hover:text-emerald-400" href="#taches">Tâches</a>
-                <a class="transition hover:text-emerald-400" href="#projets">Projets</a>
-                <a class="transition hover:text-emerald-400" href="#veille">Veille</a>
+            <div class="hidden items-center gap-5 text-xs font-semibold uppercase tracking-wide text-slate-400 md:flex">
+                <a class="transition hover:text-emerald-300" href="#profil">Profil</a>
+                <a class="transition hover:text-emerald-300" href="#experience">Expérience</a>
+                <a class="transition hover:text-emerald-300" href="#taches">Tâches</a>
+                <a class="transition hover:text-emerald-300" href="#projets">Projets</a>
+                <a class="transition hover:text-emerald-300" href="#competences">Compétences</a>
+                <a class="transition hover:text-emerald-300" href="#veille">Veille</a>
             </div>
-            <a href="mailto:talbinael10@gmail.com" class="inline-flex h-9 items-center gap-2 rounded border border-emerald-500/30 bg-emerald-500/10 px-4 text-[10px] font-bold uppercase tracking-widest text-emerald-300 transition hover:bg-emerald-500/20">
-                <i class="fa-solid fa-envelope"></i> Contact
+            <a href="mailto:talbinael10@gmail.com" class="inline-flex h-9 items-center gap-2 rounded-md border border-emerald-500/45 bg-emerald-500/15 px-3 text-xs font-bold uppercase tracking-wide text-emerald-200 transition hover:bg-emerald-500/25">
+                <i class="fa-solid fa-paper-plane"></i>
+                Contact
             </a>
         </div>
     </nav>
 
-    <main id="top" class="mx-auto max-w-7xl px-4 py-12 md:px-6">
-        <header class="boot grid items-center gap-12 pb-16 lg:grid-cols-[1.1fr_0.9fr]">
-            <section class="space-y-8">
+    <main id="top" class="relative z-10 mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14">
+        <header class="boot grid min-h-[calc(100vh-8rem)] items-center gap-10 pb-12 md:grid-cols-[1.15fr_0.85fr]">
+            <section class="space-y-7">
                 <div class="space-y-4">
-                    <p class="section-title">Nael Talbi — Étudiant Alternant</p>
-                    <h1 class="text-5xl font-black leading-tight text-white md:text-7xl">
-                        Expertise SISR <br> <span class="text-emerald-500">en milieu de santé.</span>
+                    <p class="text-sm font-semibold uppercase tracking-widest text-emerald-200">Portfolio BTS SIO option SISR</p>
+                    <h1 class="max-w-4xl text-5xl font-black leading-[0.94] tracking-tight text-white md:text-7xl">
+                        Nael Talbi
                     </h1>
-                    <p class="max-w-xl text-lg leading-relaxed text-slate-400">
-                        En alternance à la <strong>Clinique Montfleuri Saint Roch</strong>. Spécialisé dans le support technique multisite, l'administration Active Directory et la maintenance d'infrastructures critiques pour 17 établissements.
+                    <div class="inline-flex items-center gap-4 rounded-lg border border-white/15 bg-white px-4 py-3 shadow-[0_20px_70px_rgba(16,185,129,0.14)]">
+                        <span class="h-8 w-px bg-emerald-500/25"></span>
+                        <span class="text-xs font-black uppercase tracking-widest text-slate-900">Alternance terrain</span>
+                    </div>
+                    <p class="max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
+                        Étudiant en BTS SIO option SISR, en alternance à la Clinique Montfleuri Saint Roch à Marseille. Je gère le support utilisateur, le réseau local, Active Directory et le parc informatique dans un environnement de santé où la disponibilité du SI est critique pour nos 17 sites.
                     </p>
                 </div>
 
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projets" class="inline-flex items-center gap-2 rounded bg-emerald-500 px-6 py-3 text-xs font-black uppercase tracking-widest text-white transition hover:bg-emerald-400">
-                        <i class="fa-solid fa-network-wired"></i> Voir mes travaux
-                    </a>
-                    <a href="https://github.com/WazapCMD" target="_blank" class="inline-flex items-center gap-2 rounded border border-white/10 bg-white/5 px-6 py-3 text-xs font-bold uppercase tracking-widest text-white transition hover:bg-white/10">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
+                <div class="grid gap-3 text-sm text-slate-300 sm:grid-cols-3">
+                    <div class="industrial-card rounded-lg p-4">
+                        <span class="block font-mono text-xs uppercase tracking-widest text-slate-500">Formation</span>
+                        <strong class="mt-1 block text-white">BTS SIO SISR</strong>
+                    </div>
+                    <div class="industrial-card rounded-lg p-4">
+                        <span class="block font-mono text-xs uppercase tracking-widest text-slate-500">Alternance</span>
+                        <strong class="mt-1 block text-white">Clinique Montfleuri</strong>
+                    </div>
+                    <div class="industrial-card rounded-lg p-4">
+                        <span class="block font-mono text-xs uppercase tracking-widest text-slate-500">Objectif</span>
+                        <strong class="mt-1 block text-white">Cybersécurité &amp; pentest</strong>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-3 gap-4 border-t border-white/5 pt-8">
-                    <div>
-                        <p class="text-2xl font-black text-emerald-400">17</p>
-                        <p class="text-[10px] uppercase tracking-widest text-slate-500">Cliniques gérées</p>
-                    </div>
-                    <div>
-                        <p class="text-2xl font-black text-emerald-400">Jira</p>
-                        <p class="text-[10px] uppercase tracking-widest text-slate-500">Ticketing expert</p>
-                    </div>
-                    <div>
-                        <p class="text-2xl font-black text-emerald-400">ActiveD</p>
-                        <p class="text-[10px] uppercase tracking-widest text-slate-500">Admin domaine</p>
-                    </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#projets" class="inline-flex items-center gap-2 rounded-md bg-emerald-500 px-4 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:bg-emerald-400">
+                        <i class="fa-solid fa-server"></i>
+                        Voir mes projets
+                    </a>
+                    <a href="https://www.linkedin.com/in/talbi-nael-57312a353/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/5 px-4 py-3 text-sm font-bold text-white transition hover:border-emerald-300/70 hover:text-emerald-100">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/WazapCMD" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/5 px-4 py-3 text-sm font-bold text-white transition hover:border-emerald-300/70 hover:text-emerald-100">
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
                 </div>
             </section>
 
-            <div class="industrial-card overflow-hidden rounded-2xl p-2">
-                <div class="relative aspect-video lg:aspect-square overflow-hidden rounded-xl">
-                    <img src="clinique.jpg" alt="Clinique Montfleuri Saint Roch" class="h-full w-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <div class="inline-flex items-center gap-2 rounded bg-black/60 px-3 py-1.5 backdrop-blur-md">
-                            <span class="h-2 w-2 animate-pulse rounded-full bg-emerald-500"></span>
-                            <span class="font-mono text-[10px] font-bold text-white uppercase">Site Principal : Montfleuri</span>
+            <aside class="industrial-card rounded-xl p-4">
+                <div class="brand-glow rounded-lg p-[1px]">
+                    <div class="relative overflow-hidden rounded-lg bg-black">
+                        <div class="aspect-[4/5] w-full relative">
+                            <img src="clinique.jpg" alt="Clinique Montfleuri Saint Roch" class="h-full w-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-emerald-500/10"></div>
+                        <div class="absolute bottom-0 left-0 right-0 border-t border-white/15 bg-black/72 p-5 backdrop-blur-md">
+                            <p class="font-mono text-xs uppercase tracking-widest text-emerald-200">Environnement de santé</p>
+                            <p class="mt-1 text-lg font-black text-white">Support, réseau et continuité de service</p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </aside>
         </header>
 
-        <section id="profil" class="boot py-16">
-            <h2 class="section-title mb-6">// 01 / Profil Technique</h2>
-            <div class="industrial-card rounded-2xl p-8 md:p-12">
-                <div class="grid gap-12 md:grid-cols-2">
-                    <div class="space-y-6">
-                        <h3 class="text-3xl font-black text-white">Maintenir la continuité des soins par l'informatique.</h3>
-                        <p class="leading-relaxed text-slate-400">
-                            Mon rôle consiste à garantir que chaque membre du personnel soignant dispose d'un outil de travail fonctionnel et sécurisé. Ma force réside dans ma capacité à diagnostiquer rapidement des pannes complexes sur un parc informatique multisite.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-pill">Administration AD</span>
-                            <span class="skill-pill">Scripts .BAT</span>
-                            <span class="skill-pill">Support N2</span>
-                            <span class="skill-pill">Réseau LAN</span>
-                        </div>
-                    </div>
-                    <div class="grid gap-4 sm:grid-cols-2">
-                        <div class="rounded-xl border border-white/5 bg-white/2 p-5">
-                            <i class="fa-solid fa-shield-virus text-emerald-400 text-xl"></i>
-                            <h4 class="mt-4 font-bold text-white">Sécurité</h4>
-                            <p class="mt-2 text-xs text-slate-500">Gestion fine des droits NTFS et GPO.</p>
-                        </div>
-                        <div class="rounded-xl border border-white/5 bg-white/2 p-5">
-                            <i class="fa-solid fa-server text-emerald-400 text-xl"></i>
-                            <h4 class="mt-4 font-bold text-white">Infrastructure</h4>
-                            <p class="mt-2 text-xs text-slate-500">Déploiement et brassage réseau.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="boot py-16">
-            <h2 class="section-title mb-6">// 02 / Expérience & Quotidien</h2>
-            <div class="industrial-card rounded-2xl p-8">
-                <div class="flex flex-col gap-4 border-b border-white/5 pb-8 lg:flex-row lg:items-center lg:justify-between">
+        <section id="profil" class="boot space-y-4 py-10" style="animation-delay:0.08s">
+            <h2 class="section-title">// 01 / Profil</h2>
+            <div class="industrial-card rounded-xl p-6 md:p-8">
+                <div class="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
                     <div>
-                        <h3 class="text-2xl font-black text-white">Informaticien Support Multisite</h3>
-                        <p class="text-emerald-400 font-mono text-sm">Alternance — Clinique Montfleuri (Groupe Almaviva)</p>
+                        <h3 class="text-2xl font-black tracking-tight text-white">Un profil SISR orienté terrain</h3>
+                        <p class="mt-4 leading-8 text-slate-300">
+                            Mon parcours combine la formation académique du BTS SIO et l'expérience concrète d'un système d'information en milieu hospitalier. Cette double approche me permet de relier réseau, support, gestion des accès et documentation à des besoins réels d'établissement de santé.
+                        </p>
                     </div>
-                    <span class="font-mono text-xs text-slate-500">SEPTEMBRE 2024 — JUIN 2026</span>
+                    <div class="grid gap-3 sm:grid-cols-2">
+                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-headset text-emerald-400"></i>
+                            <h4 class="mt-3 font-bold text-white">Support N1 / N2</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Analyse, priorisation et résolution d'incidents matériels, logiciels et comptes utilisateurs.</p>
+                        </div>
+                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-network-wired text-emerald-400"></i>
+                            <h4 class="mt-3 font-bold text-white">Réseau</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Adressage, VLAN, DHCP, supervision et premiers diagnostics de connectivité LAN.</p>
+                        </div>
+                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-shield-halved text-teal-300"></i>
+                            <h4 class="mt-3 font-bold text-white">Sécurité</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Gestion des droits, comptes AD, GPO et sensibilisation des utilisateurs.</p>
+                        </div>
+                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <i class="fa-solid fa-book-open text-white"></i>
+                            <h4 class="mt-3 font-bold text-white">Documentation</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Procédures, comptes rendus d'intervention et suivi via GLPI et Jira.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="boot space-y-4 py-10" style="animation-delay:0.14s">
+            <h2 class="section-title">// 02 / Expérience & Quotidien</h2>
+            <div class="industrial-card rounded-xl p-6 md:p-8">
+                <div class="flex flex-col gap-5 border-b border-white/10 pb-6 md:flex-row md:items-start md:justify-between">
+                    <div>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-200">Clinique Montfleuri Saint Roch — Marseille 11e</p>
+                        <h3 class="mt-2 text-2xl font-black text-white">Informaticien en alternance</h3>
+                        <p class="mt-3 max-w-3xl leading-7 text-slate-300">
+                            Intervention dans un environnement de santé à forte criticité, où la disponibilité du système d'information accompagne directement la continuité des soins et des services administratifs.
+                        </p>
+                    </div>
+                    <span class="w-max rounded-md border border-emerald-400/35 bg-emerald-500/12 px-3 py-1.5 font-mono text-xs font-bold text-emerald-200">2024 – 2026</span>
                 </div>
 
-                <div class="mt-12">
-                    <h4 class="text-xl font-black text-white mb-8"><i class="fa-solid fa-bolt text-emerald-500 mr-2"></i> Workflow Quotidien</h4>
+                <div class="timeline-line mt-8 space-y-7">
+                    <article class="flex gap-4">
+                        <span class="dot mt-1"></span>
+                        <div>
+                            <h4 class="font-bold text-white">Support utilisateur quotidien</h4>
+                            <p class="mt-2 leading-7 text-slate-400">Création et suivi de tickets, accompagnement du personnel soignant et administratif, opérations Active Directory, gestion des groupes et réinitialisation de mots de passe.</p>
+                        </div>
+                    </article>
+                    <article class="flex gap-4">
+                        <span class="dot mt-1"></span>
+                        <div>
+                            <h4 class="font-bold text-white">Gestion du parc et déploiement postes</h4>
+                            <p class="mt-2 leading-7 text-slate-400">Préparation, configuration Windows 10/11, intégration au domaine AD, application des GPO et validation avant remise à l'utilisateur.</p>
+                        </div>
+                    </article>
+                    <article class="flex gap-4">
+                        <span class="dot mt-1"></span>
+                        <div>
+                            <h4 class="font-bold text-white">Réseau local et segmentation</h4>
+                            <p class="mt-2 leading-7 text-slate-400">Diagnostic de connectivité, adressage IP, configuration VLAN, brassage et remontée d'informations exploitables pour les équipes réseau.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="mt-12 border-t border-white/10 pt-8">
+                    <h3 class="text-xl font-black text-white mb-6"><i class="fa-solid fa-clock text-emerald-500 mr-2"></i> Ma journée type</h3>
                     
-                    <div class="grid gap-12 lg:grid-cols-[1fr_0.8fr]">
-                        <div class="space-y-10 timeline-line">
-                            <div class="flex gap-6 relative">
-                                <span class="dot mt-1"></span>
+                    <div class="grid gap-8 lg:grid-cols-[1fr_0.8fr]">
+                        <div class="space-y-6 text-slate-300">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-desktop text-emerald-400"></i></div>
                                 <div>
-                                    <h5 class="font-black text-white uppercase text-xs tracking-widest">Étape 01 — Supervision</h5>
-                                    <p class="mt-2 text-slate-400 leading-relaxed">
-                                        Dès mon arrivée, j'ouvre le logiciel de <strong>Surveillance Technique</strong>. Cet outil centralise les 17 cliniques du groupe. Je vérifie l'état des machines, les adresses IP, les adresses MAC et les IDs de poste pour détecter toute anomalie réseau ou matérielle.
-                                    </p>
+                                    <h4 class="font-bold text-white">1. Ouverture de la Surveillance Technique</h4>
+                                    <p class="mt-1 text-sm leading-6">Dès mon arrivée, j'ouvre notre outil interne de <em>Surveillance Technique</em>. Ce logiciel est essentiel pour suivre notre parc réparti sur <strong>17 cliniques (sites différents)</strong>. J'y retrouve toutes les informations critiques : adresses IP, identifiants des postes, adresses MAC, modèles de PC, le tout trié par établissement.</p>
                                 </div>
                             </div>
 
-                            <div class="flex gap-6 relative">
-                                <span class="dot mt-1"></span>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1"><i class="fa-brands fa-jira text-emerald-400"></i></div>
                                 <div>
-                                    <h5 class="font-black text-white uppercase text-xs tracking-widest">Étape 02 — Ticketing JIRA</h5>
-                                    <p class="mt-2 text-slate-400 leading-relaxed">
-                                        Analyse de la file d'attente <strong>Jira Service Management</strong>. Je traite les tickets par ordre de priorité (urgences médicales d'abord), je réponds aux utilisateurs et je documente chaque résolution.
-                                    </p>
+                                    <h4 class="font-bold text-white">2. Lancement de Jira (Ticketing)</h4>
+                                    <p class="mt-1 text-sm leading-6">Je lance ensuite <strong>Jira</strong>, notre solution de ticketing, pour analyser et répondre aux demandes d'assistance des utilisateurs, tout en respectant les priorités médicales.</p>
                                 </div>
                             </div>
 
-                            <div class="flex gap-6 relative">
-                                <span class="dot mt-1"></span>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-terminal text-emerald-400"></i></div>
                                 <div>
-                                    <h5 class="font-black text-white uppercase text-xs tracking-widest">Étape 03 — Déploiement & Scripts</h5>
-                                    <p class="mt-2 text-slate-400 leading-relaxed">
-                                        Préparation de nouveaux PC. J'utilise des <strong>scripts `.bat` personnalisés</strong> pour automatiser les tâches répétitives (nettoyage, config réseau). Ensuite, j'intègre la machine au domaine, j'ajoute l'entrée dans la Surveillance Technique et j'affecte les droits AD.
-                                    </p>
+                                    <h4 class="font-bold text-white">3. Préparation & Automatisation</h4>
+                                    <p class="mt-1 text-sm leading-6">Je prépare de nouveaux postes en utilisant des <strong>scripts d'automatisation `.bat`</strong> créés par notre admin réseau. Une fois le poste prêt, je l'ajoute dans la Surveillance Technique et lui attribue les droits AD.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="space-y-4">
-                            <div class="industrial-card p-2 rounded-xl border-emerald-500/20 bg-emerald-500/5">
-                                <img src="image.jpg" alt="Surveillance Technique Logiciel" class="rounded-lg w-full h-auto shadow-2xl opacity-90">
+                        <div class="rounded-xl border border-white/10 bg-black/40 p-2 flex flex-col justify-center">
+                            <img src="image.jpg" alt="Interface de Surveillance Technique" class="rounded-lg w-full h-auto border border-white/5 opacity-90 hover:opacity-100 transition-opacity">
+                            <p class="text-center text-xs font-mono text-slate-500 mt-3"><i class="fa-solid fa-camera mr-1"></i>Aperçu de notre outil de Surveillance Technique multisite</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="taches" class="boot space-y-4 py-10" style="animation-delay:0.18s">
+            <h2 class="section-title">// 03 / Tâches en entreprise</h2>
+            <div class="industrial-card rounded-xl p-6 md:p-8">
+                <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+                    <div>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-200">Clinique Montfleuri / support &amp; infrastructure</p>
+                        <h3 class="mt-2 text-2xl font-black text-white">Détail des missions réalisées</h3>
+                        <p class="mt-4 leading-8 text-slate-300">
+                            Mes missions couvrent le support N1/N2, la gestion du parc des 17 cliniques, l'administration des comptes AD et le suivi du réseau local. Chaque intervention est tracée et documentée.
+                        </p>
+                        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <i class="fa-solid fa-computer text-emerald-400"></i>
+                                <h4 class="mt-3 font-bold text-white">Préparation de postes</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Configuration via scripts `.bat`, intégration AD, paramétrage et ajout à la surveillance technique.</p>
                             </div>
-                            <p class="text-center font-mono text-[10px] text-slate-500 uppercase">Logiciel Interne de suivi du parc IP/ID</p>
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <i class="fa-solid fa-ticket text-emerald-400"></i>
+                                <h4 class="mt-3 font-bold text-white">Ticketing Jira & GLPI</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Création, traitement et clôture des tickets Jira. Inventaire automatique du parc avec FusionInventory.</p>
+                            </div>
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <i class="fa-solid fa-headset text-teal-300"></i>
+                                <h4 class="mt-3 font-bold text-white">Incidents support</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Diagnostic, assistance en présentiel ou à distance, suivi de résolution et communication avec l'utilisateur.</p>
+                            </div>
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <i class="fa-solid fa-users-gear text-white"></i>
+                                <h4 class="mt-3 font-bold text-white">Comptes Active Directory</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Création/suppression de comptes, reset mots de passe, gestion des droits et GPO selon les profils métier.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-4">
+                        <div class="rounded-xl border border-white/10 bg-black/30 p-5">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="h-10 w-10 flex items-center justify-center bg-[#0052CC]/20 border border-[#0052CC]/50 rounded-lg text-[#2684FF] text-xl">
+                                    <i class="fa-brands fa-jira"></i>
+                                </div>
+                                <div>
+                                    <p class="font-mono text-xs uppercase tracking-widest text-emerald-200">Support & Ticketing</p>
+                                    <p class="font-black text-white">Jira / GLPI</p>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-6 text-slate-400">Utilisés au quotidien pour gérer les demandes d'assistance, prioriser les urgences cliniques, tracer chaque intervention et suivre l'inventaire matériel.</p>
+                        </div>
+                        
+                        <div class="rounded-xl border border-white/10 bg-black/30 p-5">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="h-10 w-10 flex items-center justify-center bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-emerald-400 text-xl">
+                                    <i class="fa-solid fa-desktop"></i>
+                                </div>
+                                <div>
+                                    <p class="font-mono text-xs uppercase tracking-widest text-emerald-200">Gestion Multisite</p>
+                                    <p class="font-black text-white">Surveillance Technique</p>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-6 text-slate-400">Outil interne centralisant les adresses IP, adresses MAC, identifiants des postes et configurations déployées sur l'ensemble de nos 17 cliniques.</p>
+                        </div>
+
+                        <div class="rounded-xl border border-white/10 bg-black/30 p-5">
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22Network%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22n%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310b981%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2314b8a6%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22%230f172a%22/%3E%0A%20%20%3Ccircle%20cx%3D%2264%22%20cy%3D%2234%22%20r%3D%2212%22%20fill%3D%22url%28%23n%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%2233%22%20cy%3D%2284%22%20r%3D%2212%22%20fill%3D%22url%28%23n%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%2295%22%20cy%3D%2284%22%20r%3D%2212%22%20fill%3D%22url%28%23n%29%22/%3E%0A%20%20%3Cpath%20d%3D%22M64%2046v16M41%2076l15-10M87%2076L72%2066%22%20stroke%3D%22%23a7f3d0%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%3Crect%20x%3D%2223%22%20y%3D%2294%22%20width%3D%2220%22%20height%3D%228%22%20rx%3D%224%22%20fill%3D%22%23a7f3d0%22%20opacity%3D%220.8%22/%3E%0A%20%20%3Crect%20x%3D%2254%22%20y%3D%2244%22%20width%3D%2220%22%20height%3D%228%22%20rx%3D%224%22%20fill%3D%22%23a7f3d0%22%20opacity%3D%220.8%22/%3E%0A%20%20%3Crect%20x%3D%2285%22%20y%3D%2294%22%20width%3D%2220%22%20height%3D%228%22%20rx%3D%224%22%20fill%3D%22%23a7f3d0%22%20opacity%3D%220.8%22/%3E%0A%3C/svg%3E%0A" alt="Réseau" class="h-10 w-10 object-contain rounded-lg">
+                                <div>
+                                    <p class="font-mono text-xs uppercase tracking-widest text-emerald-200">Infrastructure</p>
+                                    <p class="font-black text-white">Réseau LAN — VLAN &amp; QoS</p>
+                                </div>
+                            </div>
+                            <p class="text-sm leading-6 text-slate-400">Diagnostic de connectivité, gestion de la segmentation réseau et suivi de la qualité de service sur le réseau local des cliniques.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="taches" class="boot py-16">
-            <h2 class="section-title mb-6">// 03 / Tâches & Outils</h2>
-            <div class="grid gap-6 md:grid-cols-3">
-                <article class="industrial-card p-6">
-                    <div class="h-10 w-10 flex items-center justify-center bg-blue-600/20 rounded text-blue-400 mb-4">
-                        <i class="fa-brands fa-jira text-xl"></i>
+        <section id="projets" class="boot space-y-4 py-10" style="animation-delay:0.2s">
+            <h2 class="section-title">// 04 / Projets</h2>
+            <div class="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+                <article class="industrial-card interactive rounded-xl p-6 md:p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500 text-xl text-white">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-300">Infrastructure — BTS SIO</p>
+                            <h3 class="mt-1 text-2xl font-black text-white">Déploiement Active Directory</h3>
+                        </div>
                     </div>
-                    <h4 class="font-black text-white">JIRA</h4>
-                    <p class="mt-2 text-xs text-slate-400 leading-relaxed">Gestion des incidents et demandes. C'est l'interface directe avec nos "clients" internes sur les 17 sites.</p>
-                </article>
-                <article class="industrial-card p-6">
-                    <div class="h-10 w-10 flex items-center justify-center bg-emerald-600/20 rounded text-emerald-400 mb-4">
-                        <i class="fa-solid fa-code text-xl"></i>
-                    </div>
-                    <h4 class="font-black text-white">BATCH (.BAT)</h4>
-                    <p class="mt-2 text-xs text-slate-400 leading-relaxed">Automatisation du déploiement logiciel et configuration rapide des nouveaux postes utilisateurs.</p>
-                </article>
-                <article class="industrial-card p-6">
-                    <div class="h-10 w-10 flex items-center justify-center bg-teal-600/20 rounded text-teal-400 mb-4">
-                        <i class="fa-solid fa-users-gear text-xl"></i>
-                    </div>
-                    <h4 class="font-black text-white">AD & GPO</h4>
-                    <p class="mt-2 text-xs text-slate-400 leading-relaxed">Administration des 17 cliniques via des Unités Organisationnelles et des droits d'accès spécifiques.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="veille" class="boot py-16">
-            <h2 class="section-title mb-6">// 04 / Veille : La ToIP en Clinique</h2>
-            <div class="industrial-card rounded-2xl p-8 border-emerald-500/20">
-                <div class="max-w-3xl">
-                    <h3 class="text-2xl font-black text-white">Problématique : Cohabitation Voix et Données</h3>
-                    <p class="mt-4 text-slate-400 leading-relaxed">
-                        En clinique, un téléphone qui coupe peut retarder une urgence. Ma veille porte sur la mise en place de <strong>VLAN Voix</strong> et de mécanismes de <strong>QoS (Quality of Service)</strong> pour donner la priorité aux paquets SIP/RTP sur les flux data classiques, évitant ainsi la latence et le jitter.
+                    <p class="mt-5 leading-8 text-slate-300">
+                        Mise en place d'un environnement Windows Server complet avec arborescence d'unités organisationnelles, comptes, groupes de sécurité et stratégies GPO adaptées aux profils métier de la clinique.
                     </p>
+                    <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <h4 class="font-bold text-emerald-300"><i class="fa-brands fa-windows mr-2"></i>AD DS / DNS / DHCP</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">OUs, comptes, groupes de sécurité, services réseau Windows Server 2022.</p>
+                        </div>
+                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <h4 class="font-bold text-emerald-400"><i class="fa-solid fa-sitemap mr-2"></i>GPO & Scripts</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Stratégies de groupe et automatisation via des scripts `.bat`.</p>
+                        </div>
+                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <h4 class="font-bold text-teal-300"><i class="fa-solid fa-ticket mr-2"></i>Ticketing</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Suivi des interventions via Jira et gestion de parc via la Surveillance Technique.</p>
+                        </div>
+                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                            <h4 class="font-bold text-white"><i class="fa-solid fa-network-wired mr-2"></i>Segmentation VLAN</h4>
+                            <p class="mt-2 text-sm leading-6 text-slate-400">Isolation des flux réseau, adressage IP cohérent et connectivité maîtrisée.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="industrial-card rounded-xl p-6 md:p-8">
+                    <h3 class="text-xl font-black text-white">Résultats obtenus</h3>
+                    <div class="mt-5 space-y-4">
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
+                            <p class="leading-7 text-slate-400">Infrastructure AD documentée avec droits et GPO adaptés à chaque service.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
+                            <p class="leading-7 text-slate-400">Parc suivi rigoureusement pour nos 17 cliniques via la Surveillance Technique.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
+                            <p class="leading-7 text-slate-400">Réseau LAN segmenté avec connectivité validée et adressage cohérent.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
+                            <p class="leading-7 text-slate-400">Application métier gestion des congés développée pour le personnel clinique.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="competences" class="boot space-y-4 py-10" style="animation-delay:0.32s">
+            <h2 class="section-title">// 05 / Compétences</h2>
+            <div class="industrial-card rounded-xl p-6 md:p-8">
+                <div class="grid gap-8 md:grid-cols-2">
+                    <div>
+                        <h3 class="text-xl font-black text-white">Techniques</h3>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="skill-pill">Windows Server 2022</span>
+                            <span class="skill-pill">Active Directory</span>
+                            <span class="skill-pill">DNS / DHCP</span>
+                            <span class="skill-pill">GPO & Batch (.bat)</span>
+                            <span class="skill-pill">VLAN</span>
+                            <span class="skill-pill">QoS</span>
+                            <span class="skill-pill">Jira</span>
+                            <span class="skill-pill">GLPI</span>
+                            <span class="skill-pill">FusionInventory</span>
+                            <span class="skill-pill">Support ITSM</span>
+                            <span class="skill-pill">Switch manageable</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black text-white">Méthodes &amp; posture</h3>
+                        <div class="mt-4 space-y-3 text-slate-400">
+                            <p><i class="fa-solid fa-user-check mr-2 text-emerald-400"></i>Écoute utilisateur, pédagogie et communication claire en milieu de santé.</p>
+                            <p><i class="fa-solid fa-clipboard-check mr-2 text-emerald-400"></i>Respect des procédures, traçabilité des interventions et priorisation des incidents.</p>
+                            <p><i class="fa-solid fa-magnifying-glass-chart mr-2 text-teal-300"></i>Diagnostic méthodique, veille technique et curiosité pour la cybersécurité.</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="veille" class="boot space-y-4 py-10" style="animation-delay:0.38s">
+            <h2 class="section-title">// 06 / Veille technologique</h2>
+
+            <div class="industrial-card rounded-xl p-6 md:p-8 mb-5 border border-emerald-500/25">
+                <div class="flex items-start gap-4 mb-5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/20 border border-emerald-500/35 text-xl text-emerald-400 flex-shrink-0">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-200">Problème rencontré en alternance</p>
+                        <h3 class="mt-1 text-2xl font-black text-white">Conflit ToIP / Réseau : téléphonie et données sur le même LAN</h3>
+                    </div>
+                </div>
+                <p class="leading-8 text-slate-300 max-w-4xl">
+                    À la clinique, les téléphones IP et les postes PC partageaient le même réseau sans segmentation. Résultat&nbsp;: coupures d'appels, voix hachée, latence excessive. Un problème classique de cohabitation trafic voix/data non maîtrisée.
+                </p>
+
+                <div class="mt-6 grid gap-3 md:grid-cols-[1fr_auto_1fr] items-center">
+                    <div class="rounded-lg border border-white/10 bg-black/40 p-4">
+                        <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-2">Téléphonie IP — trafic RTP/UDP</p>
+                        <p class="font-black text-white">Téléphones IP</p>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Très sensible à la latence (&lt;150 ms) et au jitter. Nécessite une bande passante garantie en temps réel.</p>
+                    </div>
+                    <div class="text-2xl text-emerald-500 font-black text-center">⚡</div>
+                    <div class="rounded-lg border border-white/10 bg-black/40 p-4">
+                        <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-2">Réseau Data — trafic TCP</p>
+                        <p class="font-black text-white">Postes, serveurs, imprimantes</p>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Trafic en rafales, tolérant aux délais. Peut saturer le lien et écraser les paquets voix.</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid gap-3 md:grid-cols-2">
+                    <div>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Causes identifiées</p>
+                        <div class="space-y-2">
+                            <div class="flex gap-3 rounded-lg border border-white/10 bg-black/30 p-3">
+                                <i class="fa-solid fa-xmark mt-0.5 text-red-400 flex-shrink-0"></i>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Absence de QoS</strong> — aucune priorité accordée aux paquets voix.</p>
+                            </div>
+                            <div class="flex gap-3 rounded-lg border border-white/10 bg-black/30 p-3">
+                                <i class="fa-solid fa-xmark mt-0.5 text-red-400 flex-shrink-0"></i>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Pas de VLAN dédié voix</strong> — téléphones et PC sur le même segment.</p>
+                            </div>
+                            <div class="flex gap-3 rounded-lg border border-white/10 bg-black/30 p-3">
+                                <i class="fa-solid fa-xmark mt-0.5 text-red-400 flex-shrink-0"></i>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Switch non configuré</strong> — ports ToIP sans marquage CoS/DSCP.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Solutions appliquées</p>
+                        <div class="space-y-2">
+                            <div class="flex gap-3 rounded-lg border border-emerald-500/20 bg-emerald-500/8 p-3">
+                                <i class="fa-solid fa-check mt-0.5 text-emerald-400 flex-shrink-0"></i>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">VLAN Voice (VLAN 20)</strong> — isolation complète du trafic voix.</p>
+                            </div>
+                            <div class="flex gap-3 rounded-lg border border-emerald-500/20 bg-emerald-500/8 p-3">
+                                <i class="fa-solid fa-check mt-0.5 text-emerald-400 flex-shrink-0"></i>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">QoS — DSCP EF / CoS 5</strong> — priorité absolue aux paquets RTP.</p>
+                            </div>
+                            <div class="flex gap-3 rounded-lg border border-emerald-500/20 bg-emerald-500/8 p-3">
+                                <i class="fa-solid fa-check mt-0.5 text-emerald-400 flex-shrink-0"></i>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Monitoring latence/jitter</strong> — supervision continue des flux réseau.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="skill-pill">VLAN Voice</span>
+                    <span class="skill-pill">QoS / DSCP EF</span>
+                    <span class="skill-pill">RTP / SIP</span>
+                    <span class="skill-pill">Switch manageable</span>
+                    <span class="skill-pill">CoS 5</span>
+                    <span class="skill-pill">Jitter / Latence</span>
+                </div>
+            </div>
+
+            <div class="grid gap-5 md:grid-cols-3">
+                <article class="industrial-card interactive rounded-xl p-6">
+                    <i class="fa-solid fa-lock text-2xl text-emerald-400"></i>
+                    <h3 class="mt-4 text-lg font-black text-white">MFA &amp; Passkeys</h3>
+                    <p class="mt-3 leading-7 text-slate-400">Dans un établissement de santé, les comptes critiques (dossiers patients, logiciels métier) doivent être protégés au-delà du mot de passe simple. Suivi des standards FIDO2.</p>
+                </article>
+                <article class="industrial-card interactive rounded-xl p-6">
+                    <i class="fa-solid fa-shield-virus text-2xl text-emerald-400"></i>
+                    <h3 class="mt-4 text-lg font-black text-white">Ransomware hospitalier</h3>
+                    <p class="mt-3 leading-7 text-slate-400">Les hôpitaux sont des cibles privilégiées. Étude de la sauvegarde 3-2-1, des plans PCA/PRA et de la segmentation réseau pour limiter la propagation.</p>
+                </article>
+                <article class="industrial-card interactive rounded-xl p-6">
+                    <i class="fa-solid fa-robot text-2xl text-teal-300"></i>
+                    <h3 class="mt-4 text-lg font-black text-white">IA &amp; Phishing ciblé</h3>
+                    <p class="mt-3 leading-7 text-slate-400">L'IA générative facilite le spear phishing ultra-personnalisé. Dans une clinique, une pièce jointe malveillante peut compromettre l'ensemble du SI.</p>
+                </article>
             </div>
         </section>
 
     </main>
 
-    <footer class="border-t border-white/5 py-12 text-center">
-        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-600">
-            Nael Talbi — SISR Portfolio 2024/2026 — Marseille
-        </p>
+    <footer class="relative z-10 border-t border-white/10 px-4 py-8 text-center">
+        <p class="font-mono text-xs uppercase tracking-widest text-slate-500">Nael Talbi // Portfolio BTS SIO SISR // Clinique Montfleuri Saint Roch, Marseille // 2026</p>
     </footer>
 
 </body>
 </html>
-
-
-### Les changements effectués :
-1.  **Palette de couleurs** : Thème **Émeraude & Ardoise** (Vert #10b981). Plus moderne et pro.
-2.  **Photo d'accueil** : J'ai mis ta photo du bâtiment dans le bloc de droite en haut (`clinique.jpg`).
-3.  **Photo Journée Type** : Ta capture d'écran est intégrée dans la section workflow (`image.jpg`).
-4.  **Structure** : Les 17 cliniques, Jira, et les scripts `.bat` sont maintenant au cœur du texte.
-
-**Pense bien à renommer tes deux photos `clinique.jpg` et `image.jpg` avant de les mettre sur ton GitHub !** Ton site est maintenant prêt et très complet. Votre deck est prêt ! N'hésitez pas à jeter un coup d'œil et à me dire si vous souhaitez apporter des modifications.
