@@ -283,7 +283,6 @@
                 <div class="mt-12 border-t border-white/10 pt-8">
                     <h3 class="text-xl font-black text-white mb-6"><i class="fa-solid fa-clock text-emerald-500 mr-2"></i> Ma journée type</h3>
                     
-                    <!-- L'image de surveillance technique a été replacée ici, en grid à côté du texte -->
                     <div class="grid gap-8 lg:grid-cols-[1fr_0.8fr]">
                         <div class="space-y-6 text-slate-300">
                             <div class="flex gap-4">
@@ -510,75 +509,75 @@
             <div class="industrial-card rounded-xl p-6 md:p-8 mb-5 border border-emerald-500/25">
                 <div class="flex items-start gap-4 mb-5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/20 border border-emerald-500/35 text-xl text-emerald-400 flex-shrink-0">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <i class="fa-solid fa-microchip"></i>
                     </div>
                     <div>
-                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-200">Problème rencontré en alternance</p>
-                        <h3 class="mt-1 text-2xl font-black text-white">Conflit ToIP / Réseau : téléphonie et données sur le même LAN</h3>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-200">Veille ITSM & IA</p>
+                        <h3 class="mt-1 text-2xl font-black text-white">L'AIOps : l'Intelligence Artificielle pour automatiser le support N1</h3>
                     </div>
                 </div>
                 <p class="leading-8 text-slate-300 max-w-4xl">
-                    À la clinique, les téléphones IP et les postes PC partageaient le même réseau sans segmentation. Résultat&nbsp;: coupures d'appels, voix hachée, latence excessive. Un problème classique de cohabitation trafic voix/data non maîtrisée.
+                    Avec des centaines de demandes transitant par GLPI et Jira en milieu clinique, le tri et la priorisation manuelle ralentissent la prise en charge. La veille porte sur l'AIOps : comment le Machine Learning transforme l'ITSM en automatisant la catégorisation des tickets et la résolution prédictive des incidents.
                 </p>
 
                 <div class="mt-6 grid gap-3 md:grid-cols-[1fr_auto_1fr] items-center">
                     <div class="rounded-lg border border-white/10 bg-black/40 p-4">
-                        <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-2">Téléphonie IP — trafic RTP/UDP</p>
-                        <p class="font-black text-white">Téléphones IP</p>
-                        <p class="mt-2 text-sm leading-6 text-slate-400">Très sensible à la latence (&lt;150 ms) et au jitter. Nécessite une bande passante garantie en temps réel.</p>
+                        <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-2">Support Classique</p>
+                        <p class="font-black text-white">Tri manuel chronophage</p>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Le technicien lit, qualifie et route chaque ticket. Risque d'erreur humaine et délai d'attente rallongé pour l'utilisateur en détresse.</p>
                     </div>
-                    <div class="text-2xl text-emerald-500 font-black text-center">⚡</div>
+                    <div class="text-2xl text-emerald-500 font-black text-center"><i class="fa-solid fa-arrow-right"></i></div>
                     <div class="rounded-lg border border-white/10 bg-black/40 p-4">
-                        <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-2">Réseau Data — trafic TCP</p>
-                        <p class="font-black text-white">Postes, serveurs, imprimantes</p>
-                        <p class="mt-2 text-sm leading-6 text-slate-400">Trafic en rafales, tolérant aux délais. Peut saturer le lien et écraser les paquets voix.</p>
+                        <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-2">Support AIOps</p>
+                        <p class="font-black text-white">Routage &amp; Résolution IA</p>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Analyse sémantique (NLP) de la demande. Auto-assignation, suggestion de base de connaissances et résolution prédictive avant la panne.</p>
                     </div>
                 </div>
 
                 <div class="mt-6 grid gap-3 md:grid-cols-2">
                     <div>
-                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Causes identifiées</p>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Limites du modèle actuel</p>
                         <div class="space-y-2">
                             <div class="flex gap-3 rounded-lg border border-white/10 bg-black/30 p-3">
                                 <i class="fa-solid fa-xmark mt-0.5 text-red-400 flex-shrink-0"></i>
-                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Absence de QoS</strong> — aucune priorité accordée aux paquets voix.</p>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Goulot d'étranglement N1</strong> — saturation lors des pics d'incidents.</p>
                             </div>
                             <div class="flex gap-3 rounded-lg border border-white/10 bg-black/30 p-3">
                                 <i class="fa-solid fa-xmark mt-0.5 text-red-400 flex-shrink-0"></i>
-                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Pas de VLAN dédié voix</strong> — téléphones et PC sur le même segment.</p>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Posture réactive</strong> — on agit uniquement après la déclaration de la panne.</p>
                             </div>
                             <div class="flex gap-3 rounded-lg border border-white/10 bg-black/30 p-3">
                                 <i class="fa-solid fa-xmark mt-0.5 text-red-400 flex-shrink-0"></i>
-                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Switch non configuré</strong> — ports ToIP sans marquage CoS/DSCP.</p>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Perte de temps</strong> — tâches de tri répétitives à faible valeur ajoutée.</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Solutions appliquées</p>
+                        <p class="font-mono text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Apports de l'AIOps</p>
                         <div class="space-y-2">
                             <div class="flex gap-3 rounded-lg border border-emerald-500/20 bg-emerald-500/8 p-3">
                                 <i class="fa-solid fa-check mt-0.5 text-emerald-400 flex-shrink-0"></i>
-                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">VLAN Voice (VLAN 20)</strong> — isolation complète du trafic voix.</p>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Auto-catégorisation</strong> — l'IA qualifie l'urgence clinique instantanément.</p>
                             </div>
                             <div class="flex gap-3 rounded-lg border border-emerald-500/20 bg-emerald-500/8 p-3">
                                 <i class="fa-solid fa-check mt-0.5 text-emerald-400 flex-shrink-0"></i>
-                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">QoS — DSCP EF / CoS 5</strong> — priorité absolue aux paquets RTP.</p>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Agent virtuel / Chatbot</strong> — résolution autonome des problèmes basiques (ex: mots de passe).</p>
                             </div>
                             <div class="flex gap-3 rounded-lg border border-emerald-500/20 bg-emerald-500/8 p-3">
                                 <i class="fa-solid fa-check mt-0.5 text-emerald-400 flex-shrink-0"></i>
-                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Monitoring latence/jitter</strong> — supervision continue des flux réseau.</p>
+                                <p class="text-sm leading-6 text-slate-400"><strong class="text-white">Analyse prédictive</strong> — détection d'anomalies sur les serveurs avant l'incident.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-5 flex flex-wrap gap-2">
-                    <span class="skill-pill">VLAN Voice</span>
-                    <span class="skill-pill">QoS / DSCP EF</span>
-                    <span class="skill-pill">RTP / SIP</span>
-                    <span class="skill-pill">Switch manageable</span>
-                    <span class="skill-pill">CoS 5</span>
-                    <span class="skill-pill">Jitter / Latence</span>
+                    <span class="skill-pill">AIOps</span>
+                    <span class="skill-pill">ITSM</span>
+                    <span class="skill-pill">Machine Learning</span>
+                    <span class="skill-pill">NLP</span>
+                    <span class="skill-pill">Automatisation N1</span>
+                    <span class="skill-pill">Jira / GLPI</span>
                 </div>
             </div>
 
