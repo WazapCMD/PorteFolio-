@@ -283,36 +283,29 @@
                 <div class="mt-12 border-t border-white/10 pt-8">
                     <h3 class="text-xl font-black text-white mb-6"><i class="fa-solid fa-clock text-emerald-500 mr-2"></i> Ma journée type</h3>
                     
-                    <div class="grid gap-8 lg:grid-cols-[1fr_0.8fr]">
-                        <div class="space-y-6 text-slate-300">
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-desktop text-emerald-400"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-white">1. Ouverture de la Surveillance Technique</h4>
-                                    <p class="mt-1 text-sm leading-6">Dès mon arrivée, j'ouvre notre outil interne de <em>Surveillance Technique</em>. Ce logiciel est essentiel pour suivre notre parc réparti sur <strong>17 cliniques (sites différents)</strong>. J'y retrouve toutes les informations critiques : adresses IP, identifiants des postes, adresses MAC, modèles de PC, le tout trié par établissement.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 mt-1"><i class="fa-brands fa-jira text-emerald-400"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-white">2. Lancement de Jira (Ticketing)</h4>
-                                    <p class="mt-1 text-sm leading-6">Je lance ensuite <strong>Jira</strong>, notre solution de ticketing, pour analyser et répondre aux demandes d'assistance des utilisateurs, tout en respectant les priorités médicales.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-terminal text-emerald-400"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-white">3. Préparation & Automatisation</h4>
-                                    <p class="mt-1 text-sm leading-6">Je prépare de nouveaux postes en utilisant des <strong>scripts d'automatisation `.bat`</strong> créés par notre admin réseau. Une fois le poste prêt, je l'ajoute dans la Surveillance Technique et lui attribue les droits AD.</p>
-                                </div>
+                    <div class="space-y-6 text-slate-300 max-w-4xl">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-desktop text-emerald-400"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">1. Ouverture de la Surveillance Technique</h4>
+                                <p class="mt-1 text-sm leading-6">Dès mon arrivée, j'ouvre notre outil interne de <em>Surveillance Technique</em>. Ce logiciel est essentiel pour suivre notre parc réparti sur <strong>17 cliniques (sites différents)</strong>. J'y retrouve toutes les informations critiques : adresses IP, identifiants des postes, adresses MAC, modèles de PC, le tout trié par établissement.</p>
                             </div>
                         </div>
 
-                        <div class="rounded-xl border border-white/10 bg-black/40 p-2 flex flex-col justify-center">
-                            <img src="image.jpg" alt="Interface de Surveillance Technique" class="rounded-lg w-full h-auto border border-white/5 opacity-90 hover:opacity-100 transition-opacity">
-                            <p class="text-center text-xs font-mono text-slate-500 mt-3"><i class="fa-solid fa-camera mr-1"></i>Aperçu de notre outil de Surveillance Technique multisite flouté pour des raisons de confidentialité</p>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1"><i class="fa-brands fa-jira text-emerald-400"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">2. Lancement de Jira (Ticketing)</h4>
+                                <p class="mt-1 text-sm leading-6">Je lance ensuite <strong>Jira</strong>, notre solution de ticketing, pour analyser et répondre aux demandes d'assistance des utilisateurs, tout en respectant les priorités médicales.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-terminal text-emerald-400"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">3. Préparation & Automatisation</h4>
+                                <p class="mt-1 text-sm leading-6">Je prépare de nouveaux postes en utilisant des <strong>scripts d'automatisation `.bat`</strong> créés par notre admin réseau. Une fois le poste prêt, je l'ajoute dans la Surveillance Technique et lui attribue les droits AD.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -398,79 +391,77 @@
 
         <section id="projets" class="boot space-y-4 py-10" style="animation-delay:0.2s">
             <h2 class="section-title">// 04 / Projets</h2>
-            <div class="grid gap-5 lg:grid-cols-[1.1fr_0.8fr_0.9fr]">
-                <article class="industrial-card interactive rounded-xl p-6 md:p-8">
-                    <div class="flex items-start gap-4">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500 text-xl text-white">
-                            <i class="fa-solid fa-diagram-project"></i>
+            <div class="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
+                
+                <div class="space-y-6">
+                    <article class="industrial-card interactive rounded-xl p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500 text-xl text-white">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                            <div>
+                                <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-300"> Application web — Beta</p>
+                                <h3 class="mt-1 text-2xl font-black text-white">Déploiement d'une application web HOLY'DAYS</h3>
+                            </div>
                         </div>
-                        <div>
-                            <p class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-300"> Application web — Beta</p>
-                            <h3 class="mt-1 text-2xl font-black text-white">Déploiement d'une application web HOLY'DAYS</h3>
+                        <p class="mt-5 leading-8 text-slate-300">
+                            Mise en place avec aide de l'IA d'une application web interne de gestion des congés pour le personnel clinique, intégrant une interface d'approbation pour les responsables et un suivi automatisé dans notre système de documentation permetant au utilisateur de suivre l'état de leurs demandes sans devoir passer par une demande sur feuille comme cela etait le cas auparavant.
+                        </p>
+                        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <h4 class="font-bold text-emerald-300"><i class="fa-brands fa-windows mr-2"></i>VS Code / Supabase</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Editeur de code, base de données et navigateur web.</p>
+                            </div>
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <h4 class="font-bold text-emerald-400"><i class="fa-solid fa-sitemap mr-2"></i>Stack Technique</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">TypeScript, JavaScript, React, Next.js, Tailwind CSS, SQL.</p>
+                            </div>
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <h4 class="font-bold text-teal-300"><i class="fa-solid fa-ticket mr-2"></i>Suivi du projet</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Suivi des avancées via la Surveillance Technique pour la tracabilité.</p>
+                            </div>
+                            <div class="rounded-lg border border-white/10 bg-black/30 p-4">
+                                <h4 class="font-bold text-white"><i class="fa-solid fa-network-wired mr-2"></i>Réglementation</h4>
+                                <p class="mt-2 text-sm leading-6 text-slate-400">Isolation des informations sensibles et conformité aux réglementations.</p>
+                            </div>
                         </div>
-                    </div>
-                    <p class="mt-5 leading-8 text-slate-300">
-                        Mise en place avec aide de l'IA d'une application web interne de gestion des congés pour le personnel clinique, intégrant une interface d'approbation pour les responsables et un suivi automatisé dans notre système de documentation permetant au utilisateur de suivre l'état de leurs demandes sans devoir passer par une demande sur feuille comme cela etait le cas auparavant.
-                    </p>
-                    <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
-                            <h4 class="font-bold text-emerald-300"><i class="fa-brands fa-windows mr-2"></i>VS Code / Supabase / Chrome </h4>
-                            <p class="mt-2 text-sm leading-6 text-slate-400">Editeur de code, base de données et navigateur web.</p>
-                        </div>
-                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
-                            <h4 class="font-bold text-emerald-400"><i class="fa-solid fa-sitemap mr-2"></i>langage et frameworks</h4>
-                            <p class="mt-2 text-sm leading-6 text-slate-400">TypeScript, JavaScript, React, Next.js, Tailwind CSS , SQL.</p>
-                        </div>
-                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
-                            <h4 class="font-bold text-teal-300"><i class="fa-solid fa-ticket mr-2"></i>Suivi du projet</h4>
-                            <p class="mt-2 text-sm leading-6 text-slate-400">Suivi des avancées de l'application via la Surveillance Technique afin de garantir le bon déroulement du projet et la tracabilité des taches effectuées.</p>
-                        </div>
-                        <div class="rounded-lg border border-white/10 bg-black/30 p-4">
-                            <h4 class="font-bold text-white"><i class="fa-solid fa-network-wired mr-2"></i>Norme et réglementation</h4>
-                            <p class="mt-2 text-sm leading-6 text-slate-400">Isolation des informations sensibles et conformité aux réglementations en vigueur.</p>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <aside class="industrial-card rounded-xl p-6 md:p-8 space-y-4 flex flex-col justify-center">
-                    <h3 class="text-xl font-black text-white mb-6"><i class="fa-solid fa-camera text-emerald-500 mr-2"></i>Aperçu de l'application HOLY'DAYS</h3>
+                    <aside class="industrial-card rounded-xl p-6 md:p-8">
+                        <h3 class="text-xl font-black text-white">Résultats obtenus</h3>
+                        <div class="mt-5 space-y-4">
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
+                                <p class="leading-7 text-slate-400">Application web interne de gestion des congés fonctionnelle pour la majeure partie des fonctionnalités.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
+                                <p class="leading-7 text-slate-400">Base de données déployée et en cours de sécurisation avancée.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
+                                <p class="leading-7 text-slate-400">Documentation complète de l'application et suivi des modifications à jour.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
+                                <p class="leading-7 text-slate-400">Version 1.0 de l'application prévue pour un déploiement final en JUILLET 2027.</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+                <aside class="industrial-card rounded-xl p-6 md:p-8 flex flex-col gap-6">
+                    <h3 class="text-xl font-black text-white"><i class="fa-solid fa-camera text-emerald-500 mr-2"></i>Aperçu de l'application HOLY'DAYS</h3>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div class="rounded-lg border border-white/10 bg-black/30 p-1 aspect-[16/9] flex items-center justify-center overflow-hidden">
-                            <img src="image.jpg" alt="Aperçu application HOLY'DAYS">
-                        </div>
-                        <div class="rounded-lg border border-white/10 bg-black/30 p-1 aspect-[16/9] flex items-center justify-center overflow-hidden">
-                            <img src="image.png" alt="Interface d'approbation HOLY'DAYS">
-                        </div>
-                        <div class="rounded-lg border border-white/10 bg-black/30 p-1 aspect-[16/9] flex items-center justify-center overflow-hidden col-span-1 sm:col-span-2">
-                            <img src="image1.png" alt="Tableau de bord administrateur HOLY'DAYS">
-                        </div>
+                    <div class="flex flex-col gap-6">
+                        <img src="image.jpg" alt="Aperçu application HOLY'DAYS" class="rounded-lg shadow-2xl border border-white/10 w-full object-cover">
+                        <img src="image.png" alt="Interface d'approbation HOLY'DAYS" class="rounded-lg shadow-2xl border border-white/10 w-full object-cover">
+                        <img src="image1.png" alt="Tableau de bord administrateur HOLY'DAYS" class="rounded-lg shadow-2xl border border-white/10 w-full object-cover">
                     </div>
                     
-                    <p class="text-center text-xs font-mono text-slate-500 mt-2"><i class="fa-solid fa-camera mr-1"></i>Aperçu de l'interface HOLY'DAYS flouté pour des raisons de confidentialité</p>
+                    <p class="text-center text-xs font-mono text-slate-500 mt-2"><i class="fa-solid fa-circle-info mr-1"></i>Aperçu de l'interface HOLY'DAYS flouté pour des raisons de confidentialité</p>
                 </aside>
 
-                <aside class="industrial-card rounded-xl p-6 md:p-8">
-                    <h3 class="text-xl font-black text-white">Résultats obtenus</h3>
-                    <div class="mt-5 space-y-4">
-                        <div class="flex gap-3">
-                            <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
-                            <p class="leading-7 text-slate-400">Application web interne de gestion des congés encore en cours de développement mais fonctionnelle pour la majeure partie des fonctionnalités.</p>
-                        </div>
-                        <div class="flex gap-3">
-                            <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
-                            <p class="leading-7 text-slate-400">base de données fonctionnelle et est en cours de sécurisation.</p>
-                        </div>
-                        <div class="flex gap-3">
-                            <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
-                            <p class="leading-7 text-slate-400">Documentation complète de l'application et suivi des modifications à jour.</p>
-                        </div>
-                        <div class="flex gap-3">
-                            <i class="fa-solid fa-check mt-1 text-emerald-400"></i>
-                            <p class="leading-7 text-slate-400">Version 1.0 de l'application seras livrée dans les délais prévus JUILLET 2027.</p>
-                        </div>
-                    </div>
-                </aside>
             </div>
         </section>
 
