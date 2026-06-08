@@ -1,3 +1,10 @@
+C'est compris ! L'image `image.jpg` (qui correspond à la Surveillance Technique) n'avait en effet rien à faire dans la section du projet HOLY'DAYS.
+
+J'ai retiré cette image de la section des projets. Maintenant, il n'y a **que les 2 images de l'application HOLY'DAYS** (`image.png` et `image1.png`), et elles s'afficheront en très grand, l'une au-dessus de l'autre !
+
+Voici le code final corrigé à copier-coller dans ton fichier `index.html` :
+
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -283,29 +290,37 @@
                 <div class="mt-12 border-t border-white/10 pt-8">
                     <h3 class="text-xl font-black text-white mb-6"><i class="fa-solid fa-clock text-emerald-500 mr-2"></i> Ma journée type</h3>
                     
-                    <div class="space-y-6 text-slate-300 max-w-4xl">
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-desktop text-emerald-400"></i></div>
-                            <div>
-                                <h4 class="font-bold text-white">1. Ouverture de la Surveillance Technique</h4>
-                                <p class="mt-1 text-sm leading-6">Dès mon arrivée, j'ouvre notre outil interne de <em>Surveillance Technique</em>. Ce logiciel est essentiel pour suivre notre parc réparti sur <strong>17 cliniques (sites différents)</strong>. J'y retrouve toutes les informations critiques : adresses IP, identifiants des postes, adresses MAC, modèles de PC, le tout trié par établissement.</p>
+                    <div class="grid gap-8 lg:grid-cols-[1fr_0.8fr]">
+                        <div class="space-y-6 text-slate-300">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-desktop text-emerald-400"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white">1. Ouverture de la Surveillance Technique</h4>
+                                    <p class="mt-1 text-sm leading-6">Dès mon arrivée, j'ouvre notre outil interne de <em>Surveillance Technique</em>. Ce logiciel est essentiel pour suivre notre parc réparti sur <strong>17 cliniques (sites différents)</strong>. J'y retrouve toutes les informations critiques : adresses IP, identifiants des postes, adresses MAC, modèles de PC, le tout trié par établissement.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1"><i class="fa-brands fa-jira text-emerald-400"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white">2. Lancement de Jira (Ticketing)</h4>
+                                    <p class="mt-1 text-sm leading-6">Je lance ensuite <strong>Jira</strong>, notre solution de ticketing, pour analyser et répondre aux demandes d'assistance des utilisateurs, tout en respectant les priorités médicales.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-terminal text-emerald-400"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white">3. Préparation & Automatisation</h4>
+                                    <p class="mt-1 text-sm leading-6">Je prépare de nouveaux postes en utilisant des <strong>scripts d'automatisation `.bat`</strong> créés par notre admin réseau. Une fois le poste prêt, je l'ajoute dans la Surveillance Technique et lui attribue les droits AD.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 mt-1"><i class="fa-brands fa-jira text-emerald-400"></i></div>
-                            <div>
-                                <h4 class="font-bold text-white">2. Lancement de Jira (Ticketing)</h4>
-                                <p class="mt-1 text-sm leading-6">Je lance ensuite <strong>Jira</strong>, notre solution de ticketing, pour analyser et répondre aux demandes d'assistance des utilisateurs, tout en respectant les priorités médicales.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4">
-                            <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-terminal text-emerald-400"></i></div>
-                            <div>
-                                <h4 class="font-bold text-white">3. Préparation & Automatisation</h4>
-                                <p class="mt-1 text-sm leading-6">Je prépare de nouveaux postes en utilisant des <strong>scripts d'automatisation `.bat`</strong> créés par notre admin réseau. Une fois le poste prêt, je l'ajoute dans la Surveillance Technique et lui attribue les droits AD.</p>
-                            </div>
+                        <div class="rounded-xl border border-white/10 bg-black/40 p-2 flex flex-col justify-center">
+                            <!-- L'image de la Surveillance Technique reste ici car c'est sa place -->
+                            <img src="image.jpg" alt="Interface de Surveillance Technique" class="rounded-lg w-full h-auto border border-white/5 opacity-90 hover:opacity-100 transition-opacity">
+                            <p class="text-center text-xs font-mono text-slate-500 mt-3"><i class="fa-solid fa-camera mr-1"></i>Aperçu de notre outil de Surveillance Technique multisite flouté pour des raisons de confidentialité</p>
                         </div>
                     </div>
                 </div>
@@ -450,11 +465,11 @@
                     </aside>
                 </div>
 
+                <!-- ICI ON A GARDE UNIQUEMENT LES 2 IMAGES HOLY'DAYS EN GRAND FORMAT -->
                 <aside class="industrial-card rounded-xl p-6 md:p-8 flex flex-col gap-6">
                     <h3 class="text-xl font-black text-white"><i class="fa-solid fa-camera text-emerald-500 mr-2"></i>Aperçu de l'application HOLY'DAYS</h3>
                     
-                    <div class="flex flex-col gap-6">
-                        <img src="image.jpg" alt="Aperçu application HOLY'DAYS" class="rounded-lg shadow-2xl border border-white/10 w-full object-cover">
+                    <div class="flex flex-col gap-8">
                         <img src="image.png" alt="Interface d'approbation HOLY'DAYS" class="rounded-lg shadow-2xl border border-white/10 w-full object-cover">
                         <img src="image1.png" alt="Tableau de bord administrateur HOLY'DAYS" class="rounded-lg shadow-2xl border border-white/10 w-full object-cover">
                     </div>
@@ -602,3 +617,5 @@
 
 </body>
 </html>
+
+```
