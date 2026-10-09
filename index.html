@@ -147,6 +147,25 @@
         ::-webkit-scrollbar-track { background: #070b16; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+        @keyframes cyber-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.85; }
+        }
+        .animate-cyber-pulse {
+            animation: cyber-pulse 2s infinite ease-in-out;
+        }
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(800%); }
+        }
+        .terminal-scanline {
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(217, 70, 239, 0.4), transparent);
+            animation: scanline 6s linear infinite;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="selection:bg-blue-600 selection:text-white antialiased">
@@ -485,16 +504,19 @@
                             <div class="w-12 h-1 bg-blue-500 rounded-full mx-auto group-hover:w-20 transition-all duration-300"></div>
                         </div>
 
-                        <!-- Carte 3 : Veilles Technologiques -->
-                        <div onclick="showCategory('veilles')" class="card-dark-pro rounded-2xl p-8 text-center space-y-4 cursor-pointer group bg-slate-900/60 border border-slate-700/60 hover:border-purple-400/70 hover:bg-slate-800/80 shadow-xl transition-all duration-300">
-                            <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-400/30 text-purple-400 flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/10">
-                                <i class="fa-solid fa-desktop"></i>
+                        <!-- Carte 3 : Veilles Technologiques (Lab Interactif Zero Trust) -->
+                        <div onclick="showCategory('veilles')" class="card-dark-pro rounded-2xl p-8 text-center space-y-4 cursor-pointer group bg-slate-900/60 border border-slate-700/60 hover:border-fuchsia-400/70 hover:bg-slate-800/80 shadow-xl transition-all duration-300 relative">
+                            <div class="absolute top-4 right-4 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30">
+                                <i class="fa-solid fa-play text-[9px] mr-1"></i> SIMULATEUR LIVE
                             </div>
-                            <h4 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">Veilles Technologiques</h4>
+                            <div class="w-14 h-14 rounded-2xl bg-fuchsia-500/10 border border-fuchsia-400/30 text-fuchsia-400 flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition-transform shadow-lg shadow-fuchsia-500/10">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white group-hover:text-fuchsia-300 transition-colors">Veille : Sécurité Zero Trust</h4>
                             <p class="text-xs text-slate-400 leading-relaxed">
-                                Suivez mes analyses des dernières innovations IT et cybersécurité
+                                Simulateur interactif : Testez en direct pourquoi le mot de passe seul ne suffit plus face aux cyberattaques
                             </p>
-                            <div class="w-12 h-1 bg-purple-500 rounded-full mx-auto group-hover:w-20 transition-all duration-300"></div>
+                            <div class="w-12 h-1 bg-fuchsia-500 rounded-full mx-auto group-hover:w-20 transition-all duration-300"></div>
                         </div>
 
                     </div>
@@ -1240,58 +1262,422 @@
         <section id="view-veilles" class="page-view hidden theme-veilles text-white min-h-[calc(100vh-5rem)] py-16 sm:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
                 
-                <div class="text-center max-w-3xl mx-auto space-y-3">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-500/15 border border-fuchsia-400/30 text-fuchsia-300 text-xs font-semibold">
-                        <i class="fa-solid fa-radar"></i> Veille Technologique
-                    </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                        Mes Sujets de Veille Informatique
+                <!-- En-tête de la page -->
+                <div class="text-center max-w-4xl mx-auto space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-fuchsia-500/15 border border-fuchsia-400/30 text-fuchsia-300 text-xs font-semibold">
+                        <i class="fa-solid fa-lightbulb text-fuchsia-400"></i> Veille Technologique • BTS SIO SISR
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                        La Sécurité Informatique : Le Modèle <span class="bg-gradient-to-r from-fuchsia-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">"Zero Trust"</span>
                     </h2>
-                    <p class="text-slate-300 text-sm sm:text-base">
-                        Étude méthodique des innovations dans le support ITSM et de la sécurité en santé.
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
+                        Pourquoi on ne peut plus faire confiance à un simple mot de passe, et comment le principe <strong>Zero Trust</strong> (<em>"Ne faire confiance à personne par défaut"</em>) protège les réseaux et les données de santé de notre clinique.
                     </p>
+                    <div class="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs">
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-fuchsia-300 border border-fuchsia-500/20"><i class="fa-solid fa-key mr-1"></i> 1. Double Authentification (2FA)</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-purple-300 border border-purple-500/20"><i class="fa-solid fa-user-lock mr-1"></i> 2. Moindre Privilège (Droits stricts)</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-pink-300 border border-pink-500/20"><i class="fa-solid fa-network-wired mr-1"></i> 3. Réseau Cloisonné (VLANs)</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-emerald-300 border border-emerald-500/20"><i class="fa-solid fa-hospital mr-1"></i> Contexte Clinique de Santé</span>
+                    </div>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Veille 1 -->
-                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-4 bg-slate-900/70 border border-fuchsia-500/25 shadow-xl">
-                        <div class="w-12 h-12 rounded-2xl bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xl font-bold border border-fuchsia-500/30">
+                <!-- ============================================== -->
+                <!-- MODULE 1 : LAB INTERACTIF SIMPLIFIÉ            -->
+                <!-- ============================================== -->
+                <div class="card-dark-pro rounded-3xl p-6 sm:p-10 bg-slate-900/85 border border-fuchsia-500/30 shadow-2xl space-y-8 relative overflow-hidden backdrop-blur-xl">
+                    <div class="terminal-scanline"></div>
+
+                    <!-- En-tête du Lab -->
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="relative flex h-3 w-3">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-fuchsia-500"></span>
+                                </span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                                    Simulateur : Testez une Cyberattaque en Direct !
+                                </h3>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1">
+                                Choisissez la méthode de sécurité, déclenchez une attaque et observez la différence en direct.
+                            </p>
+                        </div>
+
+                        <!-- Badge Mode Actif -->
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs text-slate-400 font-mono">SÉCURITÉ CHOISIE :</span>
+                            <span id="activeModeBadge" class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-red-500/20 text-red-300 border border-red-500/30">
+                                🔴 Sécurité Classique (Mot de passe seul)
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Barre de Contrôle : Choix Architecture & Lancement Attaques -->
+                    <div class="grid lg:grid-cols-12 gap-4 items-center bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <!-- Sélecteur d'Architecture -->
+                        <div class="lg:col-span-5 flex flex-col sm:flex-row gap-2">
+                            <button id="btnArchTrad" onclick="setArchitecture('trad')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-gradient-to-r from-red-600/90 to-amber-600/90 text-white shadow-lg border border-red-400/40">
+                                <i class="fa-solid fa-lock-open"></i> 1. Sécurité Classique
+                            </button>
+                            <button id="btnArchZT" onclick="setArchitecture('ztna')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700">
+                                <i class="fa-solid fa-shield-halved"></i> 2. Sécurité Zero Trust
+                            </button>
+                        </div>
+
+                        <!-- Sélecteur d'Attaque & Actions -->
+                        <div class="lg:col-span-7 flex flex-wrap sm:flex-nowrap gap-2 justify-end">
+                            <button id="btnAttack1" onclick="runSimulation('phishing')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-fuchsia-600 hover:bg-fuchsia-500 text-white shadow-lg shadow-fuchsia-600/20 border border-fuchsia-400/30">
+                                <i class="fa-solid fa-envelope-open-text text-yellow-300"></i> Test 1 : Vol de mot de passe (Phishing)
+                            </button>
+                            <button id="btnAttack2" onclick="runSimulation('ransomware')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-600/20 border border-purple-400/30">
+                                <i class="fa-solid fa-virus text-amber-300"></i> Test 2 : Virus / Ransomware
+                            </button>
+                            <button id="btnReset" onclick="resetSimulation()" class="px-3.5 py-2.5 rounded-xl text-xs font-bold transition bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:text-white" title="Réinitialiser l'état">
+                                <i class="fa-solid fa-rotate-left"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Schéma Réseau Simplifié à 3 Nœuds -->
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between text-xs font-mono text-slate-400 px-1">
+                            <span><i class="fa-solid fa-network-wired mr-1 text-fuchsia-400"></i> ÉTATS DES ÉQUIPEMENTS EN TEMPS RÉEL</span>
+                            <span id="simStepIndicator" class="text-fuchsia-400">En attente d'un test</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                            
+                            <!-- Nœud 1 : Poste Utilisateur -->
+                            <div id="nodeCard1" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
+                                <div class="flex items-start justify-between">
+                                    <div id="nodeIconBox1" class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center text-xl border border-slate-700 transition-colors">
+                                        <i class="fa-solid fa-laptop-medical"></i>
+                                    </div>
+                                    <span id="nodeBadge1" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors">
+                                        PC SAIN • CONNECTÉ
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">1. Poste Soignant</h4>
+                                    <p class="text-xs font-mono text-slate-400">192.168.10.45 • Bureau de consultation</p>
+                                </div>
+                                <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
+                                    <span id="nodeDesc1" class="text-slate-400">L'ordinateur utilisé par le médecin ou soignant.</span>
+                                </div>
+                            </div>
+
+                            <!-- Nœud 2 : Barrière de Sécurité -->
+                            <div id="nodeCard2" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
+                                <div class="flex items-start justify-between">
+                                    <div id="nodeIconBox2" class="w-12 h-12 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center text-xl border border-slate-700 transition-colors">
+                                        <i id="nodeIcon2" class="fa-solid fa-key"></i>
+                                    </div>
+                                    <span id="nodeBadge2" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 transition-colors">
+                                        MOT DE PASSE SEUL
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4 id="nodeTitle2" class="font-bold text-white text-base">2. Contrôle de Sécurité</h4>
+                                    <p id="nodeRole2" class="text-xs font-mono text-slate-400">Vérification basique (Sans 2FA)</p>
+                                </div>
+                                <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
+                                    <span id="nodeDesc2" class="text-slate-400">Si le mot de passe est bon, le système laisse passer sans rien demander d'autre.</span>
+                                </div>
+                            </div>
+
+                            <!-- Nœud 3 : Serveur des Fichiers Patients -->
+                            <div id="nodeCard3" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
+                                <div class="flex items-start justify-between">
+                                    <div id="nodeIconBox3" class="w-12 h-12 rounded-xl bg-slate-800 text-emerald-400 flex items-center justify-center text-xl border border-slate-700 transition-colors">
+                                        <i class="fa-solid fa-database"></i>
+                                    </div>
+                                    <span id="nodeBadge3" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors">
+                                        DOSSIERS EN SÉCURITÉ
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">3. Serveur Central Médical</h4>
+                                    <p class="text-xs font-mono text-slate-400">10.0.0.50 • Base des Dossiers Patients</p>
+                                </div>
+                                <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
+                                    <span id="nodeDesc3" class="text-slate-400">Contient tous les dossiers médicaux confidentiels de la clinique.</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Console des Événements (Journal en français simple) -->
+                    <div class="rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden shadow-inner">
+                        <div class="flex items-center justify-between px-4 py-2.5 bg-slate-900 border-b border-slate-800 text-xs">
+                            <div class="flex items-center gap-2">
+                                <div class="flex gap-1.5">
+                                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                                </div>
+                                <span class="font-mono text-xs text-slate-300 ml-2">
+                                    <i class="fa-solid fa-terminal text-fuchsia-400 mr-1"></i> CE QUI SE PASSE EN DIRECT SUR LE RÉSEAU
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-2 font-mono text-xs">
+                                <span id="terminalStatusDot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span id="terminalStatusText" class="text-emerald-400">PRÊT</span>
+                            </div>
+                        </div>
+
+                        <div id="simTerminal" class="p-4 font-mono text-xs text-slate-300 h-52 sm:h-56 overflow-y-auto space-y-2 leading-relaxed bg-[#050811]">
+                            <div class="text-slate-400">[SYSTÈME] Le simulateur est prêt.</div>
+                            <div class="text-fuchsia-300">[AIDE] Cliquez sur « Test 1 : Phishing » ou « Test 2 : Virus » pour voir ce qui arrive !</div>
+                        </div>
+                    </div>
+
+                    <!-- Bilan & Verdict de l'Attaque -->
+                    <div id="simVerdictCard" class="p-5 sm:p-6 rounded-2xl bg-slate-950/90 border border-slate-800 transition-all space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">BILAN DE L'EXPÉRIENCE</span>
+                                <h4 id="simVerdictTitle" class="text-base sm:text-lg font-bold text-white mt-0.5">
+                                    Sélectionnez un test pour voir si l'attaque réussit ou est bloquée.
+                                </h4>
+                            </div>
+                            <div id="verdictPill" class="hidden sm:inline-flex px-3 py-1 rounded-xl text-xs font-bold font-mono">
+                                EN ATTENTE
+                            </div>
+                        </div>
+
+                        <p id="simVerdictDesc" class="text-xs text-slate-300 leading-relaxed">
+                            Ce test montre pourquoi un mot de passe ne suffit plus aujourd'hui et pourquoi la double authentification (2FA) et le cloisonnement réseau sont indispensables.
+                        </p>
+
+                        <!-- 3 Indicateurs Clés et Simples -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-center">
+                            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="block text-[11px] font-mono text-slate-400">RÉSULTAT DE L'ATTAQUE</span>
+                                <span id="kpiRadius" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="block text-[11px] font-mono text-slate-400">DOSSIERS PATIENTS</span>
+                                <span id="kpiImpact" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="block text-[11px] font-mono text-slate-400">RAISON DU RÉSULTAT</span>
+                                <span id="kpiCompliance" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- MODULE 2 : LE ZERO TRUST EN 3 RÈGLES SIMPLES (ORAL BTS)  -->
+                <!-- ======================================================== -->
+                <div class="space-y-8">
+                    <div class="text-center max-w-2xl mx-auto space-y-2">
+                        <span class="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider">À retenir pour l'épreuve de BTS SIO</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Le Zero Trust expliqué en 3 règles simples</h3>
+                        <p class="text-xs sm:text-sm text-slate-300">
+                            La philosophie du Zero Trust se résume par une formule : <strong>"Ne jamais faire confiance les yeux fermés, toujours revérifier"</strong>.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Règle 1 -->
+                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-fuchsia-500/25 shadow-xl hover:border-fuchsia-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xl font-bold border border-fuchsia-500/30">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <span class="text-[11px] font-mono font-bold text-fuchsia-400 uppercase tracking-wider">RÈGLE N°1</span>
+                            <h4 class="text-lg font-bold text-white">La Double Authentification (2FA)</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Un mot de passe seul peut être volé par un faux mail (phishing) ou deviné. Avec le 2FA, l'utilisateur doit aussi valider un code sur son smartphone.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-fuchsia-300">
+                                <strong>💡 Résultat :</strong> Même si un pirate a le mot de passe, il ne peut pas entrer sans le téléphone de l'employé !
+                            </div>
+                        </div>
+
+                        <!-- Règle 2 -->
+                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-purple-500/25 shadow-xl hover:border-purple-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold border border-purple-500/30">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <span class="text-[11px] font-mono font-bold text-purple-400 uppercase tracking-wider">RÈGLE N°2</span>
+                            <h4 class="text-lg font-bold text-white">Le Moindre Privilège</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                On ne donne à chaque employé que le strict minimum de droits nécessaires à son travail. Une infirmière a accès aux dossiers médicaux, mais pas aux serveurs comptables ni aux droits administrateur.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-purple-300">
+                                <strong>💡 Résultat :</strong> Si un compte est piraté, le pirate ne peut pas faire de gros dégâts sur le reste du réseau.
+                            </div>
+                        </div>
+
+                        <!-- Règle 3 -->
+                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-pink-500/25 shadow-xl hover:border-pink-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold border border-pink-500/30">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <span class="text-[11px] font-mono font-bold text-pink-400 uppercase tracking-wider">RÈGLE N°3</span>
+                            <h4 class="text-lg font-bold text-white">Le Cloisonnement (VLAN & Pare-feu)</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                On sépare les ordinateurs des soignants et les serveurs importants en différents sous-réseaux (VLANs). Un ordinateur ne peut pas discuter directement avec tous les serveurs sans autorisation du pare-feu.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-pink-300">
+                                <strong>💡 Résultat :</strong> Si un virus infecte un PC de bureau, il reste bloqué dans son coin et n'atteint jamais les serveurs !
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- MODULE 3 : TABLEAU COMPARATIF SIMPLE                    -->
+                <!-- ======================================================== -->
+                <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/70 border border-slate-800 shadow-xl space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-table-list text-fuchsia-400"></i> Comparatif : Ancienne Méthode vs Zero Trust
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-0.5">
+                                Résumé simple des différences pour bien comprendre l'enjeu.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
+                            <thead class="bg-slate-950 font-mono text-[11px] text-slate-400 border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3.5">Situation</th>
+                                    <th class="p-3.5 text-red-300 bg-red-950/20 border-x border-slate-800">Sécurité Classique (Ancienne)</th>
+                                    <th class="p-3.5 text-emerald-300 bg-emerald-950/20">Sécurité Zero Trust (Moderne)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Connexion de l'utilisateur</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Un simple mot de passe</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Mot de passe + Validation sur smartphone (2FA)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Accès aux dossiers</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Accès à presque tout le réseau</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Accès limité au strict nécessaire (Moindre privilège)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Si un PC attrape un virus</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le virus saute sur les serveurs et bloque tout</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le PC est isolé par le réseau (VLAN), le reste est sauvé</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Si le mot de passe est volé</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le pirate entre librement dans le réseau</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le pirate est bloqué car il n'a pas le téléphone (2FA)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- MODULE 4 : MA MÉTHODE DE VEILLE EN BTS SIO               -->
+                <!-- ======================================================== -->
+                <div class="space-y-8">
+                    <div class="text-center max-w-2xl mx-auto space-y-2">
+                        <span class="text-xs font-mono font-bold text-fuchsia-400 uppercase tracking-wider">Épreuve E6 • BTS SIO</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Comment je réalise ma veille technologique</h3>
+                        <p class="text-xs sm:text-sm text-slate-300">
+                            Une démarche simple en 4 étapes que j'applique tout au long de mon BTS.
+                        </p>
+                    </div>
+
+                    <!-- Les 4 étapes simples -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+                            <span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 text-[10px] font-mono font-bold">ÉTAPE 1</span>
+                            <h4 class="font-bold text-white text-sm">S'informer (Flux RSS)</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                J'utilise l'application <strong>Feedly</strong> pour recevoir automatiquement les nouveaux articles et alertes de cybersécurité chaque semaine.
+                            </p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+                            <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-[10px] font-mono font-bold">ÉTAPE 2</span>
+                            <h4 class="font-bold text-white text-sm">Lire les sources officielles</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Je consulte les alertes de <strong>Cybermalveillance.gouv.fr</strong> et de l'<strong>ANSSI</strong> pour repérer les faux mails ou failles actuelles.
+                            </p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+                            <span class="px-2 py-0.5 rounded bg-pink-500/20 text-pink-300 text-[10px] font-mono font-bold">ÉTAPE 3</span>
+                            <h4 class="font-bold text-white text-sm">Tester en pratique</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Sur mon HomeLab personnel (pfSense / Proxmox), je teste la création de VLANs pour séparer les réseaux et vérifier le blocage des flux.
+                            </p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+                            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold">ÉTAPE 4</span>
+                            <h4 class="font-bold text-white text-sm">Appliquer en clinique</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                En alternance à la Clinique Montfleuri, je sensibilise les utilisateurs au phishing et participe au déploiement de la double authentification.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sources Officielles Utilisées -->
+                    <div class="p-6 rounded-3xl bg-slate-950/90 border border-slate-800 space-y-4">
+                        <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+                            <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">
+                                <i class="fa-solid fa-bookmark text-fuchsia-400 mr-1.5"></i> Mes sources d'informations régulières
+                            </span>
+                            <span class="text-[11px] font-mono text-emerald-400">Consultation hebdomadaire</span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
+                                <i class="fa-solid fa-shield-virus text-blue-400 text-xl"></i>
+                                <div class="font-bold text-white text-xs">Cybermalveillance.gouv.fr</div>
+                                <div class="text-[11px] text-slate-400">Conseils & alertes grand public / PME</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
+                                <i class="fa-solid fa-building-shield text-emerald-400 text-xl"></i>
+                                <div class="font-bold text-white text-xs">ANSSI</div>
+                                <div class="text-[11px] text-slate-400">Guides de bonnes pratiques français</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
+                                <i class="fa-solid fa-rss text-orange-400 text-xl"></i>
+                                <div class="font-bold text-white text-xs">Feedly</div>
+                                <div class="text-[11px] text-slate-400">Agrégateur de flux RSS d'actualité IT</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
+                                <i class="fa-solid fa-newspaper text-purple-400 text-xl"></i>
+                                <div class="font-bold text-white text-xs">Sites spécialisés IT</div>
+                                <div class="text-[11px] text-slate-400">ZDNet, Clubic Pro, Le Monde Informatique</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- MODULE 5 : SUJET COMPLÉMENTAIRE (L'IA AU SUPPORT N1)     -->
+                <!-- ======================================================== -->
+                <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/60 border border-purple-500/20 shadow-xl space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg border border-purple-500/30">
                             <i class="fa-solid fa-robot"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">L'AIOps pour Automatiser le Support N1</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            L'intégration du Machine Learning et du NLP dans les outils de ticketing (Jira/GLPI) permet d'analyser sémantiquement les demandes soignantes, de router automatiquement les urgences médicales et de résoudre de manière autonome les incidents simples (mots de passe oubliés).
-                        </p>
-                        <div class="pt-2 flex flex-wrap gap-2 text-xs">
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-fuchsia-300 border border-slate-700">AIOps</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-fuchsia-300 border border-slate-700">ITSM</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-fuchsia-300 border border-slate-700">Support N1</span>
+                        <div>
+                            <span class="text-[10px] font-mono font-bold text-purple-400 uppercase tracking-wider">Deuxième Sujet de Veille • Support & IA</span>
+                            <h4 class="text-lg font-bold text-white">L'IA pour aider le support informatique (Ticketing N1)</h4>
                         </div>
                     </div>
-
-                    <!-- Veille 2 -->
-                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-4 bg-slate-900/70 border border-purple-500/25 shadow-xl">
-                        <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold border border-purple-500/30">
-                            <i class="fa-solid fa-shield-virus"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Résilience Face aux Ransomwares Hospitaliers</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Les établissements de santé sont des cibles critiques. Étude des mécanismes de défense : stratégie de sauvegarde 3-2-1 immuable, segmentation stricte VLAN des équipements biomédicaux et sensibilisation au spear-phishing soignant.
-                        </p>
-                        <div class="pt-2 flex flex-wrap gap-2 text-xs">
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Sauvegarde 3-2-1</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">PRA Hospitalier</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">HDS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Outils de veille -->
-                <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 text-center max-w-2xl mx-auto space-y-2">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Outils & Sources de Veille Utilisés</span>
-                    <p class="text-xs text-slate-300">
-                        Flux RSS Feedly • Alertes ANSSI / CERT-FR • Bulletins Microsoft Security • LinkedIn IT Pulse
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        En plus de la cybersécurité, j'ai suivi l'évolution de l'intelligence artificielle dans les outils de tickets (comme GLPI ou Jira). L'IA permet de comprendre automatiquement les demandes des soignants, d'identifier les pannes urgentes (par exemple un bloc opératoire bloqué), et d'aider à résoudre les problèmes simples comme la réinitialisation de mots de passe oubliés.
                     </p>
+                    <div class="flex flex-wrap gap-2 text-xs pt-1">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Support informatique</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Gestion des tickets (GLPI)</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Gain de temps</span>
+                    </div>
                 </div>
 
             </div>
@@ -1818,6 +2204,435 @@ Switch(config-if)# switchport trunk allowed vlan 10,20</code></pre>
                     row.style.display = 'none';
                 }
             });
+        }
+
+        // ========================================================
+        // SIMULATEUR INTERACTIF SIMPLIFIÉ (ZERO TRUST VS CLASSIQUE)
+        // ========================================================
+        let currentArch = 'trad'; // 'trad' (classique) ou 'ztna' (zero trust)
+        let isSimulating = false;
+        let simTimeouts = [];
+
+        function setArchitecture(arch) {
+            if (isSimulating) return;
+            currentArch = arch;
+
+            const btnTrad = document.getElementById('btnArchTrad');
+            const btnZT = document.getElementById('btnArchZT');
+            const modeBadge = document.getElementById('activeModeBadge');
+
+            const nodeIcon2 = document.getElementById('nodeIcon2');
+            const nodeIconBox2 = document.getElementById('nodeIconBox2');
+            const nodeBadge2 = document.getElementById('nodeBadge2');
+            const nodeTitle2 = document.getElementById('nodeTitle2');
+            const nodeRole2 = document.getElementById('nodeRole2');
+            const nodeDesc2 = document.getElementById('nodeDesc2');
+
+            if (arch === 'trad') {
+                btnTrad.className = "flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-gradient-to-r from-red-600/90 to-amber-600/90 text-white shadow-lg border border-red-400/40";
+                btnZT.className = "flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700";
+                modeBadge.className = "px-3 py-1 rounded-xl text-xs font-bold font-mono bg-red-500/20 text-red-300 border border-red-500/30";
+                modeBadge.innerHTML = '🔴 Sécurité Classique (Mot de passe seul)';
+
+                nodeIcon2.className = "fa-solid fa-key";
+                nodeIconBox2.className = "w-12 h-12 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center text-xl border border-slate-700 transition-colors";
+                nodeBadge2.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 transition-colors";
+                nodeBadge2.textContent = "MOT DE PASSE SEUL";
+                nodeTitle2.textContent = "2. Contrôle de Sécurité";
+                nodeRole2.textContent = "Vérification basique (Sans 2FA)";
+                nodeDesc2.textContent = "Si le mot de passe est bon, le système laisse passer sans rien demander d'autre.";
+            } else {
+                btnZT.className = "flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600/90 to-teal-600/90 text-white shadow-lg border border-emerald-400/40";
+                btnTrad.className = "flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700";
+                modeBadge.className = "px-3 py-1 rounded-xl text-xs font-bold font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+                modeBadge.innerHTML = '🟢 Sécurité Zero Trust (2FA & Réseau cloisonné)';
+
+                nodeIcon2.className = "fa-solid fa-shield-halved";
+                nodeIconBox2.className = "w-12 h-12 rounded-xl bg-slate-800 text-emerald-400 flex items-center justify-center text-xl border border-slate-700 transition-colors";
+                nodeBadge2.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors";
+                nodeBadge2.textContent = "2FA + PARE-FEU ACTIF";
+                nodeTitle2.textContent = "2. Contrôle Zero Trust";
+                nodeRole2.textContent = "Validation smartphone & Réseau isolé";
+                nodeDesc2.textContent = "Exige une confirmation sur smartphone et empêche le PC de contacter directement le serveur.";
+            }
+
+            resetSimulation(false);
+            appendLog(`[CHANGEMENT] Mode activé : ${arch === 'trad' ? 'Sécurité Classique (Ancienne méthode)' : 'Sécurité Zero Trust (Méthode moderne)'}`, 'text-fuchsia-300 font-bold');
+        }
+
+        function appendLog(message, cssClass = 'text-slate-300') {
+            const terminal = document.getElementById('simTerminal');
+            if (!terminal) return;
+            const now = new Date();
+            const timeStr = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}:${String(now.getSeconds()).padStart(2,'0')}`;
+            const line = document.createElement('div');
+            line.className = `${cssClass} transition-all`;
+            line.innerHTML = `<span class="text-slate-500">[${timeStr}]</span> ${message}`;
+            terminal.appendChild(line);
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function clearTerminal() {
+            const terminal = document.getElementById('simTerminal');
+            if (terminal) terminal.innerHTML = '';
+        }
+
+        function setSimState(simulating) {
+            isSimulating = simulating;
+            const btnAttack1 = document.getElementById('btnAttack1');
+            const btnAttack2 = document.getElementById('btnAttack2');
+            const btnReset = document.getElementById('btnReset');
+            const dot = document.getElementById('terminalStatusDot');
+            const text = document.getElementById('terminalStatusText');
+            const stepInd = document.getElementById('simStepIndicator');
+
+            if (simulating) {
+                if (btnAttack1) btnAttack1.classList.add('opacity-50', 'cursor-not-allowed');
+                if (btnAttack2) btnAttack2.classList.add('opacity-50', 'cursor-not-allowed');
+                if (btnReset) btnReset.classList.add('opacity-50', 'cursor-not-allowed');
+                if (dot) dot.className = "w-2 h-2 rounded-full bg-amber-400 animate-ping";
+                if (text) {
+                    text.className = "text-amber-400";
+                    text.textContent = "TEST EN COURS...";
+                }
+                if (stepInd) stepInd.textContent = "Attaque en cours de simulation...";
+            } else {
+                if (btnAttack1) btnAttack1.classList.remove('opacity-50', 'cursor-not-allowed');
+                if (btnAttack2) btnAttack2.classList.remove('opacity-50', 'cursor-not-allowed');
+                if (btnReset) btnReset.classList.remove('opacity-50', 'cursor-not-allowed');
+                if (dot) dot.className = "w-2 h-2 rounded-full bg-emerald-400 animate-pulse";
+                if (text) {
+                    text.className = "text-emerald-400";
+                    text.textContent = "PRÊT";
+                }
+                if (stepInd) stepInd.textContent = "En attente d'un test";
+            }
+        }
+
+        function resetSimulation(clearLogs = true) {
+            simTimeouts.forEach(t => clearTimeout(t));
+            simTimeouts = [];
+            isSimulating = false;
+
+            setSimState(false);
+
+            // Nœud 1
+            const card1 = document.getElementById('nodeCard1');
+            const box1 = document.getElementById('nodeIconBox1');
+            const badge1 = document.getElementById('nodeBadge1');
+            if (card1) card1.className = "rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3";
+            if (box1) box1.className = "w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center text-xl border border-slate-700 transition-colors";
+            if (badge1) {
+                badge1.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors";
+                badge1.textContent = "PC SAIN • CONNECTÉ";
+            }
+
+            // Nœud 2
+            const card2 = document.getElementById('nodeCard2');
+            const box2 = document.getElementById('nodeIconBox2');
+            const badge2 = document.getElementById('nodeBadge2');
+            if (card2) card2.className = "rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3";
+            if (currentArch === 'trad') {
+                if (box2) box2.className = "w-12 h-12 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center text-xl border border-slate-700 transition-colors";
+                if (badge2) {
+                    badge2.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 transition-colors";
+                    badge2.textContent = "MOT DE PASSE SEUL";
+                }
+            } else {
+                if (box2) box2.className = "w-12 h-12 rounded-xl bg-slate-800 text-emerald-400 flex items-center justify-center text-xl border border-slate-700 transition-colors";
+                if (badge2) {
+                    badge2.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors";
+                    badge2.textContent = "2FA + PARE-FEU ACTIF";
+                }
+            }
+
+            // Nœud 3
+            const card3 = document.getElementById('nodeCard3');
+            const box3 = document.getElementById('nodeIconBox3');
+            const badge3 = document.getElementById('nodeBadge3');
+            if (card3) card3.className = "rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3";
+            if (box3) box3.className = "w-12 h-12 rounded-xl bg-slate-800 text-emerald-400 flex items-center justify-center text-xl border border-slate-700 transition-colors";
+            if (badge3) {
+                badge3.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors";
+                badge3.textContent = "DOSSIERS EN SÉCURITÉ";
+            }
+
+            // Bilan
+            const vTitle = document.getElementById('simVerdictTitle');
+            const vDesc = document.getElementById('simVerdictDesc');
+            const vPill = document.getElementById('verdictPill');
+            const kpiRadius = document.getElementById('kpiRadius');
+            const kpiImpact = document.getElementById('kpiImpact');
+            const kpiCompliance = document.getElementById('kpiCompliance');
+            const vCard = document.getElementById('simVerdictCard');
+
+            if (vCard) vCard.className = "p-5 sm:p-6 rounded-2xl bg-slate-950/90 border border-slate-800 transition-all space-y-4";
+            if (vTitle) {
+                vTitle.className = "text-base sm:text-lg font-bold text-white mt-0.5";
+                vTitle.textContent = "Sélectionnez un test pour voir si l'attaque réussit ou est bloquée.";
+            }
+            if (vDesc) vDesc.textContent = "Ce test montre pourquoi un mot de passe ne suffit plus aujourd'hui et pourquoi la double authentification (2FA) et le cloisonnement réseau sont indispensables.";
+            if (vPill) {
+                vPill.className = "hidden sm:inline-flex px-3 py-1 rounded-xl text-xs font-bold font-mono";
+                vPill.textContent = "EN ATTENTE";
+            }
+            if (kpiRadius) kpiRadius.textContent = "Non testé";
+            if (kpiImpact) kpiImpact.textContent = "Non testé";
+            if (kpiCompliance) kpiCompliance.textContent = "Non testé";
+
+            if (clearLogs) {
+                clearTerminal();
+                appendLog("[SYSTÈME] Le simulateur est réinitialisé et prêt.", "text-slate-400");
+                appendLog(`[INFO] Mode actuel : ${currentArch === 'trad' ? 'Sécurité Classique' : 'Sécurité Zero Trust'}. Cliquez sur un test pour démarrer.`, "text-fuchsia-300");
+            }
+        }
+
+        function runSimulation(scenario) {
+            if (isSimulating) return;
+            resetSimulation(true);
+            setSimState(true);
+
+            if (scenario === 'phishing') {
+                runPhishingScenario();
+            } else {
+                runRansomwareScenario();
+            }
+        }
+
+        // SCÉNARIO 1 : PHISHING / MOT DE PASSE VOLÉ
+        function runPhishingScenario() {
+            appendLog("🎣 [TEST] Un pirate envoie un faux email et vole le mot de passe d'un soignant...", "text-yellow-300 font-bold");
+
+            if (currentArch === 'trad') {
+                // SÉCURITÉ CLASSIQUE (ÉCHEC)
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("⚠️ [ÉTAPE 1] Le soignant a saisi son mot de passe sur le faux site.", "text-amber-400");
+                    appendLog("👤 [PIRATE] Le pirate utilise ce mot de passe pour se connecter au réseau.", "text-amber-400");
+                    const card1 = document.getElementById('nodeCard1');
+                    const badge1 = document.getElementById('nodeBadge1');
+                    if (card1) card1.className = "rounded-2xl p-5 bg-red-950/40 border border-red-500/60 shadow-lg relative space-y-3";
+                    if (badge1) {
+                        badge1.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-red-500/30 text-red-200 border border-red-400";
+                        badge1.textContent = "IDENTIFIANT PIRATÉ";
+                    }
+                }, 800));
+
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("🔓 [ÉTAPE 2] Sécurité classique : Le mot de passe est bon, aucune vérification supplémentaire (Pas de 2FA).", "text-red-400");
+                    appendLog("🚪 [ACCÈS ACCORDÉ] Le pirate entre sur le réseau sans aucun obstacle !", "text-red-400 font-bold");
+                    const badge2 = document.getElementById('nodeBadge2');
+                    if (badge2) {
+                        badge2.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-amber-500/30 text-amber-200 border border-amber-400";
+                        badge2.textContent = "CONNEXION VALIDÉE SANS 2FA";
+                    }
+                }, 2000));
+
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("💥 [ÉTAPE 3] Le pirate télécharge et vole l'ensemble des dossiers médicaux.", "text-red-500 font-extrabold");
+                    const card3 = document.getElementById('nodeCard3');
+                    const box3 = document.getElementById('nodeIconBox3');
+                    const badge3 = document.getElementById('nodeBadge3');
+                    if (card3) card3.className = "rounded-2xl p-5 bg-red-950/50 border border-red-500 shadow-xl relative space-y-3";
+                    if (box3) box3.className = "w-12 h-12 rounded-xl bg-red-600/30 text-red-400 flex items-center justify-center text-xl border border-red-500 animate-pulse";
+                    if (badge3) {
+                        badge3.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-red-600 text-white border border-red-300";
+                        badge3.textContent = "💥 DOSSIERS PATIENTS VOLÉS";
+                    }
+
+                    finishSimpleVerdict(
+                        false,
+                        "❌ PIRATAGE RÉUSSI : LE MOT DE PASSE SEUL N'A PAS SUFFI",
+                        "En sécurité classique, un mot de passe volé donne un accès direct à tout. Comme il n'y avait pas de double authentification (2FA), le pirate est entré directement et a volé les données de santé.",
+                        "Piratage réussi ❌",
+                        "Données volées 💥",
+                        "Absence de 2FA (Double Authentification)"
+                    );
+                }, 3300));
+
+            } else {
+                // SÉCURITÉ ZERO TRUST (SUCCÈS)
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("⚠️ [ÉTAPE 1] Le pirate tente de se connecter avec le mot de passe volé.", "text-amber-400");
+                    appendLog("🛡️ [ZERO TRUST] Le mot de passe est bon, MAIS le système demande la confirmation 2FA sur le smartphone du soignant.", "text-fuchsia-300 font-bold");
+                }, 800));
+
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("🛑 [ÉTAPE 2] Le pirate ne possède pas le smartphone du soignant.", "text-emerald-400 font-bold");
+                    appendLog("🔒 [REFUS] Code 2FA manquant : La tentative de connexion est immédiatement BLOQUÉE !", "text-emerald-400 font-bold");
+                    const card2 = document.getElementById('nodeCard2');
+                    const box2 = document.getElementById('nodeIconBox2');
+                    const badge2 = document.getElementById('nodeBadge2');
+                    if (card2) card2.className = "rounded-2xl p-5 bg-emerald-950/30 border border-emerald-500/60 shadow-lg relative space-y-3";
+                    if (box2) box2.className = "w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl border border-emerald-500/40 animate-pulse";
+                    if (badge2) {
+                        badge2.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/30 text-emerald-200 border border-emerald-400";
+                        badge2.textContent = "🛑 CONNEXION REFUSÉE (2FA ABSENT)";
+                    }
+                }, 2000));
+
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("✅ [ÉTAPE 3] Le pirate est rejeté avant d'atteindre le réseau. Les dossiers patients sont 100% sécurisés !", "text-emerald-300 font-bold");
+                    const card3 = document.getElementById('nodeCard3');
+                    const badge3 = document.getElementById('nodeBadge3');
+                    if (card3) card3.className = "rounded-2xl p-5 bg-emerald-950/30 border border-emerald-500/60 relative space-y-3";
+                    if (badge3) {
+                        badge3.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/30 text-emerald-200 border border-emerald-400";
+                        badge3.textContent = "🔒 100% INTACT ET PROTÉGÉ";
+                    }
+
+                    finishSimpleVerdict(
+                        true,
+                        "✅ ATTAQUE STOPPÉE : LA DOUBLE AUTHENTIFICATION A SAUVÉ L'ÉTABLISSEMENT",
+                        "Même si le pirate avait le bon mot de passe, la politique Zero Trust exige toujours une deuxième preuve d'identité (le code 2FA reçu sur le smartphone). Ne possédant pas le téléphone, le pirate est resté à la porte !",
+                        "Attaque bloquée ✅",
+                        "100% Intacts et protégés 🔒",
+                        "Protégé grâce au 2FA obligatoire"
+                    );
+                }, 3300));
+            }
+        }
+
+        // SCÉNARIO 2 : VIRUS / RANSOMWARE
+        function runRansomwareScenario() {
+            appendLog("🦠 [TEST] Un utilisateur ouvre un fichier piégé reçu par email (Virus / Ransomware)...", "text-amber-300 font-bold");
+
+            if (currentArch === 'trad') {
+                // CLASSIQUE (RÉSEAU NON CLOISONNÉ - ÉCHEC)
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("⚠️ [ÉTAPE 1] Le fichier infecte le poste de travail de l'utilisateur.", "text-red-400");
+                    const card1 = document.getElementById('nodeCard1');
+                    const box1 = document.getElementById('nodeIconBox1');
+                    const badge1 = document.getElementById('nodeBadge1');
+                    if (card1) card1.className = "rounded-2xl p-5 bg-red-950/40 border border-red-500/60 shadow-lg relative space-y-3";
+                    if (box1) box1.className = "w-12 h-12 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center text-xl border border-red-500/40 animate-pulse";
+                    if (badge1) {
+                        badge1.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-red-500/30 text-red-200 border border-red-400";
+                        badge1.textContent = "PC INFECTÉ PAR LE VIRUS";
+                    }
+                }, 800));
+
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("⚠️ [ÉTAPE 2] Réseau plat sans séparation (pas de VLANs) : Le virus cherche d'autres machines sur le réseau local.", "text-amber-400");
+                    appendLog("🔄 [PROPAGATION] Aucun pare-feu interne ne bloque le virus entre les bureaux et les serveurs !", "text-red-400");
+                    const badge2 = document.getElementById('nodeBadge2');
+                    if (badge2) {
+                        badge2.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-amber-500/30 text-amber-200 border border-amber-400";
+                        badge2.textContent = "PAS DE SÉPARATION RÉSEAU";
+                    }
+                }, 2000));
+
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("💥 [ÉTAPE 3] Le virus a sauté sur le serveur central et a chiffré les dossiers médicaux (Ransomware) !", "text-red-500 font-extrabold");
+                    const card3 = document.getElementById('nodeCard3');
+                    const box3 = document.getElementById('nodeIconBox3');
+                    const badge3 = document.getElementById('nodeBadge3');
+                    if (card3) card3.className = "rounded-2xl p-5 bg-red-950/50 border border-red-500 shadow-xl relative space-y-3";
+                    if (box3) box3.className = "w-12 h-12 rounded-xl bg-red-600/30 text-red-400 flex items-center justify-center text-xl border border-red-500 animate-pulse";
+                    if (badge3) {
+                        badge3.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-red-600 text-white border border-red-300";
+                        badge3.textContent = "💥 FICHIERS BLOQUÉS PAR RANSOMWARE";
+                    }
+
+                    finishSimpleVerdict(
+                        false,
+                        "❌ CATASTROPHE : LE VIRUS S'EST PROPAGÉ À TOUT LE RÉSEAU",
+                        "Parce que les ordinateurs et les serveurs étaient tous sur le même réseau sans cloisonnement (sans VLANs), le virus a pu voyager d'une machine à l'autre sans obstacle. Les données de la clinique sont bloquées.",
+                        "Infection totale du réseau ❌",
+                        "Fichiers bloqués / Rançon demandée 💥",
+                        "Réseau non cloisonné (Pas de VLAN)"
+                    );
+                }, 3300));
+
+            } else {
+                // ZERO TRUST (CLOISONNEMENT & MOINDRE PRIVILÈGE - SUCCÈS)
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("⚠️ [ÉTAPE 1] Le fichier infecte le poste de travail utilisateur.", "text-amber-400");
+                    const card1 = document.getElementById('nodeCard1');
+                    const badge1 = document.getElementById('nodeBadge1');
+                    if (card1) card1.className = "rounded-2xl p-5 bg-amber-950/30 border border-amber-500/60 shadow-lg relative space-y-3";
+                    if (badge1) {
+                        badge1.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-amber-500/30 text-amber-200 border border-amber-400";
+                        badge1.textContent = "VIRUS DÉTECTÉ SUR LE PC";
+                    }
+                }, 800));
+
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("🛡️ [ÉTAPE 2] Le réseau est cloisonné en VLANs : Le PC n'a aucun droit direct de contact avec le serveur central.", "text-emerald-400 font-bold");
+                    appendLog("🛑 [BLOCAGE] Le pare-feu interne bloque immédiatement la tentative de propagation du virus !", "text-emerald-400 font-bold");
+                    const card2 = document.getElementById('nodeCard2');
+                    const box2 = document.getElementById('nodeIconBox2');
+                    const badge2 = document.getElementById('nodeBadge2');
+                    if (card2) card2.className = "rounded-2xl p-5 bg-emerald-950/30 border border-emerald-500/60 shadow-lg relative space-y-3";
+                    if (box2) box2.className = "w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl border border-emerald-500/40 animate-pulse";
+                    if (badge2) {
+                        badge2.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/30 text-emerald-200 border border-emerald-400";
+                        badge2.textContent = "🛑 PROPAGATION BLOQUÉE PAR LE PARE-FEU";
+                    }
+                }, 2000));
+
+                simTimeouts.push(setTimeout(() => {
+                    appendLog("✅ [ÉTAPE 3] Le virus est piégé sur le poste initial. Le serveur central médical reste intact et en parfaite santé !", "text-emerald-300 font-bold");
+                    const card3 = document.getElementById('nodeCard3');
+                    const badge3 = document.getElementById('nodeBadge3');
+                    if (card3) card3.className = "rounded-2xl p-5 bg-emerald-950/30 border border-emerald-500/60 relative space-y-3";
+                    if (badge3) {
+                        badge3.className = "px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/30 text-emerald-200 border border-emerald-400";
+                        badge3.textContent = "🔒 SERVEUR INTACT ET OPÉRATIONNEL";
+                    }
+
+                    finishSimpleVerdict(
+                        true,
+                        "✅ INFECTION ISOLÉE : LE CLOISONNEMENT RÉSEAU A FONCTIONNÉ",
+                        "En politique Zero Trust, on applique le principe de cloisonnement (VLAN) et de moindre privilège : même si un ordinateur de bureau est infecté, le pare-feu empêche le virus de sauter sur les serveurs importants. Seul un poste est à nettoyer, le reste de l'entreprise continue de fonctionner !",
+                        "Propagation bloquée ✅",
+                        "Serveur 100% sain et sauf 🔒",
+                        "Cloisonnement par VLANs & Pare-feu"
+                    );
+                }, 3300));
+            }
+        }
+
+        function finishSimpleVerdict(success, title, desc, resultKpi, dataKpi, reasonKpi) {
+            setSimState(false);
+            const verdictCard = document.getElementById('simVerdictCard');
+            const verdictTitle = document.getElementById('simVerdictTitle');
+            const verdictDesc = document.getElementById('simVerdictDesc');
+            const verdictPill = document.getElementById('verdictPill');
+
+            const kpiRadius = document.getElementById('kpiRadius');
+            const kpiImpact = document.getElementById('kpiImpact');
+            const kpiCompliance = document.getElementById('kpiCompliance');
+
+            if (verdictTitle) verdictTitle.textContent = title;
+            if (verdictDesc) verdictDesc.textContent = desc;
+
+            if (success) {
+                if (verdictCard) verdictCard.className = "p-5 sm:p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/60 shadow-xl transition-all space-y-4";
+                if (verdictTitle) verdictTitle.className = "text-base sm:text-lg font-bold text-emerald-300 mt-0.5";
+                if (verdictPill) {
+                    verdictPill.className = "inline-flex px-3 py-1 rounded-xl text-xs font-bold font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-400/40";
+                    verdictPill.textContent = "SÉCURITÉ RÉUSSIE";
+                }
+                if (kpiRadius) kpiRadius.className = "block font-bold text-sm text-emerald-400 mt-1";
+                if (kpiImpact) kpiImpact.className = "block font-bold text-sm text-emerald-400 mt-1";
+                if (kpiCompliance) kpiCompliance.className = "block font-bold text-sm text-emerald-400 mt-1";
+            } else {
+                if (verdictCard) verdictCard.className = "p-5 sm:p-6 rounded-2xl bg-red-950/40 border border-red-500/60 shadow-xl transition-all space-y-4";
+                if (verdictTitle) verdictTitle.className = "text-base sm:text-lg font-bold text-red-300 mt-0.5";
+                if (verdictPill) {
+                    verdictPill.className = "inline-flex px-3 py-1 rounded-xl text-xs font-bold font-mono bg-red-500/20 text-red-300 border border-red-400/40";
+                    verdictPill.textContent = "ÉCHEC DE LA SÉCURITÉ";
+                }
+                if (kpiRadius) kpiRadius.className = "block font-bold text-sm text-red-400 mt-1";
+                if (kpiImpact) kpiImpact.className = "block font-bold text-sm text-red-400 mt-1";
+                if (kpiCompliance) kpiCompliance.className = "block font-bold text-sm text-red-400 mt-1";
+            }
+
+            if (kpiRadius) kpiRadius.textContent = resultKpi;
+            if (kpiImpact) kpiImpact.textContent = dataKpi;
+            if (kpiCompliance) kpiCompliance.textContent = reasonKpi;
+
+            appendLog(`[RÉSULTAT] ${title}`, success ? "text-emerald-400 font-bold" : "text-red-400 font-bold");
         }
 
         // Contact submit
