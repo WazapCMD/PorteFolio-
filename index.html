@@ -683,7 +683,7 @@
                             <!-- Capture 1 : Sélection des Sites -->
                             <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-cyan-400/70 transition shadow-xl">
                                 <div class="relative overflow-hidden cursor-pointer h-44 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt1').src, 'Surveillance Technique (ST) - Vue Périmètre & Filtrage des 17 cliniques')">
-                                    <img id="imgSt1" src="st1.png" onerror="if(window.EMBEDDED_ASSETS) this.src=window.EMBEDDED_ASSETS.st1" alt="ST - Sélection des sites" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <img id="imgSt1" src="st1.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st1){this.src=window.EMBEDDED_ASSETS.st1;this.onerror=null;}" alt="ST - Sélection des sites" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
                                         <span class="text-xs font-bold text-cyan-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
                                             <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
@@ -699,7 +699,7 @@
                             <!-- Capture 2 : Typologie Équipements -->
                             <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-blue-400/70 transition shadow-xl">
                                 <div class="relative overflow-hidden cursor-pointer h-44 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt2').src, 'Surveillance Technique (ST) - Filtrage par types d\'équipements')">
-                                    <img id="imgSt2" src="st2.png" onerror="if(window.EMBEDDED_ASSETS) this.src=window.EMBEDDED_ASSETS.st2" alt="ST - Types d'équipements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <img id="imgSt2" src="st2.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st2){this.src=window.EMBEDDED_ASSETS.st2;this.onerror=null;}" alt="ST - Types d'équipements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
                                         <span class="text-xs font-bold text-blue-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
                                             <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
@@ -715,7 +715,7 @@
                             <!-- Capture 3 : Console de surveillance -->
                             <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-purple-400/70 transition shadow-xl">
                                 <div class="relative overflow-hidden cursor-pointer h-44 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt3').src, 'Surveillance Technique (ST) - Console générale d\'administration')">
-                                    <img id="imgSt3" src="st3.png" onerror="if(window.EMBEDDED_ASSETS) this.src=window.EMBEDDED_ASSETS.st3" alt="ST - Console de surveillance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <img id="imgSt3" src="st3.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st3){this.src=window.EMBEDDED_ASSETS.st3;this.onerror=null;}" alt="ST - Console de surveillance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
                                         <span class="text-xs font-bold text-purple-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
                                             <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
@@ -1443,30 +1443,28 @@
 
     <!-- SCRIPTS JS (ROUTER ISOLÉ & ASSETS) -->
     <script>
-        // Initialisation immédiate des images pour affichage infaillible
+        // Initialisation sécurisée des images de secours uniquement si le fichier direct échoue
         function initImages() {
-            if (window.EMBEDDED_ASSETS) {
-                const holy1 = document.getElementById('imgHoly1');
-                const holy2 = document.getElementById('imgHoly2');
-                const clin = document.getElementById('imgClinique');
-                const surv = document.getElementById('imgSurv');
-                const home = document.getElementById('imgHomelab');
-                
-                if (holy1 && (!holy1.complete || holy1.naturalWidth === 0)) holy1.src = window.EMBEDDED_ASSETS.img_holy1;
-                if (holy2 && (!holy2.complete || holy2.naturalWidth === 0)) holy2.src = window.EMBEDDED_ASSETS.img_holy2;
-                if (clin && (!clin.complete || clin.naturalWidth === 0)) clin.src = window.EMBEDDED_ASSETS.clinique;
-                if (surv && (!surv.complete || surv.naturalWidth === 0)) surv.src = window.EMBEDDED_ASSETS.surveillance;
-                if (home && (!home.complete || home.naturalWidth === 0)) home.src = window.EMBEDDED_ASSETS.homelab;
-
-                const st1 = document.getElementById('imgSt1');
-                const st2 = document.getElementById('imgSt2');
-                const st3 = document.getElementById('imgSt3');
-                if (st1 && (!st1.complete || st1.naturalWidth === 0)) st1.src = window.EMBEDDED_ASSETS.st1;
-                if (st2 && (!st2.complete || st2.naturalWidth === 0)) st2.src = window.EMBEDDED_ASSETS.st2;
-                if (st3 && (!st3.complete || st3.naturalWidth === 0)) st3.src = window.EMBEDDED_ASSETS.st3;
-            }
+            if (!window.EMBEDDED_ASSETS) return;
+            const fallbackList = [
+                { id: 'imgHoly1', key: 'img_holy1' },
+                { id: 'imgHoly2', key: 'img_holy2' },
+                { id: 'imgClinique', key: 'clinique' },
+                { id: 'imgSurv', key: 'surveillance' },
+                { id: 'imgHomelab', key: 'homelab' },
+                { id: 'imgSt1', key: 'st1' },
+                { id: 'imgSt2', key: 'st2' },
+                { id: 'imgSt3', key: 'st3' }
+            ];
+            fallbackList.forEach(item => {
+                const el = document.getElementById(item.id);
+                if (el && el.naturalWidth === 0 && window.EMBEDDED_ASSETS[item.key]) {
+                    el.src = window.EMBEDDED_ASSETS[item.key];
+                    el.onerror = null;
+                }
+            });
         }
-        document.addEventListener('DOMContentLoaded', initImages);
+        window.addEventListener('load', initImages);
 
         // ROUTER : AFFICHAGE ISOLÉ DE CHAQUE CATÉGORIE
         function showCategory(categoryId) {
