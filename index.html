@@ -436,7 +436,7 @@
     <!-- NAVBAR FIXE (STRUCTURE, ORDRE ET STYLE DE L'ANCIEN SITE) -->
     <!-- ======================================================== -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#070b16]/95 backdrop-blur-md border-b border-slate-800 shadow-xl transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1700px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
             <div class="flex justify-between items-center h-16 sm:h-20">
                 
                 <!-- Logo -->
@@ -450,37 +450,37 @@
                     </div>
                 </a>
 
-                <!-- Liens Desktop (Ordre exact du screenshot : ACCUEIL, BTS SIO, À PROPOS DE MOI, ENTREPRISE, MES CERTIFICATIONS, MES PROJETS, TCS, VEILLES) -->
-                <div class="hidden xl:flex items-center space-x-1 font-bold text-slate-300 text-xs tracking-wider uppercase">
+                <!-- Liens Desktop aérés et bien espacés -->
+                <div class="hidden xl:flex items-center justify-center gap-2 xl:gap-3 2xl:gap-5 flex-1 mx-4 2xl:mx-8 font-bold text-slate-300 text-xs tracking-wider uppercase">
                     
                     <!-- 1. ACCUEIL -->
-                    <button onclick="showCategory('accueil')" id="nav-accueil" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition nav-btn-active">
+                    <button onclick="showCategory('accueil')" id="nav-accueil" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition nav-btn-active">
                         ACCUEIL
                     </button>
 
                     <!-- 2. BTS SIO -->
-                    <button onclick="showCategory('bts-sio')" id="nav-bts-sio" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
+                    <button onclick="showCategory('bts-sio')" id="nav-bts-sio" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
                         BTS SIO
                     </button>
 
                     <!-- 3. À PROPOS DE MOI -->
-                    <button onclick="showCategory('a-propos')" id="nav-a-propos" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
+                    <button onclick="showCategory('a-propos')" id="nav-a-propos" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
                         À PROPOS DE MOI
                     </button>
 
                     <!-- 4. ENTREPRISE -->
-                    <button onclick="showCategory('entreprise')" id="nav-entreprise" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
+                    <button onclick="showCategory('entreprise')" id="nav-entreprise" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
                         ENTREPRISE
                     </button>
 
                     <!-- 5. MES CERTIFICATIONS -->
-                    <button onclick="showCategory('certifications')" id="nav-certifications" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
+                    <button onclick="showCategory('certifications')" id="nav-certifications" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
                         MES CERTIFICATIONS
                     </button>
 
                     <!-- 6. MES PROJETS avec Dropdown (Uniquement En entreprise et En formation) -->
                     <div class="relative group">
-                        <button onclick="showCategory('projets'); filterProjects('entreprise')" id="nav-projets" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1 hover:text-white hover:bg-slate-800/80 transition">
+                        <button onclick="showCategory('projets'); filterProjects('entreprise')" id="nav-projets" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
                             MES PROJETS <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
                         <div class="nav-dropdown absolute top-full left-0 w-48 pt-2 z-50">
@@ -496,28 +496,34 @@
                     </div>
 
                     <!-- 7. TCS -->
-                    <button onclick="showCategory('tcs')" id="nav-tcs" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
+                    <button onclick="showCategory('tcs')" id="nav-tcs" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
                         TCS
                     </button>
 
                     <!-- 8. VEILLES avec Dropdown -->
                     <div class="relative group">
-                        <button onclick="showCategory('veilles'); showVeilleSub('tech')" id="nav-veilles" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1 hover:text-white hover:bg-slate-800/80 transition">
+                        <button onclick="showCategory('veilles')" id="nav-veilles" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
                             VEILLES <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
                         <div class="nav-dropdown absolute top-full right-0 w-64 pt-2 z-50">
                             <div class="bg-[#0f172a] rounded-2xl shadow-2xl border border-slate-700/80 p-2 space-y-1 normal-case tracking-normal">
-                                <button onclick="showCategory('veilles'); showVeilleSub('tech'); scrollToSection('veille-technologique')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-fuchsia-500/15 text-slate-200 hover:text-fuchsia-300 transition font-medium text-xs">
-                                    <i class="fa-solid fa-microchip text-fuchsia-400 text-xs"></i> Veille technologique (Zero Trust)
+                                <button onclick="showCategory('veilles'); scrollToSection('veille-technologique')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-fuchsia-500/15 text-slate-200 hover:text-fuchsia-300 transition font-medium text-xs">
+                                    <i class="fa-solid fa-microchip text-fuchsia-400 text-xs"></i> Veille Technologique (Zero Trust)
                                 </button>
-                                <button onclick="showCategory('veilles'); showVeilleSub('tech'); scrollToSection('simulateur-zero-trust')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-purple-500/15 text-purple-300 hover:text-purple-200 transition font-semibold text-xs">
+                                <button onclick="showCategory('veilles'); scrollToSection('veille-pourquoi')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-fuchsia-500/15 text-slate-200 hover:text-fuchsia-300 transition font-medium text-xs">
+                                    <i class="fa-solid fa-question text-fuchsia-400 text-xs"></i> Pourquoi le Zero Trust ?
+                                </button>
+                                <button onclick="showCategory('veilles'); scrollToSection('veille-piliers')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-purple-500/15 text-slate-200 hover:text-purple-300 transition font-medium text-xs">
+                                    <i class="fa-solid fa-cubes-stacked text-purple-400 text-xs"></i> Les 4 Piliers & Technologies
+                                </button>
+                                <button onclick="showCategory('veilles'); scrollToSection('veille-climat')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-purple-500/15 text-slate-200 hover:text-purple-300 transition font-medium text-xs">
+                                    <i class="fa-solid fa-earth-europe text-purple-400 text-xs"></i> Climat actuel (Ransomwares & NIS 2)
+                                </button>
+                                <button onclick="showCategory('veilles'); scrollToSection('simulateur-zero-trust')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-purple-500/15 text-purple-300 hover:text-purple-200 transition font-semibold text-xs">
                                     <i class="fa-solid fa-gamepad text-purple-400 text-xs"></i> Simulateur Cyber Zero Trust
                                 </button>
-                                <button onclick="showCategory('veilles'); showVeilleSub('juridique'); scrollToSection('veille-juridique')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-amber-500/15 text-slate-200 hover:text-amber-300 transition font-medium text-xs">
-                                    <i class="fa-solid fa-scale-balanced text-amber-400 text-xs"></i> Veille juridique (RGPD & HDS)
-                                </button>
-                                <button onclick="showCategory('veilles'); showVeilleSub('suivi'); scrollToSection('suivi-de-veille')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-emerald-500/15 text-slate-200 hover:text-emerald-300 transition font-medium text-xs">
-                                    <i class="fa-solid fa-rss text-emerald-400 text-xs"></i> Suivi des flux RSS
+                                <button onclick="showCategory('veilles'); scrollToSection('suivi-de-veille')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-emerald-500/15 text-slate-200 hover:text-emerald-300 transition font-medium text-xs">
+                                    <i class="fa-solid fa-rss text-emerald-400 text-xs"></i> Suivi des flux (Feedly & ANSSI)
                                 </button>
                             </div>
                         </div>
@@ -883,63 +889,54 @@
                     </p>
                 </div>
 
-                <!-- 2 Cartes : Profil & Passerelle Entreprise -->
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Profil Nael Talbi -->
-                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-4 bg-slate-900/70 border border-indigo-500/25 shadow-xl flex flex-col justify-between">
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl font-bold border border-indigo-500/30">
-                                    <i class="fa-solid fa-id-card"></i>
+                <!-- Carte Profil Nael Talbi (Centrée et épurée sans doublon entreprise) -->
+                <div class="max-w-4xl mx-auto w-full">
+                    <div class="card-dark-pro rounded-3xl p-8 sm:p-12 space-y-6 bg-slate-900/70 border border-indigo-500/25 shadow-2xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl font-bold border border-indigo-500/30 shadow-lg shadow-indigo-500/10">
+                                    <i class="fa-solid fa-user-shield"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-white">Nael Talbi</h3>
-                                    <p class="text-xs text-indigo-300 font-semibold">Alternant BTS SIO SISR • Marseille</p>
+                                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Nael Talbi</h3>
+                                    <p class="text-xs sm:text-sm text-indigo-300 font-semibold mt-0.5">Alternant BTS SIO SISR • Marseille</p>
                                 </div>
                             </div>
-                            <p class="text-slate-300 text-sm leading-relaxed">
-                                Actuellement en <strong>2ème année de BTS SIO option SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux), j'ai choisi l'alternance pour développer des compétences solides et concrètes en conditions réelles de production hospitalière.
-                            </p>
-                            <p class="text-slate-300 text-sm leading-relaxed">
-                                Curieux et rigoureux, mon objectif après l'obtention du BTS est d'intégrer une formation d'<strong>Expert en Cybersécurité</strong> afin d'évoluer vers le métier de <strong>Responsable de la Sécurité des Systèmes d'Information (RSSI)</strong>.
-                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-semibold">
+                                    <i class="fa-solid fa-circle-check mr-1"></i> BTS SIO SISR • 2ème Année
+                                </span>
+                            </div>
                         </div>
-                        <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs">
-                            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 font-medium border border-indigo-500/30">Cybersécurité</span>
-                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Windows Server & AD</span>
-                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">VLANs & Routage</span>
-                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Virtualisation</span>
-                        </div>
-                    </div>
 
-                    <!-- Passerelle vers Mon Entreprise -->
-                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-4 bg-slate-900/70 border border-blue-500/25 shadow-xl flex flex-col justify-between">
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl font-bold border border-blue-500/30">
-                                    <i class="fa-solid fa-hospital"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-white">Mon Entreprise d'Accueil</h3>
-                                    <p class="text-xs text-blue-300 font-semibold">Clinique Montfleuri Saint Roch (17 sites)</p>
-                                </div>
-                            </div>
-                            <p class="text-slate-300 text-sm leading-relaxed">
-                                J'effectue mon alternance au sein du service informatique de la <strong>Clinique Montfleuri Saint Roch</strong>, un établissement de santé marseillais interconnecté à un groupe de <strong>17 cliniques</strong>.
+                        <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                            <p>
+                                Actuellement en <strong>2ème année de BTS SIO option SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux), je me spécialise dans la conception d'architectures réseau sécurisées, l'administration système et la gestion de la haute disponibilité.
                             </p>
-                            <p class="text-slate-300 text-sm leading-relaxed">
-                                Ce milieu exigeant me permet d'intervenir quotidiennement sur la haute disponibilité réseau, la conformité des données de santé (HDS), la surveillance technique et le support soignants.
+                            <p>
+                                Mon parcours en alternance m'a permis d'acquérir une rigueur opérationnelle forte face à des exigences concrètes de production : segmentation réseau par VLANs, gestion des droits Active Directory, automatisation de déploiement par scripts et conformité de sécurité.
                             </p>
-                            <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs">
-                                <div class="p-2.5 rounded-xl bg-slate-800 text-blue-300 font-bold border border-slate-700">17 Sites</div>
-                                <div class="p-2.5 rounded-xl bg-slate-800 text-purple-300 font-bold border border-slate-700">~200 Postes</div>
-                                <div class="p-2.5 rounded-xl bg-slate-800 text-emerald-300 font-bold border border-slate-700">Support N1/N2</div>
-                            </div>
+                            <p>
+                                Curieux, méthodique et passionné par les enjeux de défense des systèmes d'information, mon objectif après l'obtention du BTS est de poursuivre vers une formation d'<strong>Expert en Cybersécurité</strong> afin d'évoluer vers les fonctions d'<strong>Ingénieur Sécurité</strong> puis de <strong>Responsable de la Sécurité des Systèmes d'Information (RSSI)</strong>.
+                            </p>
                         </div>
-                        <div class="pt-4 border-t border-slate-800">
-                            <button onclick="showCategory('entreprise')" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer">
-                                <i class="fa-solid fa-building"></i> Voir la présentation complète de mon entreprise <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </button>
+
+                        <div class="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 font-medium border border-indigo-500/30">Cybersécurité</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Windows Server & AD DS</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">VLANs & pfSense</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Virtualisation Proxmox</span>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Scripts .bat</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <button onclick="showCategory('tcs')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-semibold border border-slate-700 transition cursor-pointer">
+                                    <i class="fa-solid fa-list-check mr-1.5 text-emerald-400"></i> Tableau TCS
+                                </button>
+                                <button onclick="showCategory('contact')" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-md transition cursor-pointer">
+                                    <i class="fa-solid fa-envelope mr-1.5"></i> Me contacter
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1972,29 +1969,270 @@ powershell -Command "Add-Computer -DomainName 'clinique.local' -OUPath 'OU=Poste
         <section id="view-veilles" class="page-view hidden theme-veilles text-white min-h-[calc(100vh-5rem)] py-16 sm:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
                 
-                <!-- En-tête de la page -->
-                <div class="text-center max-w-4xl mx-auto space-y-4">
+                <!-- ======================================================== -->
+                <!-- EN-TÊTE : PHILOSOPHIE ZERO TRUST (NEVER TRUST, ALWAYS VERIFY) -->
+                <!-- ======================================================== -->
+                <div id="veille-technologique" class="text-center max-w-4xl mx-auto space-y-4">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-fuchsia-500/15 border border-fuchsia-400/30 text-fuchsia-300 text-xs font-semibold">
-                        <i class="fa-solid fa-lightbulb text-fuchsia-400"></i> Veille Technologique • BTS SIO SISR
+                        <i class="fa-solid fa-shield-halved text-fuchsia-400"></i> Veille Technologique • BTS SIO SISR
                     </div>
                     <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
                         La Sécurité Informatique : Le Modèle <span class="bg-gradient-to-r from-fuchsia-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">"Zero Trust"</span>
                     </h2>
                     <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
-                        Pourquoi on ne peut plus faire confiance à un simple mot de passe, et comment le principe <strong>Zero Trust</strong> (<em>"Ne faire confiance à personne par défaut"</em>) protège les réseaux et les données de santé de notre clinique.
+                        La philosophie fondamentale de la cybersécurité moderne : <strong>"Ne jamais faire confiance par défaut, toujours vérifier chaque accès"</strong> (<em>Never Trust, Always Verify</em>). Pourquoi ce modèle a remplacé la sécurité traditionnelle et comment il répond directement aux menaces actuelles.
                     </p>
                     <div class="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs">
-                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-fuchsia-300 border border-fuchsia-500/20"><i class="fa-solid fa-key mr-1"></i> 1. Double Authentification (2FA)</span>
-                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-purple-300 border border-purple-500/20"><i class="fa-solid fa-user-lock mr-1"></i> 2. Moindre Privilège (Droits stricts)</span>
-                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-pink-300 border border-pink-500/20"><i class="fa-solid fa-network-wired mr-1"></i> 3. Réseau Cloisonné (VLANs)</span>
-                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-emerald-300 border border-emerald-500/20"><i class="fa-solid fa-hospital mr-1"></i> Contexte Clinique de Santé</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-fuchsia-300 border border-fuchsia-500/20"><i class="fa-solid fa-ban mr-1"></i> Fin du modèle "Château-fort"</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-purple-300 border border-purple-500/20"><i class="fa-solid fa-fingerprint mr-1"></i> MFA • Moindre Privilège • VLANs</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-pink-300 border border-pink-500/20"><i class="fa-solid fa-hospital mr-1"></i> Ransomwares Santé & Télétravail</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-emerald-300 border border-emerald-500/20"><i class="fa-solid fa-gavel mr-1"></i> Directive NIS 2 & ANSSI</span>
                     </div>
                 </div>
 
-                <!-- ============================================== -->
-                <!-- MODULE 1 : LAB INTERACTIF SIMPLIFIÉ            -->
-                <!-- ============================================== -->
-                <div class="card-dark-pro rounded-3xl p-6 sm:p-10 bg-slate-900/85 border border-fuchsia-500/30 shadow-2xl space-y-8 relative overflow-hidden backdrop-blur-xl">
+                <!-- ======================================================== -->
+                <!-- BLOC 1 : POURQUOI AVOIR CRÉÉ LE ZERO TRUST ?             -->
+                <!-- ======================================================== -->
+                <div id="veille-pourquoi" class="card-dark-pro rounded-3xl p-6 sm:p-10 bg-slate-900/75 border border-fuchsia-500/30 shadow-2xl space-y-8 backdrop-blur-xl">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xl border border-fuchsia-500/30">
+                            <i class="fa-solid fa-chess-rook"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono font-bold text-fuchsia-400 uppercase tracking-wider">Origine & Problématique Historique</span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white">1. Pourquoi avoir créé le modèle Zero Trust ?</h3>
+                        </div>
+                    </div>
+
+                    <!-- Comparaison 2 colonnes : Château fort vs Faille fatale -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Colonne 1 : L'ancien modèle du château-fort -->
+                        <div class="p-6 rounded-2xl bg-slate-950/80 border border-red-500/30 space-y-4">
+                            <div class="flex items-center gap-2 text-red-400 font-bold text-sm">
+                                <i class="fa-solid fa-dungeon"></i> L'Ancien Modèle du "Château-Fort" (Périmétrique)
+                            </div>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                Pendant des années, la sécurité reposait uniquement sur la <strong>frontière extérieure</strong> de l'entreprise : un gros pare-feu faisait office de muraille, et un mot de passe unique servait de clé d'entrée.
+                            </p>
+                            <div class="p-3.5 rounded-xl bg-red-950/40 border border-red-500/30 text-xs text-red-200 space-y-1">
+                                <strong>⚠️ La faille fatale :</strong>
+                                <p class="text-slate-300">Tout utilisateur ou ordinateur situé à <em>l'intérieur</em> du réseau local (ou connecté par VPN) bénéficiait d'une <strong>confiance aveugle et totale</strong>.</p>
+                            </div>
+                        </div>
+
+                        <!-- Colonne 2 : Les conséquences et mouvements latéraux -->
+                        <div class="p-6 rounded-2xl bg-slate-950/80 border border-amber-500/30 space-y-4">
+                            <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+                                <i class="fa-solid fa-virus-slash"></i> La Catastrophe des "Mouvements Latéraux"
+                            </div>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                Dès qu'un attaquant réussissait à piéger un employé par un faux email (<strong>phishing</strong>) ou une clé USB infectée, il franchissait la muraille et se retrouvait <strong>à l'intérieur du château</strong>.
+                            </p>
+                            <div class="p-3.5 rounded-xl bg-amber-950/40 border border-amber-500/30 text-xs text-amber-200 space-y-1">
+                                <strong>💥 Libre propagation :</strong>
+                                <p class="text-slate-300">Sans cloisonnement interne, le pirate pouvait rebondir de poste en poste, voler les identifiants administrateurs et déployer un ransomware sur l'ensemble des serveurs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- La Rupture Zero Trust -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-r from-fuchsia-950/40 via-purple-950/30 to-slate-950/80 border border-fuchsia-500/40 space-y-3">
+                        <div class="flex items-center gap-2 text-fuchsia-300 font-bold text-sm">
+                            <i class="fa-solid fa-lightbulb"></i> La Rupture Zero Trust : Supprimer la confiance implicite
+                        </div>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                            Créé initialement par <strong>John Kindervag (Forrester Research)</strong> et formalisé par le <strong>NIST (SP 800-207)</strong> et l'<strong>ANSSI</strong>, le modèle Zero Trust inverse le paradigme : <em>il faut partir du principe que le réseau interne est déjà infiltré</em>. Qu'un utilisateur soit assis au bureau ou chez lui, <strong>aucun accès n'est accordé sans vérification stricte, explicite et continue</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- BLOC 2 : LES TECHNOLOGIES CLÉS (LES 4 PILIERS TECHNIQUES) -->
+                <!-- ======================================================== -->
+                <div id="veille-piliers" class="space-y-8">
+                    <div class="text-center max-w-3xl mx-auto space-y-2">
+                        <span class="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider">Arsenal Technique • BTS SIO SISR</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">2. L'Essentiel des Technologies Zero Trust</h3>
+                        <p class="text-xs sm:text-sm text-slate-300">
+                            Le Zero Trust repose sur 4 piliers technologiques complémentaires à connaître pour l'épreuve E6 :
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Pilier 1 : MFA / 2FA -->
+                        <div class="card-dark-pro rounded-3xl p-6 space-y-4 bg-slate-900/70 border border-fuchsia-500/25 shadow-xl hover:border-fuchsia-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xl font-bold border border-fuchsia-500/30">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-mono font-bold text-fuchsia-400 uppercase tracking-wider">PILIER 1 • IDENTITÉ</span>
+                                <h4 class="text-base font-bold text-white mt-1">Double Authentification (MFA / 2FA)</h4>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Un mot de passe seul peut être deviné ou volé. L'authentification multifacteur exige une validation supplémentaire sur smartphone (application TOTP ou push).
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-fuchsia-300">
+                                <strong>💡 Rôle clé :</strong> Bloque 99% des tentatives d'intrusion même si le mot de passe de l'utilisateur a été dérobé.
+                            </div>
+                        </div>
+
+                        <!-- Pilier 2 : Moindre Privilège & ZTNA -->
+                        <div class="card-dark-pro rounded-3xl p-6 space-y-4 bg-slate-900/70 border border-purple-500/25 shadow-xl hover:border-purple-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold border border-purple-500/30">
+                                <i class="fa-solid fa-user-lock"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-mono font-bold text-purple-400 uppercase tracking-wider">PILIER 2 • CONTRÔLE</span>
+                                <h4 class="text-base font-bold text-white mt-1">Moindre Privilège & ZTNA</h4>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Chaque employé ne reçoit que les accès strictement indispensables à sa tâche (RBAC). Le ZTNA remplace le VPN classique en ouvrant l'accès application par application, et non à tout le réseau.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-purple-300">
+                                <strong>💡 Rôle clé :</strong> Si un compte est piraté, les dégâts restent strictement cantonnés à ce seul utilisateur.
+                            </div>
+                        </div>
+
+                        <!-- Pilier 3 : Micro-segmentation & VLANs -->
+                        <div class="card-dark-pro rounded-3xl p-6 space-y-4 bg-slate-900/70 border border-pink-500/25 shadow-xl hover:border-pink-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold border border-pink-500/30">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-mono font-bold text-pink-400 uppercase tracking-wider">PILIER 3 • RÉSEAU</span>
+                                <h4 class="text-base font-bold text-white mt-1">Micro-segmentation (VLANs & Pare-feu)</h4>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Découpage du réseau local en compartiments isolés (VLANs 802.1Q et règles pfSense) : séparation étanche entre postes soignants, serveurs médicaux et Wi-Fi invités.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-pink-300">
+                                <strong>💡 Rôle clé :</strong> Empêche physiquement un virus d'infecter d'autres sous-réseaux et serveurs vitaux.
+                            </div>
+                        </div>
+
+                        <!-- Pilier 4 : Surveillance & Audit continu -->
+                        <div class="card-dark-pro rounded-3xl p-6 space-y-4 bg-slate-900/70 border border-cyan-500/25 shadow-xl hover:border-cyan-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl font-bold border border-cyan-500/30">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-wider">PILIER 4 • DÉTECTION</span>
+                                <h4 class="text-base font-bold text-white mt-1">Audit Continu & Détection (SIEM / EDR)</h4>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Inspection permanente de l'état de santé du poste (antivirus actif, mises à jour) et analyse en temps réel des journaux d'événements pour détecter les anomalies de comportement.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-cyan-300">
+                                <strong>💡 Rôle clé :</strong> Révocation automatique et immédiate de la session en cas d'activité suspecte.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- BLOC 3 : EN QUOI EST-ELLE LIÉE AU CLIMAT ACTUEL ?        -->
+                <!-- ======================================================== -->
+                <div id="veille-climat" class="card-dark-pro rounded-3xl p-6 sm:p-10 bg-slate-900/75 border border-purple-500/30 shadow-2xl space-y-8 backdrop-blur-xl">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl border border-purple-500/30">
+                            <i class="fa-solid fa-earth-europe"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider">Contexte d'Actualité & Entreprise</span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white">3. En quoi le Zero Trust est-il directement lié au climat actuel ?</h3>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Climat 1 : Télétravail & Nomadisme -->
+                        <div class="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg border border-blue-500/30">
+                                <i class="fa-solid fa-house-laptop"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-base">Fin du Périmètre Physique</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Avec l'explosion du télétravail, du nomadisme et des solutions Cloud (Microsoft 365), les soignants et employés accèdent aux ressources depuis chez eux. <strong>Le bureau physique n'existe plus comme barrière de sécurité</strong>. Le Zero Trust permet de sécuriser chaque accès où que se trouve l'utilisateur.
+                            </p>
+                        </div>
+
+                        <!-- Climat 2 : Vagues de Ransomwares ciblant la Santé -->
+                        <div class="p-6 rounded-2xl bg-slate-950/80 border border-red-500/30 space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center text-lg border border-red-500/30">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-base">Ransomwares Ciblant la Santé</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Ces dernières années en France, des dizaines d'établissements de santé (hôpitaux de Dax, Versailles, Corbeil-Essonnes, Armentières) ont été paralysés par des rançongiciels, menaçant la vie des patients. En milieu médical comme à la Clinique Montfleuri, le Zero Trust empêche la propagation d'un virus d'un PC vers les serveurs de soins.
+                            </p>
+                        </div>
+
+                        <!-- Climat 3 : Pression Réglementaire NIS 2 & ANSSI -->
+                        <div class="p-6 rounded-2xl bg-slate-950/80 border border-emerald-500/30 space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg border border-emerald-500/30">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-base">Directive NIS 2 & Normes ANSSI</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Entrée en vigueur en 2024-2025, la directive européenne <strong>NIS 2</strong> ainsi que les exigences de l'<strong>ANSSI</strong> et de la certification <strong>HDS</strong> (Hébergement de Données de Santé) obligent légalement les établissements de santé à adopter le MFA, le moindre privilège et le cloisonnement réseau étanche sous peine de sanctions lourdes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- TABLEAU COMPARATIF SIMPLE                                -->
+                <!-- ======================================================== -->
+                <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/70 border border-slate-800 shadow-xl space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-table-list text-fuchsia-400"></i> Synthèse Comparative : Sécurité Traditionnelle vs Zero Trust
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-0.5">
+                                Ce qu'il faut retenir pour expliquer l'intérêt du Zero Trust à l'oral du BTS SIO SISR.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
+                            <thead class="bg-slate-950 font-mono text-[11px] text-slate-400 border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3.5">Critère de Sécurité</th>
+                                    <th class="p-3.5 text-red-300 bg-red-950/20 border-x border-slate-800">Sécurité Classique (Périmétrique)</th>
+                                    <th class="p-3.5 text-emerald-300 bg-emerald-950/20">Sécurité Moderne (Zero Trust)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Connexion utilisateur</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Simple mot de passe statique</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Mot de passe + Validation MFA sur smartphone</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Confiance réseau</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Totale dès qu'on est sur le réseau interne ou en VPN</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Zéro confiance implicite, vérification à chaque requête</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Droits d'accès</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Larges permissions accordées par défaut</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Moindre privilège strict (RBAC & ZTNA granulaire)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">En cas d'infection d'un PC</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le virus se propage à tout le réseau (mouvements latéraux)</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le PC est confiné dans son VLAN, serveurs protégés</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- BLOC 4 : SIMULATEUR INTERACTIF EN DIRECT                 -->
+                <!-- ======================================================== -->
+                <div id="simulateur-zero-trust" class="card-dark-pro rounded-3xl p-6 sm:p-10 bg-slate-900/85 border border-fuchsia-500/30 shadow-2xl space-y-8 relative overflow-hidden backdrop-blur-xl">
                     <div class="terminal-scanline"></div>
 
                     <!-- En-tête du Lab -->
@@ -2010,7 +2248,7 @@ powershell -Command "Add-Computer -DomainName 'clinique.local' -OUPath 'OU=Poste
                                 </h3>
                             </div>
                             <p class="text-xs text-slate-400 mt-1">
-                                Choisissez la méthode de sécurité, déclenchez une attaque et observez la différence en direct.
+                                Choisissez la méthode de sécurité, déclenchez une attaque et observez la différence en direct pour l'oral.
                             </p>
                         </div>
 
@@ -2181,124 +2419,14 @@ powershell -Command "Add-Computer -DomainName 'clinique.local' -OUPath 'OU=Poste
                 </div>
 
                 <!-- ======================================================== -->
-                <!-- MODULE 2 : LE ZERO TRUST EN 3 RÈGLES SIMPLES (ORAL BTS)  -->
+                <!-- BLOC 5 : MA DÉMARCHE DE VEILLE EN BTS SIO                -->
                 <!-- ======================================================== -->
-                <div class="space-y-8">
-                    <div class="text-center max-w-2xl mx-auto space-y-2">
-                        <span class="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider">À retenir pour l'épreuve de BTS SIO</span>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Le Zero Trust expliqué en 3 règles simples</h3>
-                        <p class="text-xs sm:text-sm text-slate-300">
-                            La philosophie du Zero Trust se résume par une formule : <strong>"Ne jamais faire confiance les yeux fermés, toujours revérifier"</strong>.
-                        </p>
-                    </div>
-
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <!-- Règle 1 -->
-                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-fuchsia-500/25 shadow-xl hover:border-fuchsia-400/50 transition">
-                            <div class="w-12 h-12 rounded-2xl bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xl font-bold border border-fuchsia-500/30">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                            </div>
-                            <span class="text-[11px] font-mono font-bold text-fuchsia-400 uppercase tracking-wider">RÈGLE N°1</span>
-                            <h4 class="text-lg font-bold text-white">La Double Authentification (2FA)</h4>
-                            <p class="text-slate-300 text-xs leading-relaxed">
-                                Un mot de passe seul peut être volé par un faux mail (phishing) ou deviné. Avec le 2FA, l'utilisateur doit aussi valider un code sur son smartphone.
-                            </p>
-                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-fuchsia-300">
-                                <strong>💡 Résultat :</strong> Même si un pirate a le mot de passe, il ne peut pas entrer sans le téléphone de l'employé !
-                            </div>
-                        </div>
-
-                        <!-- Règle 2 -->
-                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-purple-500/25 shadow-xl hover:border-purple-400/50 transition">
-                            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold border border-purple-500/30">
-                                <i class="fa-solid fa-user-shield"></i>
-                            </div>
-                            <span class="text-[11px] font-mono font-bold text-purple-400 uppercase tracking-wider">RÈGLE N°2</span>
-                            <h4 class="text-lg font-bold text-white">Le Moindre Privilège</h4>
-                            <p class="text-slate-300 text-xs leading-relaxed">
-                                On ne donne à chaque employé que le strict minimum de droits nécessaires à son travail. Une infirmière a accès aux dossiers médicaux, mais pas aux serveurs comptables ni aux droits administrateur.
-                            </p>
-                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-purple-300">
-                                <strong>💡 Résultat :</strong> Si un compte est piraté, le pirate ne peut pas faire de gros dégâts sur le reste du réseau.
-                            </div>
-                        </div>
-
-                        <!-- Règle 3 -->
-                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-pink-500/25 shadow-xl hover:border-pink-400/50 transition">
-                            <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold border border-pink-500/30">
-                                <i class="fa-solid fa-network-wired"></i>
-                            </div>
-                            <span class="text-[11px] font-mono font-bold text-pink-400 uppercase tracking-wider">RÈGLE N°3</span>
-                            <h4 class="text-lg font-bold text-white">Le Cloisonnement (VLAN & Pare-feu)</h4>
-                            <p class="text-slate-300 text-xs leading-relaxed">
-                                On sépare les ordinateurs des soignants et les serveurs importants en différents sous-réseaux (VLANs). Un ordinateur ne peut pas discuter directement avec tous les serveurs sans autorisation du pare-feu.
-                            </p>
-                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-pink-300">
-                                <strong>💡 Résultat :</strong> Si un virus infecte un PC de bureau, il reste bloqué dans son coin et n'atteint jamais les serveurs !
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ======================================================== -->
-                <!-- MODULE 3 : TABLEAU COMPARATIF SIMPLE                    -->
-                <!-- ======================================================== -->
-                <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/70 border border-slate-800 shadow-xl space-y-6">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                                <i class="fa-solid fa-table-list text-fuchsia-400"></i> Comparatif : Ancienne Méthode vs Zero Trust
-                            </h3>
-                            <p class="text-xs text-slate-400 mt-0.5">
-                                Résumé simple des différences pour bien comprendre l'enjeu.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
-                            <thead class="bg-slate-950 font-mono text-[11px] text-slate-400 border-b border-slate-800">
-                                <tr>
-                                    <th class="p-3.5">Situation</th>
-                                    <th class="p-3.5 text-red-300 bg-red-950/20 border-x border-slate-800">Sécurité Classique (Ancienne)</th>
-                                    <th class="p-3.5 text-emerald-300 bg-emerald-950/20">Sécurité Zero Trust (Moderne)</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-800">
-                                <tr class="hover:bg-slate-800/40 transition">
-                                    <td class="p-3.5 font-bold text-white">Connexion de l'utilisateur</td>
-                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Un simple mot de passe</td>
-                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Mot de passe + Validation sur smartphone (2FA)</td>
-                                </tr>
-                                <tr class="hover:bg-slate-800/40 transition">
-                                    <td class="p-3.5 font-bold text-white">Accès aux dossiers</td>
-                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Accès à presque tout le réseau</td>
-                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Accès limité au strict nécessaire (Moindre privilège)</td>
-                                </tr>
-                                <tr class="hover:bg-slate-800/40 transition">
-                                    <td class="p-3.5 font-bold text-white">Si un PC attrape un virus</td>
-                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le virus saute sur les serveurs et bloque tout</td>
-                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le PC est isolé par le réseau (VLAN), le reste est sauvé</td>
-                                </tr>
-                                <tr class="hover:bg-slate-800/40 transition">
-                                    <td class="p-3.5 font-bold text-white">Si le mot de passe est volé</td>
-                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le pirate entre librement dans le réseau</td>
-                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le pirate est bloqué car il n'a pas le téléphone (2FA)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- ======================================================== -->
-                <!-- MODULE 4 : MA MÉTHODE DE VEILLE EN BTS SIO               -->
-                <!-- ======================================================== -->
-                <div class="space-y-8">
+                <div id="suivi-de-veille" class="space-y-8">
                     <div class="text-center max-w-2xl mx-auto space-y-2">
                         <span class="text-xs font-mono font-bold text-fuchsia-400 uppercase tracking-wider">Épreuve E6 • BTS SIO</span>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Comment je réalise ma veille technologique</h3>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">4. Comment je réalise ma veille technologique</h3>
                         <p class="text-xs sm:text-sm text-slate-300">
-                            Une démarche simple en 4 étapes que j'applique tout au long de mon BTS.
+                            Une démarche structurée en 4 étapes appliquée tout au long de mon parcours BTS.
                         </p>
                     </div>
 
@@ -2308,28 +2436,28 @@ powershell -Command "Add-Computer -DomainName 'clinique.local' -OUPath 'OU=Poste
                             <span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 text-[10px] font-mono font-bold">ÉTAPE 1</span>
                             <h4 class="font-bold text-white text-sm">S'informer (Flux RSS)</h4>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                J'utilise l'application <strong>Feedly</strong> pour recevoir automatiquement les nouveaux articles et alertes de cybersécurité chaque semaine.
+                                J'utilise l'application <strong>Feedly</strong> pour recevoir automatiquement les alertes et actualités de cybersécurité chaque semaine.
                             </p>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
                             <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-[10px] font-mono font-bold">ÉTAPE 2</span>
-                            <h4 class="font-bold text-white text-sm">Lire les sources officielles</h4>
+                            <h4 class="font-bold text-white text-sm">Sources officielles</h4>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                Je consulte les alertes de <strong>Cybermalveillance.gouv.fr</strong> et de l'<strong>ANSSI</strong> pour repérer les faux mails ou failles actuelles.
+                                Je consulte les bulletins d'alerte du <strong>CERT-FR</strong>, de l'<strong>ANSSI</strong> et de <strong>Cybermalveillance.gouv.fr</strong> pour surveiller les vulnérabilités critiques.
                             </p>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
                             <span class="px-2 py-0.5 rounded bg-pink-500/20 text-pink-300 text-[10px] font-mono font-bold">ÉTAPE 3</span>
                             <h4 class="font-bold text-white text-sm">Tester en pratique</h4>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                Sur mon HomeLab personnel (pfSense / Proxmox), je teste la création de VLANs pour séparer les réseaux et vérifier le blocage des flux.
+                                Sur mon HomeLab personnel (pfSense / Proxmox VE), je configure des VLANs pour tester le cloisonnement et les règles de blocage des flux.
                             </p>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
                             <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold">ÉTAPE 4</span>
                             <h4 class="font-bold text-white text-sm">Appliquer en clinique</h4>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                En alternance à la Clinique Montfleuri, je sensibilise les utilisateurs au phishing et participe au déploiement de la double authentification.
+                                À la Clinique Montfleuri, je participe au déploiement de l'authentification forte (MFA), à la sensibilisation au phishing et à l'isolation des réseaux médicaux.
                             </p>
                         </div>
                     </div>
@@ -2346,12 +2474,12 @@ powershell -Command "Add-Computer -DomainName 'clinique.local' -OUPath 'OU=Poste
                             <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
                                 <i class="fa-solid fa-shield-virus text-blue-400 text-xl"></i>
                                 <div class="font-bold text-white text-xs">Cybermalveillance.gouv.fr</div>
-                                <div class="text-[11px] text-slate-400">Conseils & alertes grand public / PME</div>
+                                <div class="text-[11px] text-slate-400">Alertes phishing & sensibilisation</div>
                             </div>
                             <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
                                 <i class="fa-solid fa-building-shield text-emerald-400 text-xl"></i>
-                                <div class="font-bold text-white text-xs">ANSSI</div>
-                                <div class="text-[11px] text-slate-400">Guides de bonnes pratiques français</div>
+                                <div class="font-bold text-white text-xs">ANSSI & CERT-FR</div>
+                                <div class="text-[11px] text-slate-400">Guides techniques & bulletins critiques</div>
                             </div>
                             <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
                                 <i class="fa-solid fa-rss text-orange-400 text-xl"></i>
@@ -2360,33 +2488,10 @@ powershell -Command "Add-Computer -DomainName 'clinique.local' -OUPath 'OU=Poste
                             </div>
                             <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
                                 <i class="fa-solid fa-newspaper text-purple-400 text-xl"></i>
-                                <div class="font-bold text-white text-xs">Sites spécialisés IT</div>
-                                <div class="text-[11px] text-slate-400">ZDNet, Clubic Pro, Le Monde Informatique</div>
+                                <div class="font-bold text-white text-xs">Médias Spécialisés</div>
+                                <div class="text-[11px] text-slate-400">ZDNet, BleepingComputer, Le Monde Info</div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- ======================================================== -->
-                <!-- MODULE 5 : SUJET COMPLÉMENTAIRE (L'IA AU SUPPORT N1)     -->
-                <!-- ======================================================== -->
-                <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/60 border border-purple-500/20 shadow-xl space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg border border-purple-500/30">
-                            <i class="fa-solid fa-robot"></i>
-                        </div>
-                        <div>
-                            <span class="text-[10px] font-mono font-bold text-purple-400 uppercase tracking-wider">Deuxième Sujet de Veille • Support & IA</span>
-                            <h4 class="text-lg font-bold text-white">L'IA pour aider le support informatique (Ticketing N1)</h4>
-                        </div>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                        En plus de la cybersécurité, j'ai suivi l'évolution de l'intelligence artificielle dans les outils de tickets (comme GLPI ou Jira). L'IA permet de comprendre automatiquement les demandes des soignants, d'identifier les pannes urgentes (par exemple un bloc opératoire bloqué), et d'aider à résoudre les problèmes simples comme la réinitialisation de mots de passe oubliés.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs pt-1">
-                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Support informatique</span>
-                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Gestion des tickets (GLPI)</span>
-                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Gain de temps</span>
                     </div>
                 </div>
 
@@ -2613,6 +2718,11 @@ powershell -Command "Add-Computer -DomainName 'clinique.local' -OUPath 'OU=Poste
                     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 100);
+        }
+
+        // Helper de compatibilité pour la navigation des veilles
+        function showVeilleSub(sub) {
+            // Aucune action bloquante, la vue veille unique et épurée intègre tous les blocs
         }
 
         // FILTRE DES PROJETS (ENTREPRISE / FORMATION)
