@@ -117,23 +117,29 @@
                         #120e24;
         }
 
-        .theme-certifications {
-            background: radial-gradient(circle at 40% 0%, rgba(245, 158, 11, 0.13) 0%, transparent 60%),
-                        radial-gradient(circle at 80% 60%, rgba(59, 130, 246, 0.09) 0%, transparent 50%),
-                        #0b1120;
-        }
-
         .theme-contact {
             background: radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.12) 0%, transparent 60%),
                         radial-gradient(circle at 80% 70%, rgba(124, 58, 237, 0.10) 0%, transparent 50%),
                         #070b16;
         }
 
-        /* Style bouton actif dans la navbar */
+        .theme-entreprise {
+            background: radial-gradient(circle at 30% 10%, rgba(37, 99, 235, 0.14) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 60%, rgba(79, 70, 229, 0.10) 0%, transparent 60%),
+                        #0a1329;
+        }
+
+        .theme-certifications {
+            background: radial-gradient(circle at 40% 0%, rgba(245, 158, 11, 0.13) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 60%, rgba(59, 130, 246, 0.09) 0%, transparent 50%),
+                        #0b1120;
+        }
+
+        /* Style bouton actif dans la navbar (identique à l'ancien avec dégradé et lueur) */
         .nav-btn-active {
             background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
             color: #ffffff !important;
-            box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+            box-shadow: 0 4px 18px rgba(124, 58, 237, 0.45);
         }
 
         /* Dropdown styles */
@@ -147,9 +153,6 @@
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
-        }
-        .group:hover .nav-chevron {
-            transform: rotate(180deg);
         }
 
         ::-webkit-scrollbar { width: 8px; }
@@ -175,12 +178,261 @@
             animation: scanline 6s linear infinite;
             pointer-events: none;
         }
+
+        /* ======================================================== */
+        /* THÈME CLAIR (INSPIRÉ DU SCREENSHOT 1 DE HOCINE)          */
+        /* ======================================================== */
+        body.light-mode {
+            background-color: #f6f4ee !important;
+            color: #1e293b !important;
+        }
+
+        body.light-mode nav {
+            background-color: rgba(246, 244, 238, 0.94) !important;
+            border-bottom-color: #e4decb !important;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        body.light-mode nav .nav-btn {
+            color: #475569 !important;
+        }
+        body.light-mode nav .nav-btn:hover {
+            color: #0f172a !important;
+            background-color: rgba(228, 222, 203, 0.6) !important;
+        }
+        body.light-mode nav .nav-btn-active {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
+            color: #ffffff !important;
+        }
+
+        body.light-mode .nav-dropdown {
+            background-color: #ffffff !important;
+            border-color: #e4decb !important;
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.1) !important;
+        }
+        body.light-mode .nav-dropdown a,
+        body.light-mode .nav-dropdown button {
+            color: #334155 !important;
+        }
+        body.light-mode .nav-dropdown a:hover,
+        body.light-mode .nav-dropdown button:hover {
+            background-color: #f1f5f9 !important;
+            color: #2563eb !important;
+        }
+
+        body.light-mode .card-dark-pro,
+        body.light-mode .bg-slate-900\/70,
+        body.light-mode .bg-slate-900\/75,
+        body.light-mode .bg-slate-900\/80,
+        body.light-mode .bg-slate-900\/85,
+        body.light-mode .bg-slate-900\/90,
+        body.light-mode .bg-slate-900\/60,
+        body.light-mode .bg-slate-950\/70,
+        body.light-mode .bg-slate-950\/80,
+        body.light-mode .bg-slate-950\/90 {
+            background-color: rgba(255, 255, 255, 0.88) !important;
+            border-color: #e4decb !important;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.03) !important;
+        }
+
+        body.light-mode .text-white {
+            color: #0f172a !important;
+        }
+
+        body.light-mode .text-slate-300,
+        body.light-mode .text-slate-400 {
+            color: #475569 !important;
+        }
+
+        body.light-mode .text-slate-500 {
+            color: #64748b !important;
+        }
+
+        body.light-mode .border-slate-800,
+        body.light-mode .border-slate-700 {
+            border-color: #e4decb !important;
+        }
+
+        body.light-mode .bg-slate-800,
+        body.light-mode .bg-slate-850,
+        body.light-mode .bg-slate-900 {
+            background-color: #f8fafc !important;
+        }
+
+        body.light-mode .bg-slate-800\/80,
+        body.light-mode .bg-slate-800\/90 {
+            background-color: #f1f5f9 !important;
+        }
+
+        /* Thèmes clairs subtils par catégorie */
+        body.light-mode .theme-accueil {
+            background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 90% 40%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-apropos {
+            background: radial-gradient(circle at 20% 10%, rgba(99, 102, 241, 0.08) 0%, transparent 55%),
+                        radial-gradient(circle at 80% 60%, rgba(168, 85, 247, 0.06) 0%, transparent 60%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-entreprise {
+            background: radial-gradient(circle at 30% 10%, rgba(59, 130, 246, 0.08) 0%, transparent 55%),
+                        radial-gradient(circle at 80% 60%, rgba(168, 85, 247, 0.06) 0%, transparent 60%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-btssio {
+            background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 20% 70%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-tcs {
+            background: radial-gradient(circle at 30% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 50%, rgba(20, 184, 166, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-projets {
+            background: radial-gradient(circle at 70% 0%, rgba(168, 85, 247, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-procedures {
+            background: radial-gradient(circle at 40% 0%, rgba(6, 182, 212, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 85% 70%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-veilles {
+            background: radial-gradient(circle at 50% 0%, rgba(217, 70, 239, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 10% 60%, rgba(244, 63, 94, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-contact {
+            background: radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 70%, rgba(124, 58, 237, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-entreprise {
+            background: radial-gradient(circle at 30% 10%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 60%, rgba(79, 70, 229, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+        body.light-mode .theme-certifications {
+            background: radial-gradient(circle at 40% 0%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 60%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+                        #f6f4ee !important;
+        }
+
+        body.light-mode footer {
+            background-color: #ede8dc !important;
+            border-top-color: #e4decb !important;
+            color: #64748b !important;
+        }
+
+        body.light-mode #mobileMenu {
+            background-color: #f6f4ee !important;
+            border-top-color: #e4decb !important;
+        }
+        body.light-mode #mobileMenu button {
+            color: #334155 !important;
+        }
+        body.light-mode #mobileMenu button:hover {
+            background-color: #e4decb !important;
+            color: #0f172a !important;
+        }
+
+        /* Bouton toggle thème en mode clair (Exactement comme screen 1) */
+        body.light-mode #themeToggleBtn {
+            background-color: #eae5da !important;
+            border-color: #dad2c3 !important;
+            color: #1e293b !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+        }
+
+        /* Tableaux en mode clair */
+        body.light-mode table thead {
+            background-color: #f1ede4 !important;
+            color: #334155 !important;
+        }
+        body.light-mode table tbody tr:hover {
+            background-color: rgba(228, 222, 203, 0.25) !important;
+        }
+
+        /* Modale Procédure en mode clair */
+        body.light-mode #procedureModal > div {
+            background-color: #ffffff !important;
+            border-color: #e4decb !important;
+            color: #1e293b !important;
+        }
+        body.light-mode #procedureModal #procModalBody {
+            color: #334155 !important;
+        }
+        body.light-mode #procedureModal .bg-slate-950 {
+            background-color: #f8fafc !important;
+            border-color: #e2ddd3 !important;
+        }
+
+        /* Formulaire de contact en mode clair */
+        body.light-mode input,
+        body.light-mode textarea {
+            background-color: #ffffff !important;
+            border-color: #cbd5e1 !important;
+            color: #0f172a !important;
+        }
+        body.light-mode input:focus,
+        body.light-mode textarea:focus {
+            border-color: #3b82f6 !important;
+        }
+
+        /* Conserver le terminal sombre du simulateur cyber pour garder le look console pro */
+        body.light-mode #simTerminal {
+            background-color: #070b16 !important;
+            color: #cbd5e1 !important;
+        }
+
+        /* Boutons de bascule de thème clair / sombre (Style Screenshot 1) */
+        body.light-mode #themeToggleBtn,
+        body.light-mode #themeToggleMobileBtn {
+            background-color: #ede9dc !important;
+            border-color: #dcd4c0 !important;
+            color: #1e293b !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+        }
+        body.light-mode #themeToggleBtn:hover,
+        body.light-mode #themeToggleMobileBtn:hover {
+            background-color: #e5dfcf !important;
+        }
+
+        /* Menu déroulant MES PROJETS en mode clair (Identique Screenshot 1) */
+        body.light-mode .nav-dropdown {
+            background-color: #f7f5ef !important;
+            border-color: #e4decb !important;
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.08) !important;
+        }
+        body.light-mode .nav-dropdown button,
+        body.light-mode .nav-dropdown a {
+            color: #1e293b !important;
+        }
+        body.light-mode .nav-dropdown button:hover,
+        body.light-mode .nav-dropdown a:hover {
+            background-color: #ede7da !important;
+            color: #2563eb !important;
+        }
+
+        /* Boutons filtres des projets en mode clair */
+        body.light-mode .proj-filter-btn {
+            background-color: #ffffff !important;
+            border-color: #e4decb !important;
+            color: #475569 !important;
+        }
+        body.light-mode .proj-filter-btn:hover {
+            background-color: #f1f5f9 !important;
+            color: #0f172a !important;
+        }
     </style>
 </head>
 <body class="selection:bg-blue-600 selection:text-white antialiased">
 
     <!-- ======================================================== -->
-    <!-- NAVBAR FIXE (MENUS & SOUS-MENUS IDENTIQUES AU MODÈLE)    -->
+    <!-- NAVBAR FIXE (STRUCTURE, ORDRE ET STYLE DE L'ANCIEN SITE) -->
     <!-- ======================================================== -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#070b16]/95 backdrop-blur-md border-b border-slate-800 shadow-xl transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,8 +449,8 @@
                     </div>
                 </a>
 
-                <!-- Liens Desktop (Exactement les mêmes menus et dropdowns que sur les captures) -->
-                <div class="hidden xl:flex items-center space-x-1 font-semibold text-slate-300 text-xs tracking-wider uppercase">
+                <!-- Liens Desktop (Ordre exact du screenshot : ACCUEIL, BTS SIO, À PROPOS DE MOI, ENTREPRISE, MES CERTIFICATIONS, MES PROJETS, TCS, VEILLES) -->
+                <div class="hidden xl:flex items-center space-x-1 font-bold text-slate-300 text-xs tracking-wider uppercase">
                     
                     <!-- 1. ACCUEIL -->
                     <button onclick="showCategory('accueil')" id="nav-accueil" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition nav-btn-active">
@@ -225,25 +477,26 @@
                         MES CERTIFICATIONS
                     </button>
 
-                    <!-- 6. MES PROJETS (avec Dropdown : Toutes mes Procédures, Projets E5, Projets E6) -->
+                    <!-- 6. MES PROJETS avec Dropdown -->
                     <div class="relative group">
-                        <button onclick="showCategory('projets'); filterProjects('all')" id="nav-projets" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
-                            MES PROJETS <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 transition-transform duration-200 nav-chevron"></i>
+                        <button onclick="showCategory('projets'); filterProjects('all')" id="nav-projets" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1 hover:text-white hover:bg-slate-800/80 transition">
+                            MES PROJETS <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
-                        <div class="nav-dropdown absolute top-full left-0 w-60 pt-2 z-50">
-                            <div class="bg-[#0f172a] rounded-2xl shadow-2xl border border-slate-700/80 p-2.5 space-y-1 normal-case tracking-normal">
-                                <a href="#procedures" onclick="showCategory('procedures')" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-cyan-500/15 text-slate-200 hover:text-cyan-300 transition font-medium text-sm">
-                                    <i class="fa-solid fa-file-lines text-cyan-400 w-4 text-center"></i>
-                                    <span>Toutes mes Procédures</span>
-                                </a>
-                                <a href="#projets" onclick="showCategory('projets'); filterProjects('e5'); scrollToSection('section-projets-e5')" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-blue-500/15 text-slate-200 hover:text-blue-300 transition font-medium text-sm">
-                                    <i class="fa-solid fa-server text-blue-400 w-4 text-center"></i>
-                                    <span>Projets E5</span>
-                                </a>
-                                <a href="#projets" onclick="showCategory('projets'); filterProjects('e6'); scrollToSection('section-projets-e6')" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-purple-500/15 text-slate-200 hover:text-purple-300 transition font-medium text-sm">
-                                    <i class="fa-solid fa-shield-halved text-purple-400 w-4 text-center"></i>
-                                    <span>Projets E6</span>
-                                </a>
+                        <div class="nav-dropdown absolute top-full left-0 w-56 pt-2 z-50">
+                            <div class="bg-[#0f172a] rounded-2xl shadow-2xl border border-slate-700/80 p-2 space-y-1 normal-case tracking-normal">
+                                <button onclick="showCategory('projets'); filterProjects('all')" class="w-full text-left flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 hover:text-white font-medium text-xs transition">
+                                    <i class="fa-solid fa-layer-group text-blue-400 text-xs"></i> Tous les projets
+                                </button>
+                                <button onclick="showCategory('projets'); filterProjects('entreprise')" class="w-full text-left flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-blue-500/15 text-blue-400 hover:text-blue-300 font-semibold text-xs transition">
+                                    <i class="fa-solid fa-building text-xs"></i> En entreprise
+                                </button>
+                                <button onclick="showCategory('projets'); filterProjects('formation')" class="w-full text-left flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-purple-500/15 text-slate-200 hover:text-purple-300 font-medium text-xs transition">
+                                    <i class="fa-solid fa-graduation-cap text-xs"></i> En formation
+                                </button>
+                                <div class="border-t border-slate-800 my-1"></div>
+                                <button onclick="showCategory('procedures')" class="w-full text-left flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-cyan-500/15 text-cyan-300 hover:text-cyan-200 font-medium text-xs transition">
+                                    <i class="fa-solid fa-file-lines text-xs"></i> Toutes mes Procédures
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -253,86 +506,103 @@
                         TCS
                     </button>
 
-                    <!-- 8. VEILLES (avec Dropdown : Veille technologique, Veille juridique, Suivi de veille) -->
+                    <!-- 8. VEILLES avec Dropdown -->
                     <div class="relative group">
-                        <button onclick="showCategory('veilles'); showVeilleSub('tech')" id="nav-veilles" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
-                            VEILLES <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 transition-transform duration-200 nav-chevron"></i>
+                        <button onclick="showCategory('veilles'); showVeilleSub('tech')" id="nav-veilles" class="nav-btn px-3.5 py-2 rounded-xl flex items-center gap-1 hover:text-white hover:bg-slate-800/80 transition">
+                            VEILLES <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
-                        <div class="nav-dropdown absolute top-full right-0 w-60 pt-2 z-50">
-                            <div class="bg-[#0f172a] rounded-2xl shadow-2xl border border-slate-700/80 p-2.5 space-y-1 normal-case tracking-normal">
-                                <a href="#veilles" onclick="showCategory('veilles'); showVeilleSub('tech'); scrollToSection('veille-technologique')" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-fuchsia-500/15 text-slate-200 hover:text-fuchsia-300 transition font-medium text-sm">
-                                    <i class="fa-solid fa-microchip text-fuchsia-400 w-4 text-center"></i>
-                                    <span>Veille technologique</span>
-                                </a>
-                                <a href="#veilles" onclick="showCategory('veilles'); showVeilleSub('juridique'); scrollToSection('veille-juridique')" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-amber-500/15 text-slate-200 hover:text-amber-300 transition font-medium text-sm">
-                                    <i class="fa-solid fa-scale-balanced text-amber-400 w-4 text-center"></i>
-                                    <span>Veille juridique</span>
-                                </a>
-                                <a href="#veilles" onclick="showCategory('veilles'); showVeilleSub('suivi'); scrollToSection('suivi-de-veille')" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-emerald-500/15 text-slate-200 hover:text-emerald-300 transition font-medium text-sm">
-                                    <i class="fa-solid fa-rss text-emerald-400 w-4 text-center"></i>
-                                    <span>Suivi de veille</span>
-                                </a>
+                        <div class="nav-dropdown absolute top-full right-0 w-64 pt-2 z-50">
+                            <div class="bg-[#0f172a] rounded-2xl shadow-2xl border border-slate-700/80 p-2 space-y-1 normal-case tracking-normal">
+                                <button onclick="showCategory('veilles'); showVeilleSub('tech'); scrollToSection('veille-technologique')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-fuchsia-500/15 text-slate-200 hover:text-fuchsia-300 transition font-medium text-xs">
+                                    <i class="fa-solid fa-microchip text-fuchsia-400 text-xs"></i> Veille technologique (Zero Trust)
+                                </button>
+                                <button onclick="showCategory('veilles'); showVeilleSub('tech'); scrollToSection('simulateur-zero-trust')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-purple-500/15 text-purple-300 hover:text-purple-200 transition font-semibold text-xs">
+                                    <i class="fa-solid fa-gamepad text-purple-400 text-xs"></i> Simulateur Cyber Zero Trust
+                                </button>
+                                <button onclick="showCategory('veilles'); showVeilleSub('juridique'); scrollToSection('veille-juridique')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-amber-500/15 text-slate-200 hover:text-amber-300 transition font-medium text-xs">
+                                    <i class="fa-solid fa-scale-balanced text-amber-400 text-xs"></i> Veille juridique (RGPD & HDS)
+                                </button>
+                                <button onclick="showCategory('veilles'); showVeilleSub('suivi'); scrollToSection('suivi-de-veille')" class="w-full text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-emerald-500/15 text-slate-200 hover:text-emerald-300 transition font-medium text-xs">
+                                    <i class="fa-solid fa-rss text-emerald-400 text-xs"></i> Suivi des flux RSS
+                                </button>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Contact -->
-                <div class="hidden sm:flex items-center gap-2">
-                    <button onclick="showCategory('contact')" id="nav-contact" class="btn-gradient text-white text-xs font-semibold uppercase tracking-wider px-4 py-2.5 rounded-xl shadow-md flex items-center gap-2">
-                        <i class="fa-solid fa-envelope"></i> Contact
+                <!-- Actions Droite : Bascule de thème & Contact -->
+                <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+                    <!-- Bouton Bascule Thème Clair / Thème Sombre -->
+                    <button id="themeToggleBtn" onclick="toggleTheme()" title="Basculer entre thème clair et sombre" aria-label="Changer de thème" class="w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-300 bg-slate-800/80 text-amber-300 border border-slate-700/80 hover:bg-slate-700 shadow-sm cursor-pointer">
+                        <i id="themeToggleIcon" class="fa-solid fa-sun text-base"></i>
                     </button>
-                </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="xl:hidden flex items-center">
-                    <button id="mobileMenuBtn" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
-                        <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
-                    </button>
+                    <!-- Contact Desktop -->
+                    <div class="hidden sm:flex items-center">
+                        <button onclick="showCategory('contact')" class="btn-gradient text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-md flex items-center gap-2">
+                            <i class="fa-solid fa-envelope"></i> Me contacter
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu & Mobile Theme -->
+                    <div class="xl:hidden flex items-center gap-1.5">
+                        <button id="themeToggleMobileBtn" onclick="toggleTheme()" title="Changer de thème" aria-label="Changer de thème" class="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-slate-800 text-amber-300 border border-slate-700 cursor-pointer">
+                            <i id="themeToggleMobileIcon" class="fa-solid fa-sun text-sm"></i>
+                        </button>
+                        <button id="mobileMenuBtn" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
+                            <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobileMenu" class="hidden xl:hidden border-t border-slate-800 bg-[#070b16] px-4 pt-3 pb-6 space-y-1.5 shadow-2xl max-h-[85vh] overflow-y-auto">
-            <button onclick="showCategory('accueil')" class="w-full text-left px-3 py-2 rounded-lg font-semibold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">Accueil</button>
-            <button onclick="showCategory('bts-sio')" class="w-full text-left px-3 py-2 rounded-lg font-semibold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">BTS SIO</button>
-            <button onclick="showCategory('a-propos')" class="w-full text-left px-3 py-2 rounded-lg font-semibold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">À propos de moi</button>
-            <button onclick="showCategory('entreprise')" class="w-full text-left px-3 py-2 rounded-lg font-semibold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">Entreprise</button>
-            <button onclick="showCategory('certifications')" class="w-full text-left px-3 py-2 rounded-lg font-semibold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">Mes Certifications</button>
+            <button onclick="showCategory('accueil')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">ACCUEIL</button>
+            <button onclick="showCategory('bts-sio')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">BTS SIO</button>
+            <button onclick="showCategory('a-propos')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">À PROPOS DE MOI</button>
+            <button onclick="showCategory('entreprise')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-blue-400 bg-blue-500/10 hover:bg-blue-500/20">ENTREPRISE</button>
+            <button onclick="showCategory('certifications')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-amber-400 bg-amber-500/10 hover:bg-amber-500/20">MES CERTIFICATIONS</button>
             
-            <!-- Sous-menu mobile Mes Projets -->
+            <!-- Projets Mobile -->
             <div class="pt-1 pb-1 border-y border-slate-800/80 my-1">
-                <div class="px-3 py-1 text-[11px] font-mono uppercase text-slate-400 font-bold">Mes Projets</div>
+                <div class="px-3 py-1 text-[11px] font-mono uppercase text-slate-400 font-bold">MES PROJETS</div>
+                <button onclick="showCategory('projets'); filterProjects('all')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-slate-300 hover:bg-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-xs text-blue-400"></i> Tous les projets
+                </button>
+                <button onclick="showCategory('projets'); filterProjects('entreprise')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-blue-300 hover:bg-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-building text-xs text-blue-400"></i> En entreprise
+                </button>
+                <button onclick="showCategory('projets'); filterProjects('formation')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-purple-300 hover:bg-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-xs text-purple-400"></i> En formation
+                </button>
                 <button onclick="showCategory('procedures')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-cyan-300 hover:bg-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-file-lines text-xs"></i> Toutes mes Procédures
-                </button>
-                <button onclick="showCategory('projets'); filterProjects('e5'); scrollToSection('section-projets-e5')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-slate-300 hover:bg-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-server text-xs text-blue-400"></i> Projets E5
-                </button>
-                <button onclick="showCategory('projets'); filterProjects('e6'); scrollToSection('section-projets-e6')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-slate-300 hover:bg-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-shield-halved text-xs text-purple-400"></i> Projets E6
+                    <i class="fa-solid fa-file-lines text-xs text-cyan-400"></i> Toutes mes Procédures
                 </button>
             </div>
 
-            <button onclick="showCategory('tcs')" class="w-full text-left px-3 py-2 rounded-lg font-semibold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">TCS (Tableau de Synthèse)</button>
+            <button onclick="showCategory('tcs')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">TCS</button>
 
-            <!-- Sous-menu mobile Veilles -->
+            <!-- Veilles Mobile -->
             <div class="pt-1 pb-1 border-b border-slate-800/80 my-1">
-                <div class="px-3 py-1 text-[11px] font-mono uppercase text-slate-400 font-bold">Veilles</div>
+                <div class="px-3 py-1 text-[11px] font-mono uppercase text-slate-400 font-bold">VEILLES</div>
                 <button onclick="showCategory('veilles'); showVeilleSub('tech'); scrollToSection('veille-technologique')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-fuchsia-300 hover:bg-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-microchip text-xs"></i> Veille technologique
+                    <i class="fa-solid fa-microchip text-xs"></i> Veille technologique (Zero Trust)
+                </button>
+                <button onclick="showCategory('veilles'); showVeilleSub('tech'); scrollToSection('simulateur-zero-trust')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-purple-300 hover:bg-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-gamepad text-xs"></i> Simulateur Cyber Zero Trust
                 </button>
                 <button onclick="showCategory('veilles'); showVeilleSub('juridique'); scrollToSection('veille-juridique')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-amber-300 hover:bg-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-scale-balanced text-xs"></i> Veille juridique
+                    <i class="fa-solid fa-scale-balanced text-xs"></i> Veille juridique (RGPD & HDS)
                 </button>
                 <button onclick="showCategory('veilles'); showVeilleSub('suivi'); scrollToSection('suivi-de-veille')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-emerald-300 hover:bg-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-rss text-xs"></i> Suivi de veille
+                    <i class="fa-solid fa-rss text-xs"></i> Suivi des flux RSS
                 </button>
             </div>
 
-            <button onclick="showCategory('contact')" class="w-full py-2.5 rounded-lg font-bold text-center text-white btn-gradient mt-2 text-xs uppercase tracking-wider">Me Contacter</button>
+            <button onclick="showCategory('contact')" class="w-full py-2.5 rounded-lg font-bold text-center text-white bg-blue-600 mt-2">ME CONTACTER</button>
         </div>
     </nav>
 
@@ -568,26 +838,16 @@
                     </div>
 
                     <!-- 3 cartes complémentaires pour accéder directement aux autres sections -->
-                    <div class="grid md:grid-cols-4 gap-6 mt-6">
+                    <div class="grid md:grid-cols-3 gap-6 mt-6">
                         
                         <!-- Raccourci Entreprise -->
-                        <div onclick="showCategory('entreprise')" class="card-dark-pro rounded-2xl p-6 text-center space-y-3 cursor-pointer group bg-slate-900/60 border border-slate-700/60 hover:border-indigo-400/70 hover:bg-slate-800/80 shadow-lg transition-all duration-300">
-                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-400/30 text-indigo-400 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition-transform">
+                        <div onclick="showCategory('entreprise')" class="card-dark-pro rounded-2xl p-6 text-center space-y-3 cursor-pointer group bg-slate-900/60 border border-slate-700/60 hover:border-blue-400/70 hover:bg-slate-800/80 shadow-lg transition-all duration-300">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-400 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-hospital"></i>
                             </div>
-                            <h4 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">Mon Entreprise</h4>
-                            <p class="text-xs text-slate-400">Clinique Montfleuri (17 sites) & Journée type</p>
-                            <div class="w-10 h-1 bg-indigo-500 rounded-full mx-auto group-hover:w-16 transition-all duration-300"></div>
-                        </div>
-
-                        <!-- Raccourci Certifications -->
-                        <div onclick="showCategory('certifications')" class="card-dark-pro rounded-2xl p-6 text-center space-y-3 cursor-pointer group bg-slate-900/60 border border-slate-700/60 hover:border-amber-400/70 hover:bg-slate-800/80 shadow-lg transition-all duration-300">
-                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-400/30 text-amber-400 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-certificate"></i>
-                            </div>
-                            <h4 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">Mes Certifications</h4>
-                            <p class="text-xs text-slate-400">Cisco CCNA, ANSSI, RGPD CNIL & Pix</p>
-                            <div class="w-10 h-1 bg-amber-500 rounded-full mx-auto group-hover:w-16 transition-all duration-300"></div>
+                            <h4 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">Mon Entreprise</h4>
+                            <p class="text-xs text-slate-400">Clinique Montfleuri (17 sites) & Logiciel ST</p>
+                            <div class="w-10 h-1 bg-blue-500 rounded-full mx-auto group-hover:w-16 transition-all duration-300"></div>
                         </div>
 
                         <!-- Raccourci Tableau TCS -->
@@ -605,7 +865,7 @@
                             <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-400/30 text-teal-400 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-screwdriver-wrench"></i>
                             </div>
-                            <h4 class="text-lg font-bold text-white group-hover:text-teal-300 transition-colors">Toutes mes Procédures</h4>
+                            <h4 class="text-lg font-bold text-white group-hover:text-teal-300 transition-colors">Procédures Techniques</h4>
                             <p class="text-xs text-slate-400">Proxmox Pools, pfSense VLAN/DHCP & Switch 802.1Q</p>
                             <div class="w-10 h-1 bg-teal-500 rounded-full mx-auto group-hover:w-16 transition-all duration-300"></div>
                         </div>
@@ -618,117 +878,130 @@
 
 
         <!-- ======================================================== -->
-        <!-- PAGE 2 : À PROPOS DE MOI (PROFIL, COMPÉTENCES & CURSUS)  -->
+        <!-- PAGE 2 : À PROPOS (PROFIL & COMPÉTENCES PERSONNELLES)    -->
         <!-- ======================================================== -->
         <section id="view-a-propos" class="page-view hidden theme-apropos text-white min-h-[calc(100vh-5rem)] py-16 sm:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
                 
                 <div class="text-center max-w-3xl mx-auto space-y-3">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/15 border border-indigo-400/30 text-indigo-300 text-xs font-semibold">
-                        <i class="fa-solid fa-user"></i> Présentation Personnelle
+                        <i class="fa-solid fa-user"></i> Mon Profil
                     </span>
                     <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
                         À Propos de Moi
                     </h2>
                     <p class="text-slate-300 text-sm sm:text-base">
-                        Mon parcours académique, mes objectifs professionnels en cybersécurité et mes compétences techniques.
+                        Étudiant passionné par l'administration des systèmes, les réseaux d'entreprise et la cybersécurité.
                     </p>
                 </div>
 
-                <!-- 2 Cartes : Profil & Objectif Professionnel -->
+                <!-- 2 Cartes : Profil & Passerelle Entreprise -->
                 <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Profil -->
-                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-5 bg-slate-900/70 border border-indigo-500/25 shadow-xl">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl font-bold border border-indigo-500/30">
-                                <i class="fa-solid fa-id-card"></i>
+                    <!-- Profil Nael Talbi -->
+                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-4 bg-slate-900/70 border border-indigo-500/25 shadow-xl flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl font-bold border border-indigo-500/30">
+                                    <i class="fa-solid fa-id-card"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Nael Talbi</h3>
+                                    <p class="text-xs text-indigo-300 font-semibold">Alternant BTS SIO SISR • Marseille</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Nael Talbi</h3>
-                                <p class="text-xs text-indigo-300 font-semibold">Étudiant BTS SIO SISR en Alternance • Marseille</p>
-                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Actuellement en <strong>2ème année de BTS SIO option SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux), j'ai choisi l'alternance pour développer des compétences solides et concrètes en conditions réelles de production hospitalière.
+                            </p>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Curieux et rigoureux, mon objectif après l'obtention du BTS est d'intégrer une formation d'<strong>Expert en Cybersécurité</strong> afin d'évoluer vers le métier de <strong>Responsable de la Sécurité des Systèmes d'Information (RSSI)</strong>.
+                            </p>
                         </div>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Actuellement étudiant en <strong>BTS SIO option SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux), j'ai fait le choix de l'alternance afin de confronter immédiatement mes connaissances théoriques aux exigences d'un environnement de production critique.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Passionné par l'administration système Windows/Linux, la virtualisation sous Proxmox et le cloisonnement réseau, je maintiens également un <strong>HomeLab personnel</strong> complet pour expérimenter en continu de nouvelles architectures sécurisées.
-                        </p>
-                        <div class="pt-2 flex flex-wrap gap-2 text-xs">
-                            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 font-medium border border-indigo-500/30">Administration Systèmes</span>
-                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Réseaux & VLANs</span>
-                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Virtualisation Proxmox</span>
-                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Cybersécurité</span>
+                        <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 font-medium border border-indigo-500/30">Cybersécurité</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Windows Server & AD</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">VLANs & Routage</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-medium border border-slate-700">Virtualisation</span>
                         </div>
                     </div>
 
-                    <!-- Projet Professionnel & Poursuite d'études -->
-                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-5 bg-slate-900/70 border border-purple-500/25 shadow-xl">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold border border-purple-500/30">
-                                <i class="fa-solid fa-bullseye"></i>
+                    <!-- Passerelle vers Mon Entreprise -->
+                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-4 bg-slate-900/70 border border-blue-500/25 shadow-xl flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl font-bold border border-blue-500/30">
+                                    <i class="fa-solid fa-hospital"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Mon Entreprise d'Accueil</h3>
+                                    <p class="text-xs text-blue-300 font-semibold">Clinique Montfleuri Saint Roch (17 sites)</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Projet Professionnel</h3>
-                                <p class="text-xs text-purple-300 font-semibold">Cap vers l'Expertise en Cybersécurité & RSSI</p>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                J'effectue mon alternance au sein du service informatique de la <strong>Clinique Montfleuri Saint Roch</strong>, un établissement de santé marseillais interconnecté à un groupe de <strong>17 cliniques</strong>.
+                            </p>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Ce milieu exigeant me permet d'intervenir quotidiennement sur la haute disponibilité réseau, la conformité des données de santé (HDS), la surveillance technique et le support soignants.
+                            </p>
+                            <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs">
+                                <div class="p-2.5 rounded-xl bg-slate-800 text-blue-300 font-bold border border-slate-700">17 Sites</div>
+                                <div class="p-2.5 rounded-xl bg-slate-800 text-purple-300 font-bold border border-slate-700">~200 Postes</div>
+                                <div class="p-2.5 rounded-xl bg-slate-800 text-emerald-300 font-bold border border-slate-700">Support N1/N2</div>
                             </div>
                         </div>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Mon objectif après l'obtention du BTS SIO est de poursuivre mes études en alternance vers un <strong>Bachelor Administrateur Systèmes, Réseaux et Cybersécurité</strong> puis un <strong>Mastère Expert en Cybersécurité</strong>.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            À terme, je souhaite évoluer vers les métiers d'<strong>Ingénieur Sécurité Réseau</strong> puis de <strong>RSSI</strong> (Responsable de la Sécurité des Systèmes d'Information), notamment dans le secteur hospitalier où la protection des données de santé (HDS) est vitale.
-                        </p>
-                        <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs">
-                            <div class="p-2.5 rounded-xl bg-slate-800 text-indigo-300 font-bold border border-slate-700">Bac+2 BTS SIO</div>
-                            <div class="p-2.5 rounded-xl bg-slate-800 text-purple-300 font-bold border border-slate-700">Bac+3 Cyber</div>
-                            <div class="p-2.5 rounded-xl bg-slate-800 text-pink-300 font-bold border border-slate-700">Bac+5 RSSI</div>
+                        <div class="pt-4 border-t border-slate-800">
+                            <button onclick="showCategory('entreprise')" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer">
+                                <i class="fa-solid fa-building"></i> Voir la présentation complète de mon entreprise <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Chronologie / Parcours -->
-                <div class="card-dark-pro rounded-3xl p-8 sm:p-10 bg-slate-900/70 border border-slate-800 space-y-8 shadow-xl">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
-                        <div>
-                            <span class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider">Mon Parcours</span>
-                            <h3 class="text-2xl font-bold text-white mt-1">Formation & Expériences Clés</h3>
+                <!-- Grille des compétences techniques -->
+                <div class="card-dark-pro rounded-3xl p-8 sm:p-12 space-y-6 bg-slate-900/70 border border-slate-800 shadow-xl">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg border border-purple-500/30">
+                            <i class="fa-solid fa-microchip"></i>
                         </div>
-                        <div class="flex flex-wrap gap-3">
-                            <button onclick="showCategory('entreprise')" class="px-4 py-2 rounded-xl bg-indigo-600/20 border border-indigo-500/40 text-indigo-300 hover:bg-indigo-600 hover:text-white text-xs font-semibold transition flex items-center gap-2">
-                                <i class="fa-solid fa-hospital"></i> Découvrir mon entreprise
-                            </button>
-                            <button onclick="showCategory('certifications')" class="px-4 py-2 rounded-xl bg-amber-600/20 border border-amber-500/40 text-amber-300 hover:bg-amber-600 hover:text-white text-xs font-semibold transition flex items-center gap-2">
-                                <i class="fa-solid fa-certificate"></i> Voir mes certifications
-                            </button>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Domaines de Compétences Techniques</h3>
+                            <p class="text-xs text-slate-400">Technologies et protocoles maîtrisés durant mon parcours</p>
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div class="p-6 rounded-2xl bg-slate-950/80 border border-indigo-500/30 space-y-2 relative">
-                            <span class="px-2.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-mono font-bold">2025 - 2027</span>
-                            <h4 class="text-base font-bold text-white pt-1">BTS SIO Option SISR</h4>
-                            <p class="text-xs text-indigo-300 font-medium">Alternance • Marseille</p>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Administration des systèmes Windows Server & Linux, réseaux Cisco/HP, pare-feu pfSense/OPNsense, virtualisation Proxmox et cybersécurité.
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                        <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
+                            <div class="flex items-center gap-2 text-blue-400 font-bold text-sm">
+                                <i class="fa-solid fa-network-wired"></i> Réseaux & Sécurité
+                            </div>
+                            <p class="text-slate-400 leading-relaxed">
+                                Adressage IPv4, segmentation VLANs 802.1Q, routage inter-VLAN, pare-feu pfSense/OPNsense, switchs managés Cisco & Netgear.
                             </p>
                         </div>
 
-                        <div class="p-6 rounded-2xl bg-slate-950/80 border border-purple-500/30 space-y-2 relative">
-                            <span class="px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-mono font-bold">En cours • Alternance</span>
-                            <h4 class="text-base font-bold text-white pt-1">Informaticien Systèmes & Réseaux</h4>
-                            <p class="text-xs text-purple-300 font-medium">Clinique Montfleuri Saint Roch (17 sites)</p>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Support N1/N2, gestion Active Directory & GPO, supervision multisite (ST), déploiement automatisé et maintenance réseau.
+                        <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
+                            <div class="flex items-center gap-2 text-indigo-400 font-bold text-sm">
+                                <i class="fa-brands fa-windows"></i> Systèmes & Annuaire
+                            </div>
+                            <p class="text-slate-400 leading-relaxed">
+                                Windows Server 2022, Active Directory (AD DS), Stratégies de groupe (GPO), DHCP, DNS, Linux Debian/Ubuntu Server.
                             </p>
                         </div>
 
-                        <div class="p-6 rounded-2xl bg-slate-950/80 border border-cyan-500/30 space-y-2 relative">
-                            <span class="px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold">Laboratoire Continu</span>
-                            <h4 class="text-base font-bold text-white pt-1">Auto-Hébergement & HomeLab</h4>
-                            <p class="text-xs text-cyan-300 font-medium">Infrastructure Personnelle</p>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Conception et maintien d'un lab complet : pare-feu OPNsense, VLANs 802.1Q, Proxmox VE, Windows Server AD, AdGuard Home et Nextcloud.
+                        <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
+                            <div class="flex items-center gap-2 text-purple-400 font-bold text-sm">
+                                <i class="fa-solid fa-server"></i> Virtualisation & Lab
+                            </div>
+                            <p class="text-slate-400 leading-relaxed">
+                                Hyperviseur Proxmox VE (Pools RBAC, Bridges vmbr), VMware ESXi, conteneurs LXC, auto-hébergement HomeLab complet.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
+                            <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+                                <i class="fa-solid fa-headset"></i> Support & Supervision
+                            </div>
+                            <p class="text-slate-400 leading-relaxed">
+                                Ticketing Jira & GLPI, outil interne de Surveillance Technique (ST) multisite, scripts batch d'automatisation PC.
                             </p>
                         </div>
                     </div>
@@ -739,82 +1012,75 @@
 
 
         <!-- ======================================================== -->
-        <!-- PAGE 2B : ENTREPRISE (CLINIQUE MONTFLEURI & JOURNÉE TYPE) -->
+        <!-- NOUVELLE PAGE DÉDIÉE : MON ENTREPRISE & LOGICIEL ST      -->
         <!-- ======================================================== -->
-        <section id="view-entreprise" class="page-view hidden theme-apropos text-white min-h-[calc(100vh-5rem)] py-16 sm:py-24">
+        <section id="view-entreprise" class="page-view hidden theme-entreprise text-white min-h-[calc(100vh-5rem)] py-16 sm:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
                 
                 <div class="text-center max-w-3xl mx-auto space-y-3">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-400/30 text-purple-300 text-xs font-semibold">
-                        <i class="fa-solid fa-hospital"></i> Alternance & Milieu Hospitalier
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-semibold">
+                        <i class="fa-solid fa-hospital"></i> Immersion en Milieu Hospitalier
                     </span>
                     <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                        Mon Entreprise : Clinique Montfleuri Saint Roch
+                        Mon Entreprise d'Alternance
                     </h2>
                     <p class="text-slate-300 text-sm sm:text-base">
-                        Immersion au sein du service informatique d'un groupe hospitalier réunissant <strong>17 cliniques</strong> interconnectées à Marseille et en région.
+                        Présentation de la Clinique Montfleuri Saint Roch, de notre groupe de 17 établissements et de nos outils métiers internes.
                     </p>
                 </div>
 
-                <!-- Présentation Entreprise & Missions -->
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Clinique -->
-                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-4 bg-slate-900/70 border border-purple-500/25 shadow-xl">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold border border-purple-500/30">
-                                <i class="fa-solid fa-hospital"></i>
+                <!-- Présentation Clinique & Chiffres Clés -->
+                <div class="card-dark-pro rounded-3xl p-8 sm:p-12 space-y-8 bg-slate-900/70 border border-blue-500/25 shadow-2xl">
+                    <div class="grid lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold">Établissement de Santé</span>
+                                <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold">17 Cliniques Interconnectées</span>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Clinique Montfleuri Saint Roch</h3>
-                                <p class="text-xs text-purple-300 font-semibold">Établissement de santé • Groupe de 17 cliniques</p>
+                            <h3 class="text-2xl sm:text-4xl font-extrabold text-white">
+                                Clinique Montfleuri Saint Roch
+                            </h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Établissement médical et de soins psychiatriques situé dans le 11e arrondissement de Marseille, la <strong>Clinique Montfleuri Saint Roch</strong> fait partie intégrante d'un réseau de <strong>17 cliniques et établissements de santé</strong>.
+                            </p>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                En environnement hospitalier, l'informatique est un élément vital : la disponibilité du réseau conditionne l'accès en temps réel aux <strong>dossiers patients informatisés (DPI)</strong>, aux ordonnances médicales et à la continuité des soins 24h/24 et 7j/7.
+                            </p>
+                            <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-xs text-slate-300 space-y-1">
+                                <strong class="text-white flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-cyan-400"></i> Exigences de Sécurité Santé (HDS) :</strong>
+                                <p class="text-slate-400">Strict respect de la confidentialité des données de santé, gestion des accès par le principe de moindre privilège sur Active Directory et cloisonnement étanche par VLANs.</p>
                             </div>
                         </div>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            La clinique Montfleuri Saint Roch (Marseille 11e) est spécialisée dans les soins médicaux et psychiatriques. Elle fait partie d'un groupe hospitalier réunissant <strong>17 cliniques</strong> interconnectées.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            En milieu hospitalier, la disponibilité du système d'information conditionne directement l'accès aux dossiers patients (DPI) et la continuité des soins 24h/24 et 7j/7.
-                        </p>
-                        <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs">
-                            <div class="p-2.5 rounded-xl bg-slate-800 text-blue-300 font-bold border border-slate-700">17 Sites</div>
-                            <div class="p-2.5 rounded-xl bg-slate-800 text-purple-300 font-bold border border-slate-700">~200 Salariés</div>
-                            <div class="p-2.5 rounded-xl bg-slate-800 text-emerald-300 font-bold border border-slate-700">Support N1/N2</div>
-                        </div>
-                    </div>
 
-                    <!-- Mes Missions en Alternance -->
-                    <div class="card-dark-pro rounded-3xl p-8 sm:p-10 space-y-4 bg-slate-900/70 border border-cyan-500/25 shadow-xl">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl font-bold border border-cyan-500/30">
-                                <i class="fa-solid fa-network-wired"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Mes Missions au Service IT</h3>
-                                <p class="text-xs text-cyan-300 font-semibold">Administration Systèmes, Réseaux & Support</p>
+                        <!-- Chiffres clés & missions -->
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 text-center space-y-1">
+                                    <span class="text-3xl font-extrabold text-blue-400 font-mono">17</span>
+                                    <span class="block text-xs font-bold text-white">Sites & Cliniques</span>
+                                    <span class="block text-[11px] text-slate-400">Interconnectés au groupe</span>
+                                </div>
+                                <div class="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 text-center space-y-1">
+                                    <span class="text-3xl font-extrabold text-purple-400 font-mono">~200</span>
+                                    <span class="block text-xs font-bold text-white">Postes & Utilisateurs</span>
+                                    <span class="block text-[11px] text-slate-400">Soignants et administratifs</span>
+                                </div>
+                                <div class="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 text-center space-y-1">
+                                    <span class="text-3xl font-extrabold text-emerald-400 font-mono">99.9%</span>
+                                    <span class="block text-xs font-bold text-white">Disponibilité Requise</span>
+                                    <span class="block text-[11px] text-slate-400">Continuité 24h/24</span>
+                                </div>
+                                <div class="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 text-center space-y-1">
+                                    <span class="text-3xl font-extrabold text-cyan-400 font-mono">N1 / N2</span>
+                                    <span class="block text-xs font-bold text-white">Support Informatique</span>
+                                    <span class="block text-[11px] text-slate-400">Jira Service & GLPI</span>
+                                </div>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-sm text-slate-300">
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-circle-check text-cyan-400 mt-1 text-xs"></i>
-                                <span><strong>Administration Active Directory :</strong> Gestion des comptes soignants/administratifs, groupes de sécurité et déploiement de GPO.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-circle-check text-purple-400 mt-1 text-xs"></i>
-                                <span><strong>Supervision Multisite :</strong> Monitoring temps réel des 17 cliniques via l'outil interne ST (pings, IP, MAC, switchs, bornes Wi-Fi).</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1 text-xs"></i>
-                                <span><strong>Support & Automatisation :</strong> Traitement des tickets Jira/GLPI, masterisation et scripts <code>.bat</code> d'intégration au domaine.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-circle-check text-blue-400 mt-1 text-xs"></i>
-                                <span><strong>Projets Internes :</strong> Déploiement de l'application web <strong>HOLY'DAYS</strong> pour dématérialiser les demandes de congés.</span>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
-                <!-- JOURNÉE TYPE -->
+                <!-- SECTION JOURNÉE TYPE -->
                 <div id="journee-type" class="card-dark-pro rounded-3xl p-8 sm:p-12 space-y-8 bg-slate-900/70 border border-indigo-500/25 shadow-2xl">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
                         <div>
@@ -869,69 +1135,69 @@
                             </p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Aperçu visuel de l'outil interne de Surveillance Technique (ST) -->
-                    <div class="p-6 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-5">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
-                            <div class="space-y-1">
-                                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-300 text-xs font-semibold border border-cyan-500/30">
-                                    <i class="fa-solid fa-desktop"></i> Logiciel Métier Multisite
-                                </div>
-                                <h4 class="text-xl font-bold text-white">Aperçu de notre logiciel interne de Surveillance Technique (ST)</h4>
+                <!-- SECTION LOGICIEL ST AVEC LES 3 CAPTURES -->
+                <div class="p-8 sm:p-12 rounded-3xl bg-slate-900/90 border border-cyan-500/30 space-y-8 shadow-2xl">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+                        <div class="space-y-1">
+                            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-300 text-xs font-semibold border border-cyan-500/30">
+                                <i class="fa-solid fa-desktop"></i> Logiciel Métier DSI
                             </div>
-                            <p class="text-xs text-slate-400 sm:max-w-md leading-relaxed">
-                                Développé pour la DSI, cet outil centralise le parc des <strong>17 cliniques</strong> du groupe et permet de monitorer en continu les adresses IP, adresses MAC, requêtes pings et latences.
-                            </p>
+                            <h4 class="text-2xl sm:text-3xl font-extrabold text-white">Notre Logiciel Interne de Surveillance Technique (ST)</h4>
+                        </div>
+                        <p class="text-xs text-slate-300 sm:max-w-md leading-relaxed">
+                            Développé sur-mesure pour notre DSI, cet outil centralise le parc des <strong>17 cliniques</strong> du groupe et permet de monitorer en temps réel les adresses IP, adresses MAC, la vitesse de réponse et l'état des machines.
+                        </p>
+                    </div>
+
+                    <!-- Grille des 3 captures de la ST -->
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Capture 1 : Sélection des Sites -->
+                        <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-cyan-400/70 transition shadow-xl">
+                            <div class="relative overflow-hidden cursor-pointer h-48 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt1').src, 'Surveillance Technique (ST) - Vue Périmètre & Filtrage des 17 cliniques')">
+                                <img id="imgSt1" src="st1.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st1){this.src=window.EMBEDDED_ASSETS.st1;this.onerror=null;}" alt="ST - Sélection des sites" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
+                                    <span class="text-xs font-bold text-cyan-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
+                                        <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                <span class="text-xs font-bold text-white block">1. Périmètre & 17 Sites</span>
+                                <span class="text-[11px] text-slate-400 leading-snug block">Menu déroulant des cliniques (Saint-Roch, Camargue, Cros, etc.) et suivi des pings/vitesses.</span>
+                            </div>
                         </div>
 
-                        <!-- Grille des 3 captures de la ST -->
-                        <div class="grid md:grid-cols-3 gap-4">
-                            <!-- Capture 1 : Sélection des Sites -->
-                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-cyan-400/70 transition shadow-xl">
-                                <div class="relative overflow-hidden cursor-pointer h-44 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt1').src, 'Surveillance Technique (ST) - Vue Périmètre & Filtrage des 17 cliniques')">
-                                    <img id="imgSt1" src="st1.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st1){this.src=window.EMBEDDED_ASSETS.st1;this.onerror=null;}" alt="ST - Sélection des sites" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
-                                        <span class="text-xs font-bold text-cyan-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
-                                            <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="p-3.5 bg-slate-900/70 border-t border-slate-800">
-                                    <span class="text-xs font-bold text-white block mb-0.5">1. Périmètre & 17 Sites</span>
-                                    <span class="text-[11px] text-slate-400 leading-snug block">Menu déroulant des cliniques (Saint-Roch, Camargue, Cros, etc.) et suivi des pings/vitesses.</span>
+                        <!-- Capture 2 : Typologie Équipements -->
+                        <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-blue-400/70 transition shadow-xl">
+                            <div class="relative overflow-hidden cursor-pointer h-48 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt2').src, 'Surveillance Technique (ST) - Filtrage par types d\'équipements')">
+                                <img id="imgSt2" src="st2.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st2){this.src=window.EMBEDDED_ASSETS.st2;this.onerror=null;}" alt="ST - Types d'équipements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
+                                    <span class="text-xs font-bold text-blue-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
+                                        <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
+                                    </span>
                                 </div>
                             </div>
+                            <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                <span class="text-xs font-bold text-white block">2. Typologie Équipements</span>
+                                <span class="text-[11px] text-slate-400 leading-snug block">Catégorisation : Switchs, Bornes Wifi, Serveurs, Bornes Carte Vitale, PC et Routeurs.</span>
+                            </div>
+                        </div>
 
-                            <!-- Capture 2 : Typologie Équipements -->
-                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-blue-400/70 transition shadow-xl">
-                                <div class="relative overflow-hidden cursor-pointer h-44 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt2').src, 'Surveillance Technique (ST) - Filtrage par types d\'équipements')">
-                                    <img id="imgSt2" src="st2.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st2){this.src=window.EMBEDDED_ASSETS.st2;this.onerror=null;}" alt="ST - Types d'équipements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
-                                        <span class="text-xs font-bold text-blue-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
-                                            <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="p-3.5 bg-slate-900/70 border-t border-slate-800">
-                                    <span class="text-xs font-bold text-white block mb-0.5">2. Typologie Équipements</span>
-                                    <span class="text-[11px] text-slate-400 leading-snug block">Catégorisation : Switchs, Bornes Wifi, Serveurs, Bornes Carte Vitale, PC et Routeurs.</span>
+                        <!-- Capture 3 : Console de surveillance -->
+                        <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-purple-400/70 transition shadow-xl">
+                            <div class="relative overflow-hidden cursor-pointer h-48 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt3').src, 'Surveillance Technique (ST) - Console générale d\'administration')">
+                                <img id="imgSt3" src="st3.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st3){this.src=window.EMBEDDED_ASSETS.st3;this.onerror=null;}" alt="ST - Console de surveillance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
+                                    <span class="text-xs font-bold text-purple-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
+                                        <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
+                                    </span>
                                 </div>
                             </div>
-
-                            <!-- Capture 3 : Console de surveillance -->
-                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col justify-between hover:border-purple-400/70 transition shadow-xl">
-                                <div class="relative overflow-hidden cursor-pointer h-44 bg-slate-900" onclick="openLightbox(document.getElementById('imgSt3').src, 'Surveillance Technique (ST) - Console générale d\'administration')">
-                                    <img id="imgSt3" src="st3.png" onerror="if(window.EMBEDDED_ASSETS && window.EMBEDDED_ASSETS.st3){this.src=window.EMBEDDED_ASSETS.st3;this.onerror=null;}" alt="ST - Console de surveillance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 opacity-90 group-hover:opacity-100">
-                                        <span class="text-xs font-bold text-purple-300 flex items-center gap-1.5 bg-black/60 px-2.5 py-1 rounded-lg backdrop-blur-sm">
-                                            <i class="fa-solid fa-magnifying-glass-plus"></i> Agrandir la capture
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="p-3.5 bg-slate-900/70 border-t border-slate-800">
-                                    <span class="text-xs font-bold text-white block mb-0.5">3. Console Technique</span>
-                                    <span class="text-[11px] text-slate-400 leading-snug block">Gestion globale : Onglets Politiques, Interventions, Surveillance et état actif/réserve.</span>
-                                </div>
+                            <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                <span class="text-xs font-bold text-white block">3. Console Technique</span>
+                                <span class="text-[11px] text-slate-400 leading-snug block">Gestion globale : Onglets Politiques, Interventions, Surveillance et état actif/réserve.</span>
                             </div>
                         </div>
                     </div>
@@ -942,7 +1208,7 @@
 
 
         <!-- ======================================================== -->
-        <!-- PAGE 2C : MES CERTIFICATIONS                             -->
+        <!-- MES CERTIFICATIONS                                       -->
         <!-- ======================================================== -->
         <section id="view-certifications" class="page-view hidden theme-certifications text-white min-h-[calc(100vh-5rem)] py-16 sm:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
@@ -1313,75 +1579,81 @@
 
 
         <!-- ======================================================== -->
-        <!-- PAGE 5 : PROJETS (E5, E6 & HOMELAB)                      -->
+        <!-- PAGE 5 : PROJETS (EN ENTREPRISE & EN FORMATION)         -->
         <!-- ======================================================== -->
         <section id="view-projets" class="page-view hidden theme-projets text-white min-h-[calc(100vh-5rem)] py-16 sm:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
                 
-                <div class="text-center max-w-3xl mx-auto space-y-3">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-400/30 text-purple-300 text-xs font-semibold">
-                        <i class="fa-solid fa-folder-open"></i> Réalisations SISR
+                <!-- Titre & Entête -->
+                <div class="text-center max-w-3xl mx-auto space-y-4">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-semibold">
+                        <i class="fa-solid fa-folder-open"></i> Réalisations Professionnelles & Laboratoires
                     </span>
                     <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                        Mes Projets E5 & E6
+                        Mes Projets SISR
                     </h2>
                     <p class="text-slate-300 text-sm sm:text-base">
-                        Projets d'infrastructure système, réseau et cybersécurité déployés en milieu hospitalier et sur mon laboratoire personnel.
+                        Explorez mes réalisations déployées en milieu hospitalier et mon laboratoire d'infrastructure personnel.
                     </p>
-                </div>
 
-                <!-- Barre d'onglets rapide (identique aux sous-menus de Mes Projets) -->
-                <div class="flex flex-wrap items-center justify-center gap-3">
-                    <button onclick="filterProjects('all')" id="proj-tab-all" class="proj-tab-btn px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-xs transition shadow-lg">
-                        <i class="fa-solid fa-layer-group mr-1.5"></i> Tous les Projets
-                    </button>
-                    <button onclick="filterProjects('e5')" id="proj-tab-e5" class="proj-tab-btn px-5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs transition">
-                        <i class="fa-solid fa-server text-blue-400 mr-1.5"></i> Projets E5
-                    </button>
-                    <button onclick="filterProjects('e6')" id="proj-tab-e6" class="proj-tab-btn px-5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs transition">
-                        <i class="fa-solid fa-shield-halved text-purple-400 mr-1.5"></i> Projets E6
-                    </button>
-                    <button onclick="showCategory('procedures')" class="px-5 py-2.5 rounded-xl bg-cyan-500/15 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-500/25 font-semibold text-xs transition">
-                        <i class="fa-solid fa-file-lines mr-1.5"></i> Toutes mes Procédures
-                    </button>
+                    <!-- Boutons Filtres Catégories (Style Screenshot 1) -->
+                    <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 pt-3">
+                        <button onclick="filterProjects('all')" id="projFilterBtn-all" class="proj-filter-btn px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-md bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-blue-500/20 border border-blue-400/40 cursor-pointer">
+                            <i class="fa-solid fa-layer-group mr-1.5"></i> Tous les projets
+                        </button>
+                        <button onclick="filterProjects('entreprise')" id="projFilterBtn-entreprise" class="proj-filter-btn px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-sm bg-slate-900/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 cursor-pointer">
+                            <i class="fa-solid fa-building mr-1.5 text-blue-400"></i> En entreprise
+                        </button>
+                        <button onclick="filterProjects('formation')" id="projFilterBtn-formation" class="proj-filter-btn px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-sm bg-slate-900/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 cursor-pointer">
+                            <i class="fa-solid fa-graduation-cap mr-1.5 text-purple-400"></i> En formation
+                        </button>
+                    </div>
                 </div>
 
                 <!-- ======================================================== -->
-                <!-- SECTION PROJETS E5                                       -->
+                <!-- GROUPE 1 : PROJETS EN ENTREPRISE (HÔPITAL / 17 SITES)   -->
                 <!-- ======================================================== -->
-                <div id="section-projets-e5" class="project-group space-y-10" data-proj-group="e5">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
-                        <span class="px-3 py-1 rounded-xl bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono text-xs font-bold">ÉPREUVE E5</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Projets E5 — Support, Déploiement & Administration Réseau</h3>
+                <div id="projGroupEntreprise" class="space-y-8">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+                        <div class="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm border border-blue-500/30">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                                Projets en entreprise
+                                <span class="text-xs font-mono font-normal px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">Cliniques & Production</span>
+                            </h3>
+                            <p class="text-xs text-slate-400">Missions opérationnelles menées au sein du groupe hospitalier (Clinique Montfleuri & 17 cliniques)</p>
+                        </div>
                     </div>
 
-                    <!-- PROJET E5 #1 : HOLY'DAYS -->
-                    <div id="proj-holydays" class="card-dark-pro rounded-3xl p-8 sm:p-12 bg-slate-900/80 border border-blue-500/30 shadow-2xl">
+                    <!-- PROJET ENTREPRISE 1 : APPLICATION WEB HOLY'DAYS -->
+                    <div id="proj-holydays" class="card-dark-pro rounded-3xl p-8 sm:p-12 bg-slate-900/80 border border-blue-500/25 space-y-6">
                         <div class="grid lg:grid-cols-2 gap-10 items-center">
                             <div class="space-y-4">
                                 <div class="flex items-center gap-2">
-                                    <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold">Projet E5 • Entreprise</span>
+                                    <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold">Projet Entreprise E5</span>
                                     <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold">En production</span>
                                 </div>
                                 <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
                                     Application Web « HOLY'DAYS »
                                 </h3>
                                 <p class="text-slate-300 text-sm leading-relaxed">
-                                    Mise en place d'une application interne de dématérialisation des demandes de congés pour le personnel de la clinique, remplaçant l'ancien système papier.
+                                    Mise en place d'une application interne de dématérialisation des demandes de congés pour l'ensemble du personnel de la clinique, remplaçant l'ancien système de formulaires papier.
                                 </p>
                                 <div class="grid sm:grid-cols-2 gap-3 pt-2 text-xs">
-                                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                                        <strong class="text-white block mb-1">Objectif</strong>
-                                        Suppression du papier et validation en ligne par les responsables.
+                                    <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
+                                        <strong class="text-white block mb-1"><i class="fa-solid fa-bullseye text-blue-400 mr-1"></i> Objectif</strong>
+                                        Suppression définitive du papier et circuit de validation en ligne en temps réel par les cadres de santé.
                                     </div>
-                                    <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-                                        <strong class="text-white block mb-1">Technologies</strong>
-                                        React, Next.js, Tailwind CSS, Supabase SQL.
+                                    <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
+                                        <strong class="text-white block mb-1"><i class="fa-solid fa-code text-indigo-400 mr-1"></i> Stack Technique</strong>
+                                        React, Next.js, Tailwind CSS, Base SQL Supabase, Rôles RBAC.
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Captures réelles cliquables avec fallback instantané -->
+                            <!-- Captures réelles cliquables -->
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="card-dark-pro rounded-2xl overflow-hidden cursor-pointer group bg-slate-950 border border-slate-800" onclick="openLightbox(document.getElementById('imgHoly1').src, 'Interface d\'approbation HOLY\'DAYS (flouté pour confidentialité)')">
                                     <div class="h-44 overflow-hidden relative">
@@ -1404,56 +1676,71 @@
                         </div>
                     </div>
 
-                    <!-- Autres réalisations E5 -->
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div class="card-dark-pro rounded-2xl p-6 space-y-3 bg-slate-900/70 border border-blue-500/25">
-                            <span class="text-xs font-bold text-blue-400 font-mono bg-blue-500/20 px-2.5 py-1 rounded-full border border-blue-500/30">Projet E5 • Clinique</span>
-                            <h4 class="font-bold text-white text-base">Surveillance Multisite (17 Cliniques)</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Exploitation et administration de notre outil interne (ST) pour monitorer en temps réel l'état, l'adressage IP, les adresses MAC et la latence des équipements du groupe.
+                    <!-- PROJETS ENTREPRISE SECONDAIRES (GRILLE) -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="card-dark-pro rounded-2xl p-6 sm:p-7 space-y-3 bg-slate-900/70 border border-blue-500/25">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-blue-400 font-mono bg-blue-500/20 px-2.5 py-1 rounded-full border border-blue-500/30">Entreprise E5</span>
+                                <span class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-hospital mr-1 text-blue-400"></i>17 Sites</span>
+                            </div>
+                            <h4 class="font-bold text-white text-lg">Surveillance Multisite (17 Cliniques)</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Exploitation de notre outil interne de supervision pour monitorer l'état de fonctionnement, les adresses IP, adresses MAC et la joignabilité de l'ensemble des équipements et postes informatiques du groupe de cliniques.
                             </p>
+                            <div class="flex flex-wrap gap-1.5 pt-2 text-[11px] font-mono text-slate-300">
+                                <span class="bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700">Supervision IP/MAC</span>
+                                <span class="bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700">Réseau Santé HDS</span>
+                            </div>
                         </div>
 
-                        <div class="card-dark-pro rounded-2xl p-6 space-y-3 bg-slate-900/70 border border-cyan-500/25">
-                            <span class="text-xs font-bold text-cyan-400 font-mono bg-cyan-500/20 px-2.5 py-1 rounded-full border border-cyan-500/30">Projet E5 • Clinique</span>
-                            <h4 class="font-bold text-white text-base">Automatisation Déploiement PC (.bat)</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Création de scripts d'automatisation <code>.bat</code> pour renommer les postes Windows 10/11, configurer le DNS statique et joindre le domaine Active Directory rapidement.
+                        <div class="card-dark-pro rounded-2xl p-6 sm:p-7 space-y-3 bg-slate-900/70 border border-indigo-500/25">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-indigo-400 font-mono bg-indigo-500/20 px-2.5 py-1 rounded-full border border-indigo-500/30">Entreprise E5</span>
+                                <span class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-terminal mr-1 text-indigo-400"></i>Batch CLI</span>
+                            </div>
+                            <h4 class="font-bold text-white text-lg">Automatisation Déploiement PC</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Conception et déploiement de scripts batch <code>.bat</code> pour standardiser le nommage des machines, configurer automatiquement les paramètres DNS/Passerelle et procéder à la jonction au domaine Active Directory en 1 seul clic.
                             </p>
-                        </div>
-
-                        <div class="card-dark-pro rounded-2xl p-6 space-y-3 bg-slate-900/70 border border-emerald-500/25">
-                            <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/20 px-2.5 py-1 rounded-full border border-emerald-500/30">Projet E5 • Atelier</span>
-                            <h4 class="font-bold text-white text-base">Segmentation Switch & VLANs 802.1Q</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Configuration de switchs manageables (ports Access et Trunk 802.1Q) pour séparer les flux Soins, Administration et Invités.
-                            </p>
+                            <div class="flex flex-wrap gap-1.5 pt-2 text-[11px] font-mono text-slate-300">
+                                <span class="bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700">Scripts .bat</span>
+                                <span class="bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700">Jonction AD</span>
+                                <span class="bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700">GPO Client</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- ======================================================== -->
-                <!-- SECTION PROJETS E6                                       -->
+                <!-- GROUPE 2 : PROJETS EN FORMATION (BTS SIO & HOMELAB)     -->
                 <!-- ======================================================== -->
-                <div id="section-projets-e6" class="project-group space-y-10 pt-6" data-proj-group="e6">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
-                        <span class="px-3 py-1 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-500/30 font-mono text-xs font-bold">ÉPREUVE E6</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Projets E6 — Infrastructure, Virtualisation & Cybersécurité</h3>
+                <div id="projGroupFormation" class="space-y-8 pt-6">
+                    <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+                        <div class="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                                Projets en formation & HomeLab
+                                <span class="text-xs font-mono font-normal px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">BTS SIO SISR & Lab Personnel</span>
+                            </h3>
+                            <p class="text-xs text-slate-400">Laboratoire d'expérimentation personnel et ateliers techniques de virtualisation / réseaux</p>
+                        </div>
                     </div>
 
-                    <!-- PROJET E6 #1 : LE HOMELAB PERSONNEL -->
+                    <!-- PROJET FORMATION 1 : LE HOMELAB PERSONNEL -->
                     <div id="proj-homelab" class="card-dark-pro rounded-3xl p-8 sm:p-12 border-2 border-purple-500/40 bg-slate-900/80 space-y-8 shadow-2xl">
                         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-6">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-bold">Projet E6 • Infrastructure & Sécurité</span>
+                                    <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-bold">Projet Personnel & Entraînement SISR</span>
                                     <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-bold">Auto-Hébergement Actif</span>
                                 </div>
                                 <h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-3">
-                                    HomeLab Sécurisé : OPNsense, Proxmox VE, AD, AdGuard & Nextcloud
+                                    HomeLab Personnel : OPNsense, AD, AdGuard, Nextcloud & GLPI
                                 </h3>
                                 <p class="text-slate-300 text-sm mt-1">
-                                    Architecture complète virtualisée et cloisonnée déployée pour concevoir, sécuriser et administrer des services réseaux en conditions réelles.
+                                    Laboratoire réseau & serveurs déployé à domicile pour m'entraîner en conditions réelles et sécuriser mon réseau personnel.
                                 </p>
                             </div>
                             <div class="p-3 bg-purple-500/20 text-purple-300 rounded-2xl border border-purple-400/30 text-2xl self-start lg:self-auto">
@@ -1461,7 +1748,7 @@
                             </div>
                         </div>
 
-                        <!-- PHOTO 2 DU USER : LE SCHÉMA D'INFRASTRUCTURE COMPLET -->
+                        <!-- PHOTO DU USER : LE SCHÉMA D'INFRASTRUCTURE COMPLET -->
                         <div class="space-y-3">
                             <div class="rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 cursor-pointer group relative shadow-2xl" onclick="openLightbox(document.getElementById('imgHomelab').src, 'Schéma d\'Infrastructure complet - HomeLab Personnel Nael Talbi')">
                                 <img id="imgHomelab" src="homelab.png" onerror="if(window.EMBEDDED_ASSETS) this.src=window.EMBEDDED_ASSETS.homelab" alt="Schéma d'Infrastructure HomeLab Personnel" class="w-full h-auto object-contain group-hover:scale-[1.01] transition-transform duration-500">
@@ -1524,44 +1811,40 @@
 
                             <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
                                 <div class="flex items-center gap-2 text-teal-300 font-bold text-sm">
-                                    <i class="fa-solid fa-flask-vial"></i> Cloisonnement Proxmox & pfSense
+                                    <i class="fa-solid fa-flask-vial"></i> Bac à Sable Épreuves BTS SIO
                                 </div>
                                 <p class="text-slate-400 leading-relaxed">
-                                    Administration multi-environnements (Pools SIO1/SIO2, RBAC, SDN) et sécurisation pare-feu pfSense (interfaces WAN, VLAN 24 et DHCP).
+                                    Environnement de test idéal pour préparer les épreuves E4 & E5, expérimenter de nouveaux services avant application en clinique.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Autres réalisations E6 -->
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="card-dark-pro rounded-2xl p-6 space-y-3 bg-slate-900/70 border border-orange-500/30 flex flex-col justify-between">
-                            <div class="space-y-2">
-                                <span class="text-xs font-bold text-orange-400 font-mono bg-orange-500/20 px-2.5 py-1 rounded-full border border-orange-500/30">Projet E6 • Virtualisation</span>
-                                <h4 class="font-bold text-white text-lg">Cloisonnement Multi-Pools & RBAC sous Proxmox VE</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">
-                                    Mise en œuvre d'environnements virtualisés isolés (<code>Pool-SIO1</code> et <code>Pool-SIO2</code>) avec attribution granulaire des privilèges (PVEVMAdmin, PVEDatastoreUser, PVESDNUser) et séparation des ponts réseau Linux (<code>vmbr0</code>, <code>vmbr1</code>, <code>vmbr2</code>).
-                                </p>
+                    <!-- PROJET FORMATION 2 : ARCHITECTURE PFSENSE & VLANS PROXMOX -->
+                    <div id="proj-pfsense" class="card-dark-pro rounded-3xl p-8 sm:p-10 bg-slate-900/80 border border-emerald-500/25 space-y-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/20 px-2.5 py-1 rounded-full border border-emerald-500/30">Atelier TP BTS SIO • Épreuve E4</span>
+                                <h4 class="font-extrabold text-white text-2xl mt-2">Architecture pfSense & VLANs sous Proxmox</h4>
+                                <p class="text-xs text-slate-300 mt-1">Plateforme virtualisée de sécurité et de routage inter-VLANs</p>
                             </div>
-                            <div class="pt-3">
-                                <button onclick="showCategory('procedures'); openProcedureModal(2)" class="text-xs font-semibold text-orange-300 hover:text-white flex items-center gap-1.5">
-                                    <i class="fa-solid fa-book-open"></i> Consulter la procédure Proxmox associée <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                </button>
+                            <div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-2xl border border-emerald-400/30 text-2xl self-start sm:self-auto">
+                                <i class="fa-solid fa-network-wired"></i>
                             </div>
                         </div>
 
-                        <div class="card-dark-pro rounded-2xl p-6 space-y-3 bg-slate-900/70 border border-blue-500/30 flex flex-col justify-between">
-                            <div class="space-y-2">
-                                <span class="text-xs font-bold text-blue-400 font-mono bg-blue-500/20 px-2.5 py-1 rounded-full border border-blue-500/30">Projet E6 • Cybersécurité Réseau</span>
-                                <h4 class="font-bold text-white text-lg">Pare-feu pfSense, Routage Inter-VLAN & DHCP</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">
-                                    Déploiement d'un pare-feu pfSense en console TUI : configuration de l'interface WAN, création d'interfaces VLAN 802.1Q (<code>re2.24</code>), attribution d'adressage IP statique (<code>192.168.25.254/24</code>) et serveur DHCP dédié.
-                                </p>
+                        <div class="grid md:grid-cols-3 gap-4 text-xs">
+                            <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1.5">
+                                <strong class="text-white block font-semibold"><i class="fa-solid fa-shield-halved text-emerald-400 mr-1"></i> Pare-feu pfSense</strong>
+                                <p class="text-slate-400">Filtrage stateful, gestion des règles entrantes/sortantes et NAT Wan.</p>
                             </div>
-                            <div class="pt-3">
-                                <button onclick="showCategory('procedures'); openProcedureModal(3)" class="text-xs font-semibold text-blue-300 hover:text-white flex items-center gap-1.5">
-                                    <i class="fa-solid fa-book-open"></i> Consulter la procédure pfSense associée <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                </button>
+                            <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1.5">
+                                <strong class="text-white block font-semibold"><i class="fa-solid fa-tags text-cyan-400 mr-1"></i> Segmentation 802.1Q</strong>
+                                <p class="text-slate-400">Création des sous-interfaces VLAN taggées (re2.24) et routage inter-VLANs sécurisé.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1.5">
+                                <strong class="text-white block font-semibold"><i class="fa-solid fa-server text-purple-400 mr-1"></i> Serveur DHCP & DMZ</strong>
+                                <p class="text-slate-400">Distribution automatique d'adresses IP par scope VLAN et isolement des services.</p>
                             </div>
                         </div>
                     </div>
@@ -1677,520 +1960,370 @@
 
 
         <!-- ======================================================== -->
-        <!-- PAGE 7 : VEILLES (TECHNOLOGIQUE, JURIDIQUE & SUIVI)      -->
+        <!-- PAGE 7 : VEILLES (FOND SOMBRE NÉBULEUSE FUCHSIA/VIOLET)  -->
         <!-- ======================================================== -->
         <section id="view-veilles" class="page-view hidden theme-veilles text-white min-h-[calc(100vh-5rem)] py-16 sm:py-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
                 
                 <!-- En-tête de la page -->
                 <div class="text-center max-w-4xl mx-auto space-y-4">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-fuchsia-500/15 border border-fuchsia-400/30 text-fuchsia-300 text-xs font-semibold">
-                        <i class="fa-solid fa-eye text-fuchsia-400"></i> Veilles BTS SIO SISR
+                        <i class="fa-solid fa-lightbulb text-fuchsia-400"></i> Veille Technologique • BTS SIO SISR
                     </div>
                     <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                        Mes <span class="bg-gradient-to-r from-fuchsia-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">Veilles</span>
+                        La Sécurité Informatique : Le Modèle <span class="bg-gradient-to-r from-fuchsia-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">"Zero Trust"</span>
                     </h2>
                     <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
-                        Retrouvez ma <strong>Veille Technologique</strong> (Sécurité Zero Trust & IA au support), ma <strong>Veille Juridique</strong> (RGPD, HDS & NIS 2 en santé) ainsi que mon <strong>Suivi de Veille</strong>.
+                        Pourquoi on ne peut plus faire confiance à un simple mot de passe, et comment le principe <strong>Zero Trust</strong> (<em>"Ne faire confiance à personne par défaut"</em>) protège les réseaux et les données de santé de notre clinique.
                     </p>
-
-                    <!-- Onglets de navigation rapide (identiques aux sous-menus de Veilles) -->
-                    <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-                        <button onclick="showVeilleSub('all')" id="veille-tab-all" class="veille-tab-btn px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs transition">
-                            <i class="fa-solid fa-layer-group mr-1.5"></i> Tout afficher
-                        </button>
-                        <button onclick="showVeilleSub('tech')" id="veille-tab-tech" class="veille-tab-btn px-4 py-2.5 rounded-xl bg-fuchsia-600 text-white font-semibold text-xs transition shadow-lg">
-                            <i class="fa-solid fa-microchip mr-1.5"></i> Veille technologique
-                        </button>
-                        <button onclick="showVeilleSub('juridique')" id="veille-tab-juridique" class="veille-tab-btn px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs transition">
-                            <i class="fa-solid fa-scale-balanced text-amber-400 mr-1.5"></i> Veille juridique
-                        </button>
-                        <button onclick="showVeilleSub('suivi')" id="veille-tab-suivi" class="veille-tab-btn px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs transition">
-                            <i class="fa-solid fa-rss text-emerald-400 mr-1.5"></i> Suivi de veille
-                        </button>
+                    <div class="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs">
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-fuchsia-300 border border-fuchsia-500/20"><i class="fa-solid fa-key mr-1"></i> 1. Double Authentification (2FA)</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-purple-300 border border-purple-500/20"><i class="fa-solid fa-user-lock mr-1"></i> 2. Moindre Privilège (Droits stricts)</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-pink-300 border border-pink-500/20"><i class="fa-solid fa-network-wired mr-1"></i> 3. Réseau Cloisonné (VLANs)</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800/80 text-emerald-300 border border-emerald-500/20"><i class="fa-solid fa-hospital mr-1"></i> Contexte Clinique de Santé</span>
                     </div>
                 </div>
 
-                <!-- ======================================================== -->
-                <!-- SOUS-PARTIE 1 : VEILLE TECHNOLOGIQUE                     -->
-                <!-- ======================================================== -->
-                <div id="veille-technologique" class="veille-sub-group space-y-12" data-veille-sub="tech">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-                        <div class="flex items-center gap-3">
-                            <span class="px-3 py-1 rounded-xl bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30 font-mono text-xs font-bold">VEILLE TECHNOLOGIQUE</span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white">Le Modèle « Zero Trust » en Milieu Hospitalier</h3>
+                <!-- ============================================== -->
+                <!-- MODULE 1 : LAB INTERACTIF SIMPLIFIÉ            -->
+                <!-- ============================================== -->
+                <div class="card-dark-pro rounded-3xl p-6 sm:p-10 bg-slate-900/85 border border-fuchsia-500/30 shadow-2xl space-y-8 relative overflow-hidden backdrop-blur-xl">
+                    <div class="terminal-scanline"></div>
+
+                    <!-- En-tête du Lab -->
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="relative flex h-3 w-3">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-fuchsia-500"></span>
+                                </span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                                    Simulateur : Testez une Cyberattaque en Direct !
+                                </h3>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1">
+                                Choisissez la méthode de sécurité, déclenchez une attaque et observez la différence en direct.
+                            </p>
                         </div>
-                        <div class="flex flex-wrap gap-2 text-xs">
-                            <span class="px-2.5 py-1 rounded-full bg-slate-800/80 text-fuchsia-300 border border-fuchsia-500/20"><i class="fa-solid fa-key mr-1"></i> 2FA</span>
-                            <span class="px-2.5 py-1 rounded-full bg-slate-800/80 text-purple-300 border border-purple-500/20"><i class="fa-solid fa-user-lock mr-1"></i> Moindre Privilège</span>
-                            <span class="px-2.5 py-1 rounded-full bg-slate-800/80 text-pink-300 border border-pink-500/20"><i class="fa-solid fa-network-wired mr-1"></i> VLANs</span>
+
+                        <!-- Badge Mode Actif -->
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs text-slate-400 font-mono">SÉCURITÉ CHOISIE :</span>
+                            <span id="activeModeBadge" class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-red-500/20 text-red-300 border border-red-500/30">
+                                🔴 Sécurité Classique (Mot de passe seul)
+                            </span>
                         </div>
                     </div>
 
-                    <!-- MODULE 1 : LAB INTERACTIF SIMPLIFIÉ -->
-                    <div class="card-dark-pro rounded-3xl p-6 sm:p-10 bg-slate-900/85 border border-fuchsia-500/30 shadow-2xl space-y-8 relative overflow-hidden backdrop-blur-xl">
-                        <div class="terminal-scanline"></div>
+                    <!-- Barre de Contrôle : Choix Architecture & Lancement Attaques -->
+                    <div class="grid lg:grid-cols-12 gap-4 items-center bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <!-- Sélecteur d'Architecture -->
+                        <div class="lg:col-span-5 flex flex-col sm:flex-row gap-2">
+                            <button id="btnArchTrad" onclick="setArchitecture('trad')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-gradient-to-r from-red-600/90 to-amber-600/90 text-white shadow-lg border border-red-400/40">
+                                <i class="fa-solid fa-lock-open"></i> 1. Sécurité Classique
+                            </button>
+                            <button id="btnArchZT" onclick="setArchitecture('ztna')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700">
+                                <i class="fa-solid fa-shield-halved"></i> 2. Sécurité Zero Trust
+                            </button>
+                        </div>
 
-                        <!-- En-tête du Lab -->
-                        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-800">
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <span class="relative flex h-3 w-3">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-3 w-3 bg-fuchsia-500"></span>
+                        <!-- Sélecteur d'Attaque & Actions -->
+                        <div class="lg:col-span-7 flex flex-wrap sm:flex-nowrap gap-2 justify-end">
+                            <button id="btnAttack1" onclick="runSimulation('phishing')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-fuchsia-600 hover:bg-fuchsia-500 text-white shadow-lg shadow-fuchsia-600/20 border border-fuchsia-400/30">
+                                <i class="fa-solid fa-envelope-open-text text-yellow-300"></i> Test 1 : Vol de mot de passe (Phishing)
+                            </button>
+                            <button id="btnAttack2" onclick="runSimulation('ransomware')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-600/20 border border-purple-400/30">
+                                <i class="fa-solid fa-virus text-amber-300"></i> Test 2 : Virus / Ransomware
+                            </button>
+                            <button id="btnReset" onclick="resetSimulation()" class="px-3.5 py-2.5 rounded-xl text-xs font-bold transition bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:text-white" title="Réinitialiser l'état">
+                                <i class="fa-solid fa-rotate-left"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Schéma Réseau Simplifié à 3 Nœuds -->
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between text-xs font-mono text-slate-400 px-1">
+                            <span><i class="fa-solid fa-network-wired mr-1 text-fuchsia-400"></i> ÉTATS DES ÉQUIPEMENTS EN TEMPS RÉEL</span>
+                            <span id="simStepIndicator" class="text-fuchsia-400">En attente d'un test</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                            
+                            <!-- Nœud 1 : Poste Utilisateur -->
+                            <div id="nodeCard1" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
+                                <div class="flex items-start justify-between">
+                                    <div id="nodeIconBox1" class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center text-xl border border-slate-700 transition-colors">
+                                        <i class="fa-solid fa-laptop-medical"></i>
+                                    </div>
+                                    <span id="nodeBadge1" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors">
+                                        PC SAIN • CONNECTÉ
                                     </span>
-                                    <h3 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                                        Simulateur : Testez une Cyberattaque en Direct !
-                                    </h3>
                                 </div>
-                                <p class="text-xs text-slate-400 mt-1">
-                                    Choisissez la méthode de sécurité, déclenchez une attaque et observez la différence en direct.
-                                </p>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">1. Poste Soignant</h4>
+                                    <p class="text-xs font-mono text-slate-400">192.168.10.45 • Bureau de consultation</p>
+                                </div>
+                                <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
+                                    <span id="nodeDesc1" class="text-slate-400">L'ordinateur utilisé par le médecin ou soignant.</span>
+                                </div>
                             </div>
 
-                            <!-- Badge Mode Actif -->
+                            <!-- Nœud 2 : Barrière de Sécurité -->
+                            <div id="nodeCard2" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
+                                <div class="flex items-start justify-between">
+                                    <div id="nodeIconBox2" class="w-12 h-12 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center text-xl border border-slate-700 transition-colors">
+                                        <i id="nodeIcon2" class="fa-solid fa-key"></i>
+                                    </div>
+                                    <span id="nodeBadge2" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 transition-colors">
+                                        MOT DE PASSE SEUL
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4 id="nodeTitle2" class="font-bold text-white text-base">2. Contrôle de Sécurité</h4>
+                                    <p id="nodeRole2" class="text-xs font-mono text-slate-400">Vérification basique (Sans 2FA)</p>
+                                </div>
+                                <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
+                                    <span id="nodeDesc2" class="text-slate-400">Si le mot de passe est bon, le système laisse passer sans rien demander d'autre.</span>
+                                </div>
+                            </div>
+
+                            <!-- Nœud 3 : Serveur des Fichiers Patients -->
+                            <div id="nodeCard3" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
+                                <div class="flex items-start justify-between">
+                                    <div id="nodeIconBox3" class="w-12 h-12 rounded-xl bg-slate-800 text-emerald-400 flex items-center justify-center text-xl border border-slate-700 transition-colors">
+                                        <i class="fa-solid fa-database"></i>
+                                    </div>
+                                    <span id="nodeBadge3" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors">
+                                        DOSSIERS EN SÉCURITÉ
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">3. Serveur Central Médical</h4>
+                                    <p class="text-xs font-mono text-slate-400">10.0.0.50 • Base des Dossiers Patients</p>
+                                </div>
+                                <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
+                                    <span id="nodeDesc3" class="text-slate-400">Contient tous les dossiers médicaux confidentiels de la clinique.</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Console des Événements (Journal en français simple) -->
+                    <div class="rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden shadow-inner">
+                        <div class="flex items-center justify-between px-4 py-2.5 bg-slate-900 border-b border-slate-800 text-xs">
                             <div class="flex items-center gap-2">
-                                <span class="text-xs text-slate-400 font-mono">SÉCURITÉ CHOISIE :</span>
-                                <span id="activeModeBadge" class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-red-500/20 text-red-300 border border-red-500/30">
-                                    🔴 Sécurité Classique (Mot de passe seul)
+                                <div class="flex gap-1.5">
+                                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                                </div>
+                                <span class="font-mono text-xs text-slate-300 ml-2">
+                                    <i class="fa-solid fa-terminal text-fuchsia-400 mr-1"></i> CE QUI SE PASSE EN DIRECT SUR LE RÉSEAU
                                 </span>
                             </div>
-                        </div>
-
-                        <!-- Barre de Contrôle : Choix Architecture & Lancement Attaques -->
-                        <div class="grid lg:grid-cols-12 gap-4 items-center bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
-                            <!-- Sélecteur d'Architecture -->
-                            <div class="lg:col-span-5 flex flex-col sm:flex-row gap-2">
-                                <button id="btnArchTrad" onclick="setArchitecture('trad')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-gradient-to-r from-red-600/90 to-amber-600/90 text-white shadow-lg border border-red-400/40">
-                                    <i class="fa-solid fa-lock-open"></i> 1. Sécurité Classique
-                                </button>
-                                <button id="btnArchZT" onclick="setArchitecture('ztna')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700">
-                                    <i class="fa-solid fa-shield-halved"></i> 2. Sécurité Zero Trust
-                                </button>
-                            </div>
-
-                            <!-- Sélecteur d'Attaque & Actions -->
-                            <div class="lg:col-span-7 flex flex-wrap sm:flex-nowrap gap-2 justify-end">
-                                <button id="btnAttack1" onclick="runSimulation('phishing')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-fuchsia-600 hover:bg-fuchsia-500 text-white shadow-lg shadow-fuchsia-600/20 border border-fuchsia-400/30">
-                                    <i class="fa-solid fa-envelope-open-text text-yellow-300"></i> Test 1 : Vol de mot de passe (Phishing)
-                                </button>
-                                <button id="btnAttack2" onclick="runSimulation('ransomware')" class="flex-1 px-3.5 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-600/20 border border-purple-400/30">
-                                    <i class="fa-solid fa-virus text-amber-300"></i> Test 2 : Virus / Ransomware
-                                </button>
-                                <button id="btnReset" onclick="resetSimulation()" class="px-3.5 py-2.5 rounded-xl text-xs font-bold transition bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 hover:text-white" title="Réinitialiser l'état">
-                                    <i class="fa-solid fa-rotate-left"></i>
-                                </button>
+                            <div class="flex items-center gap-2 font-mono text-xs">
+                                <span id="terminalStatusDot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span id="terminalStatusText" class="text-emerald-400">PRÊT</span>
                             </div>
                         </div>
 
-                        <!-- Schéma Réseau Simplifié à 3 Nœuds -->
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between text-xs font-mono text-slate-400 px-1">
-                                <span><i class="fa-solid fa-network-wired mr-1 text-fuchsia-400"></i> ÉTATS DES ÉQUIPEMENTS EN TEMPS RÉEL</span>
-                                <span id="simStepIndicator" class="text-fuchsia-400">En attente d'un test</span>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-                                
-                                <!-- Nœud 1 : Poste Utilisateur -->
-                                <div id="nodeCard1" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
-                                    <div class="flex items-start justify-between">
-                                        <div id="nodeIconBox1" class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center text-xl border border-slate-700 transition-colors">
-                                            <i class="fa-solid fa-laptop-medical"></i>
-                                        </div>
-                                        <span id="nodeBadge1" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors">
-                                            PC SAIN • CONNECTÉ
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-white text-base">1. Poste Soignant</h4>
-                                        <p class="text-xs font-mono text-slate-400">192.168.10.45 • Bureau de consultation</p>
-                                    </div>
-                                    <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
-                                        <span id="nodeDesc1" class="text-slate-400">L'ordinateur utilisé par le médecin ou soignant.</span>
-                                    </div>
-                                </div>
-
-                                <!-- Nœud 2 : Barrière de Sécurité -->
-                                <div id="nodeCard2" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
-                                    <div class="flex items-start justify-between">
-                                        <div id="nodeIconBox2" class="w-12 h-12 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center text-xl border border-slate-700 transition-colors">
-                                            <i id="nodeIcon2" class="fa-solid fa-key"></i>
-                                        </div>
-                                        <span id="nodeBadge2" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 transition-colors">
-                                            MOT DE PASSE SEUL
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h4 id="nodeTitle2" class="font-bold text-white text-base">2. Contrôle de Sécurité</h4>
-                                        <p id="nodeRole2" class="text-xs font-mono text-slate-400">Vérification basique (Sans 2FA)</p>
-                                    </div>
-                                    <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
-                                        <span id="nodeDesc2" class="text-slate-400">Si le mot de passe est bon, le système laisse passer sans rien demander d'autre.</span>
-                                    </div>
-                                </div>
-
-                                <!-- Nœud 3 : Serveur des Fichiers Patients -->
-                                <div id="nodeCard3" class="rounded-2xl p-5 bg-slate-950/90 border border-slate-800 transition-all duration-300 relative space-y-3">
-                                    <div class="flex items-start justify-between">
-                                        <div id="nodeIconBox3" class="w-12 h-12 rounded-xl bg-slate-800 text-emerald-400 flex items-center justify-center text-xl border border-slate-700 transition-colors">
-                                            <i class="fa-solid fa-database"></i>
-                                        </div>
-                                        <span id="nodeBadge3" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors">
-                                            DOSSIERS EN SÉCURITÉ
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-white text-base">3. Serveur Central Médical</h4>
-                                        <p class="text-xs font-mono text-slate-400">10.0.0.50 • Base des Dossiers Patients</p>
-                                    </div>
-                                    <div class="pt-2 border-t border-slate-800/80 text-xs text-slate-300">
-                                        <span id="nodeDesc3" class="text-slate-400">Contient tous les dossiers médicaux confidentiels de la clinique.</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Console des Événements (Journal en français simple) -->
-                        <div class="rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden shadow-inner">
-                            <div class="flex items-center justify-between px-4 py-2.5 bg-slate-900 border-b border-slate-800 text-xs">
-                                <div class="flex items-center gap-2">
-                                    <div class="flex gap-1.5">
-                                        <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                                        <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                                        <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                                    </div>
-                                    <span class="font-mono text-xs text-slate-300 ml-2">
-                                        <i class="fa-solid fa-terminal text-fuchsia-400 mr-1"></i> CE QUI SE PASSE EN DIRECT SUR LE RÉSEAU
-                                    </span>
-                                </div>
-                                <div class="flex items-center gap-2 font-mono text-xs">
-                                    <span id="terminalStatusDot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                                    <span id="terminalStatusText" class="text-emerald-400">PRÊT</span>
-                                </div>
-                            </div>
-
-                            <div id="simTerminal" class="p-4 font-mono text-xs text-slate-300 h-52 sm:h-56 overflow-y-auto space-y-2 leading-relaxed bg-[#050811]">
-                                <div class="text-slate-400">[SYSTÈME] Le simulateur est prêt.</div>
-                                <div class="text-fuchsia-300">[AIDE] Cliquez sur « Test 1 : Phishing » ou « Test 2 : Virus » pour voir ce qui arrive !</div>
-                            </div>
-                        </div>
-
-                        <!-- Bilan & Verdict de l'Attaque -->
-                        <div id="simVerdictCard" class="p-5 sm:p-6 rounded-2xl bg-slate-950/90 border border-slate-800 transition-all space-y-4">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                                <div>
-                                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">BILAN DE L'EXPÉRIENCE</span>
-                                    <h4 id="simVerdictTitle" class="text-base sm:text-lg font-bold text-white mt-0.5">
-                                        Sélectionnez un test pour voir si l'attaque réussit ou est bloquée.
-                                    </h4>
-                                </div>
-                                <div id="verdictPill" class="hidden sm:inline-flex px-3 py-1 rounded-xl text-xs font-bold font-mono">
-                                    EN ATTENTE
-                                </div>
-                            </div>
-
-                            <p id="simVerdictDesc" class="text-xs text-slate-300 leading-relaxed">
-                                Ce test montre pourquoi un mot de passe ne suffit plus aujourd'hui et pourquoi la double authentification (2FA) et le cloisonnement réseau sont indispensables.
-                            </p>
-
-                            <!-- 3 Indicateurs Clés et Simples -->
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-center">
-                                <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                                    <span class="block text-[11px] font-mono text-slate-400">RÉSULTAT DE L'ATTAQUE</span>
-                                    <span id="kpiRadius" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
-                                </div>
-                                <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                                    <span class="block text-[11px] font-mono text-slate-400">DOSSIERS PATIENTS</span>
-                                    <span id="kpiImpact" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
-                                </div>
-                                <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                                    <span class="block text-[11px] font-mono text-slate-400">RAISON DU RÉSULTAT</span>
-                                    <span id="kpiCompliance" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- MODULE 2 : LE ZERO TRUST EN 3 RÈGLES SIMPLES (ORAL BTS) -->
-                    <div class="space-y-8">
-                        <div class="text-center max-w-2xl mx-auto space-y-2">
-                            <span class="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider">À retenir pour l'épreuve de BTS SIO</span>
-                            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Le Zero Trust expliqué en 3 règles simples</h3>
-                            <p class="text-xs sm:text-sm text-slate-300">
-                                La philosophie du Zero Trust se résume par une formule : <strong>"Ne jamais faire confiance les yeux fermés, toujours revérifier"</strong>.
-                            </p>
-                        </div>
-
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <!-- Règle 1 -->
-                            <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-fuchsia-500/25 shadow-xl hover:border-fuchsia-400/50 transition">
-                                <div class="w-12 h-12 rounded-2xl bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xl font-bold border border-fuchsia-500/30">
-                                    <i class="fa-solid fa-mobile-screen-button"></i>
-                                </div>
-                                <span class="text-[11px] font-mono font-bold text-fuchsia-400 uppercase tracking-wider">RÈGLE N°1</span>
-                                <h4 class="text-lg font-bold text-white">La Double Authentification (2FA)</h4>
-                                <p class="text-slate-300 text-xs leading-relaxed">
-                                    Un mot de passe seul peut être volé par un faux mail (phishing) ou deviné. Avec le 2FA, l'utilisateur doit aussi valider un code sur son smartphone.
-                                </p>
-                                <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-fuchsia-300">
-                                    <strong>💡 Résultat :</strong> Même si un pirate a le mot de passe, il ne peut pas entrer sans le téléphone de l'employé !
-                                </div>
-                            </div>
-
-                            <!-- Règle 2 -->
-                            <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-purple-500/25 shadow-xl hover:border-purple-400/50 transition">
-                                <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold border border-purple-500/30">
-                                    <i class="fa-solid fa-user-shield"></i>
-                                </div>
-                                <span class="text-[11px] font-mono font-bold text-purple-400 uppercase tracking-wider">RÈGLE N°2</span>
-                                <h4 class="text-lg font-bold text-white">Le Moindre Privilège</h4>
-                                <p class="text-slate-300 text-xs leading-relaxed">
-                                    On ne donne à chaque employé que le strict minimum de droits nécessaires à son travail. Une infirmière a accès aux dossiers médicaux, mais pas aux serveurs comptables ni aux droits administrateur.
-                                </p>
-                                <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-purple-300">
-                                    <strong>💡 Résultat :</strong> Si un compte est piraté, le pirate ne peut pas faire de gros dégâts sur le reste du réseau.
-                                </div>
-                            </div>
-
-                            <!-- Règle 3 -->
-                            <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-pink-500/25 shadow-xl hover:border-pink-400/50 transition">
-                                <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold border border-pink-500/30">
-                                    <i class="fa-solid fa-network-wired"></i>
-                                </div>
-                                <span class="text-[11px] font-mono font-bold text-pink-400 uppercase tracking-wider">RÈGLE N°3</span>
-                                <h4 class="text-lg font-bold text-white">Le Cloisonnement (VLAN & Pare-feu)</h4>
-                                <p class="text-slate-300 text-xs leading-relaxed">
-                                    On sépare les ordinateurs des soignants et les serveurs importants en différents sous-réseaux (VLANs). Un ordinateur ne peut pas discuter directement avec tous les serveurs sans autorisation du pare-feu.
-                                </p>
-                                <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-pink-300">
-                                    <strong>💡 Résultat :</strong> Si un virus infecte un PC de bureau, il reste bloqué dans son coin et n'atteint jamais les serveurs !
-                                </div>
-                            </div>
+                        <div id="simTerminal" class="p-4 font-mono text-xs text-slate-300 h-52 sm:h-56 overflow-y-auto space-y-2 leading-relaxed bg-[#050811]">
+                            <div class="text-slate-400">[SYSTÈME] Le simulateur est prêt.</div>
+                            <div class="text-fuchsia-300">[AIDE] Cliquez sur « Test 1 : Phishing » ou « Test 2 : Virus » pour voir ce qui arrive !</div>
                         </div>
                     </div>
 
-                    <!-- MODULE 3 : TABLEAU COMPARATIF SIMPLE -->
-                    <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/70 border border-slate-800 shadow-xl space-y-6">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                    <!-- Bilan & Verdict de l'Attaque -->
+                    <div id="simVerdictCard" class="p-5 sm:p-6 rounded-2xl bg-slate-950/90 border border-slate-800 transition-all space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                             <div>
-                                <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                                    <i class="fa-solid fa-table-list text-fuchsia-400"></i> Comparatif : Ancienne Méthode vs Zero Trust
-                                </h3>
-                                <p class="text-xs text-slate-400 mt-0.5">
-                                    Résumé simple des différences pour bien comprendre l'enjeu.
-                                </p>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-mono">BILAN DE L'EXPÉRIENCE</span>
+                                <h4 id="simVerdictTitle" class="text-base sm:text-lg font-bold text-white mt-0.5">
+                                    Sélectionnez un test pour voir si l'attaque réussit ou est bloquée.
+                                </h4>
+                            </div>
+                            <div id="verdictPill" class="hidden sm:inline-flex px-3 py-1 rounded-xl text-xs font-bold font-mono">
+                                EN ATTENTE
                             </div>
                         </div>
 
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
-                                <thead class="bg-slate-950 font-mono text-[11px] text-slate-400 border-b border-slate-800">
-                                    <tr>
-                                        <th class="p-3.5">Situation</th>
-                                        <th class="p-3.5 text-red-300 bg-red-950/20 border-x border-slate-800">Sécurité Classique (Ancienne)</th>
-                                        <th class="p-3.5 text-emerald-300 bg-emerald-950/20">Sécurité Zero Trust (Moderne)</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-800">
-                                    <tr class="hover:bg-slate-800/40 transition">
-                                        <td class="p-3.5 font-bold text-white">Connexion de l'utilisateur</td>
-                                        <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Un simple mot de passe</td>
-                                        <td class="p-3.5 text-slate-300 bg-emerald-950/10">Mot de passe + Validation sur smartphone (2FA)</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-800/40 transition">
-                                        <td class="p-3.5 font-bold text-white">Accès aux dossiers</td>
-                                        <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Accès à presque tout le réseau</td>
-                                        <td class="p-3.5 text-slate-300 bg-emerald-950/10">Accès limité au strict nécessaire (Moindre privilège)</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-800/40 transition">
-                                        <td class="p-3.5 font-bold text-white">Si un PC attrape un virus</td>
-                                        <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le virus saute sur les serveurs et bloque tout</td>
-                                        <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le PC est isolé par le réseau (VLAN), le reste est sauvé</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-800/40 transition">
-                                        <td class="p-3.5 font-bold text-white">Si le mot de passe est volé</td>
-                                        <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le pirate entre librement dans le réseau</td>
-                                        <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le pirate est bloqué car il n'a pas le téléphone (2FA)</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- SUJET COMPLÉMENTAIRE (L'IA AU SUPPORT N1) -->
-                    <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/60 border border-purple-500/20 shadow-xl space-y-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg border border-purple-500/30">
-                                <i class="fa-solid fa-robot"></i>
-                            </div>
-                            <div>
-                                <span class="text-[10px] font-mono font-bold text-purple-400 uppercase tracking-wider">Deuxième Sujet de Veille Technologique • Support & IA</span>
-                                <h4 class="text-lg font-bold text-white">L'IA pour aider le support informatique (Ticketing N1)</h4>
-                            </div>
-                        </div>
-                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                            En plus de la cybersécurité, j'ai suivi l'évolution de l'intelligence artificielle dans les outils de tickets (comme GLPI ou Jira). L'IA permet de comprendre automatiquement les demandes des soignants, d'identifier les pannes urgentes (par exemple un bloc opératoire bloqué), et d'aider à résoudre les problèmes simples comme la réinitialisation de mots de passe oubliés.
+                        <p id="simVerdictDesc" class="text-xs text-slate-300 leading-relaxed">
+                            Ce test montre pourquoi un mot de passe ne suffit plus aujourd'hui et pourquoi la double authentification (2FA) et le cloisonnement réseau sont indispensables.
                         </p>
-                        <div class="flex flex-wrap gap-2 text-xs pt-1">
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Support informatique</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Gestion des tickets (GLPI)</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Gain de temps</span>
+
+                        <!-- 3 Indicateurs Clés et Simples -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-center">
+                            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="block text-[11px] font-mono text-slate-400">RÉSULTAT DE L'ATTAQUE</span>
+                                <span id="kpiRadius" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="block text-[11px] font-mono text-slate-400">DOSSIERS PATIENTS</span>
+                                <span id="kpiImpact" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="block text-[11px] font-mono text-slate-400">RAISON DU RÉSULTAT</span>
+                                <span id="kpiCompliance" class="block font-bold text-sm text-slate-300 mt-1">Non testé</span>
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- ======================================================== -->
-                <!-- SOUS-PARTIE 2 : VEILLE JURIDIQUE                         -->
+                <!-- MODULE 2 : LE ZERO TRUST EN 3 RÈGLES SIMPLES (ORAL BTS)  -->
                 <!-- ======================================================== -->
-                <div id="veille-juridique" class="veille-sub-group space-y-8 pt-4" data-veille-sub="juridique">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-                        <div class="flex items-center gap-3">
-                            <span class="px-3 py-1 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/30 font-mono text-xs font-bold">VEILLE JURIDIQUE</span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white">Réglementation des Données de Santé : RGPD, HDS & Directive NIS 2</h3>
-                        </div>
-                        <span class="text-xs font-mono text-amber-300">Secteur Hospitalier • Clinique Montfleuri</span>
+                <div class="space-y-8">
+                    <div class="text-center max-w-2xl mx-auto space-y-2">
+                        <span class="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider">À retenir pour l'épreuve de BTS SIO</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Le Zero Trust expliqué en 3 règles simples</h3>
+                        <p class="text-xs sm:text-sm text-slate-300">
+                            La philosophie du Zero Trust se résume par une formule : <strong>"Ne jamais faire confiance les yeux fermés, toujours revérifier"</strong>.
+                        </p>
                     </div>
 
-                    <div class="card-dark-pro rounded-3xl p-6 sm:p-10 bg-slate-900/75 border border-amber-500/30 shadow-2xl space-y-6">
-                        <p class="text-sm text-slate-300 leading-relaxed">
-                            Travaillant en alternance au sein d'un groupe de <strong>17 cliniques</strong>, ma veille juridique porte sur les obligations légales encadrant le traitement, l'hébergement et la sécurisation des <strong>données personnelles de santé</strong> en France et en Europe.
-                        </p>
-
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <!-- Pilier 1 : RGPD & CNIL -->
-                            <div class="p-6 rounded-2xl bg-slate-950/80 border border-amber-500/30 space-y-3">
-                                <div class="w-11 h-11 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg border border-amber-500/30">
-                                    <i class="fa-solid fa-scale-balanced"></i>
-                                </div>
-                                <span class="text-[11px] font-mono font-bold text-amber-400 uppercase">1. RGPD & CNIL (Article 9)</span>
-                                <h4 class="text-base font-bold text-white">Protection des Données Sensibles</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">
-                                    Les données médicales sont classées comme <strong>données sensibles</strong> par le RGPD. Elles imposent la traçabilité des accès, le principe de moindre privilège (GPO Active Directory) et l'obligation de notifier toute violation de données à la CNIL sous <strong>72 heures</strong>.
-                                </p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Règle 1 -->
+                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-fuchsia-500/25 shadow-xl hover:border-fuchsia-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xl font-bold border border-fuchsia-500/30">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
                             </div>
-
-                            <!-- Pilier 2 : Certification HDS -->
-                            <div class="p-6 rounded-2xl bg-slate-950/80 border border-cyan-500/30 space-y-3">
-                                <div class="w-11 h-11 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg border border-cyan-500/30">
-                                    <i class="fa-solid fa-hospital-user"></i>
-                                </div>
-                                <span class="text-[11px] font-mono font-bold text-cyan-400 uppercase">2. Certification HDS (Art. L.1111-8 CSP)</span>
-                                <h4 class="text-base font-bold text-white">Hébergeur de Données de Santé</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">
-                                    Le Code de la Santé Publique impose que tout prestataire hébergeant des dossiers patients soit certifié <strong>HDS</strong> (basé sur la norme ISO 27001), garantissant le chiffrement, la redondance et la souveraineté des sauvegardes médicales.
-                                </p>
+                            <span class="text-[11px] font-mono font-bold text-fuchsia-400 uppercase tracking-wider">RÈGLE N°1</span>
+                            <h4 class="text-lg font-bold text-white">La Double Authentification (2FA)</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Un mot de passe seul peut être volé par un faux mail (phishing) ou deviné. Avec le 2FA, l'utilisateur doit aussi valider un code sur son smartphone.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-fuchsia-300">
+                                <strong>💡 Résultat :</strong> Même si un pirate a le mot de passe, il ne peut pas entrer sans le téléphone de l'employé !
                             </div>
+                        </div>
 
-                            <!-- Pilier 3 : Directive NIS 2 & Programme CaRE -->
-                            <div class="p-6 rounded-2xl bg-slate-950/80 border border-purple-500/30 space-y-3">
-                                <div class="w-11 h-11 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg border border-purple-500/30">
-                                    <i class="fa-solid fa-building-shield"></i>
-                                </div>
-                                <span class="text-[11px] font-mono font-bold text-purple-400 uppercase">3. Directive Européenne NIS 2 & CaRE</span>
-                                <h4 class="text-base font-bold text-white">Cybersécurité des Établissements de Santé</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">
-                                    La directive <strong>NIS 2</strong> et le programme national <strong>CaRE</strong> (ANS) renforcent les obligations des cliniques : audit régulier de l'Active Directory, cloisonnement réseau par VLANs, MFA obligatoire et sauvegardes hors-ligne immuables.
-                                </p>
+                        <!-- Règle 2 -->
+                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-purple-500/25 shadow-xl hover:border-purple-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold border border-purple-500/30">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <span class="text-[11px] font-mono font-bold text-purple-400 uppercase tracking-wider">RÈGLE N°2</span>
+                            <h4 class="text-lg font-bold text-white">Le Moindre Privilège</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                On ne donne à chaque employé que le strict minimum de droits nécessaires à son travail. Une infirmière a accès aux dossiers médicaux, mais pas aux serveurs comptables ni aux droits administrateur.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-purple-300">
+                                <strong>💡 Résultat :</strong> Si un compte est piraté, le pirate ne peut pas faire de gros dégâts sur le reste du réseau.
+                            </div>
+                        </div>
+
+                        <!-- Règle 3 -->
+                        <div class="card-dark-pro rounded-3xl p-6 sm:p-8 space-y-4 bg-slate-900/70 border border-pink-500/25 shadow-xl hover:border-pink-400/50 transition">
+                            <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold border border-pink-500/30">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <span class="text-[11px] font-mono font-bold text-pink-400 uppercase tracking-wider">RÈGLE N°3</span>
+                            <h4 class="text-lg font-bold text-white">Le Cloisonnement (VLAN & Pare-feu)</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                On sépare les ordinateurs des soignants et les serveurs importants en différents sous-réseaux (VLANs). Un ordinateur ne peut pas discuter directement avec tous les serveurs sans autorisation du pare-feu.
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-pink-300">
+                                <strong>💡 Résultat :</strong> Si un virus infecte un PC de bureau, il reste bloqué dans son coin et n'atteint jamais les serveurs !
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- ======================================================== -->
-                <!-- SOUS-PARTIE 3 : SUIVI DE VEILLE                          -->
+                <!-- MODULE 3 : TABLEAU COMPARATIF SIMPLE                    -->
                 <!-- ======================================================== -->
-                <div id="suivi-de-veille" class="veille-sub-group space-y-8 pt-4" data-veille-sub="suivi">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-                        <div class="flex items-center gap-3">
-                            <span class="px-3 py-1 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono text-xs font-bold">SUIVI DE VEILLE</span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white">Méthodologie, Outils de Collecte & Journal de Suivi</h3>
+                <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/70 border border-slate-800 shadow-xl space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-table-list text-fuchsia-400"></i> Comparatif : Ancienne Méthode vs Zero Trust
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-0.5">
+                                Résumé simple des différences pour bien comprendre l'enjeu.
+                            </p>
                         </div>
-                        <span class="text-xs font-mono text-emerald-400"><i class="fa-solid fa-rss mr-1"></i> Veille Active Hebdomadaire</span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
+                            <thead class="bg-slate-950 font-mono text-[11px] text-slate-400 border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3.5">Situation</th>
+                                    <th class="p-3.5 text-red-300 bg-red-950/20 border-x border-slate-800">Sécurité Classique (Ancienne)</th>
+                                    <th class="p-3.5 text-emerald-300 bg-emerald-950/20">Sécurité Zero Trust (Moderne)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Connexion de l'utilisateur</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Un simple mot de passe</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Mot de passe + Validation sur smartphone (2FA)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Accès aux dossiers</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Accès à presque tout le réseau</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Accès limité au strict nécessaire (Moindre privilège)</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Si un PC attrape un virus</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le virus saute sur les serveurs et bloque tout</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le PC est isolé par le réseau (VLAN), le reste est sauvé</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="p-3.5 font-bold text-white">Si le mot de passe est volé</td>
+                                    <td class="p-3.5 text-slate-300 bg-red-950/10 border-x border-slate-800">Le pirate entre librement dans le réseau</td>
+                                    <td class="p-3.5 text-slate-300 bg-emerald-950/10">Le pirate est bloqué car il n'a pas le téléphone (2FA)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- MODULE 4 : MA MÉTHODE DE VEILLE EN BTS SIO               -->
+                <!-- ======================================================== -->
+                <div class="space-y-8">
+                    <div class="text-center max-w-2xl mx-auto space-y-2">
+                        <span class="text-xs font-mono font-bold text-fuchsia-400 uppercase tracking-wider">Épreuve E6 • BTS SIO</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Comment je réalise ma veille technologique</h3>
+                        <p class="text-xs sm:text-sm text-slate-300">
+                            Une démarche simple en 4 étapes que j'applique tout au long de mon BTS.
+                        </p>
                     </div>
 
                     <!-- Les 4 étapes simples -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
-                            <span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 text-[10px] font-mono font-bold">ÉTAPE 1 • COLLECTE</span>
-                            <h4 class="font-bold text-white text-sm">Agrégation Flux RSS (Feedly)</h4>
+                            <span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 text-[10px] font-mono font-bold">ÉTAPE 1</span>
+                            <h4 class="font-bold text-white text-sm">S'informer (Flux RSS)</h4>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                J'utilise l'agrégateur <strong>Feedly</strong> et les Google Alerts pour centraliser automatiquement les nouveaux articles et bulletins de sécurité chaque semaine.
+                                J'utilise l'application <strong>Feedly</strong> pour recevoir automatiquement les nouveaux articles et alertes de cybersécurité chaque semaine.
                             </p>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
-                            <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-[10px] font-mono font-bold">ÉTAPE 2 • FILTRAGE</span>
-                            <h4 class="font-bold text-white text-sm">Sources Institutionnelles</h4>
+                            <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-[10px] font-mono font-bold">ÉTAPE 2</span>
+                            <h4 class="font-bold text-white text-sm">Lire les sources officielles</h4>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                Je croise les informations avec les avis officiels du <strong>CERT-FR (ANSSI)</strong>, de la <strong>CNIL</strong> et de <strong>Cybermalveillance.gouv.fr</strong>.
+                                Je consulte les alertes de <strong>Cybermalveillance.gouv.fr</strong> et de l'<strong>ANSSI</strong> pour repérer les faux mails ou failles actuelles.
                             </p>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
-                            <span class="px-2 py-0.5 rounded bg-pink-500/20 text-pink-300 text-[10px] font-mono font-bold">ÉTAPE 3 • EXPÉRIMENTATION</span>
-                            <h4 class="font-bold text-white text-sm">Tests sur mon HomeLab</h4>
+                            <span class="px-2 py-0.5 rounded bg-pink-500/20 text-pink-300 text-[10px] font-mono font-bold">ÉTAPE 3</span>
+                            <h4 class="font-bold text-white text-sm">Tester en pratique</h4>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                Sur mon laboratoire (OPNsense / pfSense / Proxmox), je reproduis les configurations recommandées (segmentation VLAN, règles firewall, 2FA).
+                                Sur mon HomeLab personnel (pfSense / Proxmox), je teste la création de VLANs pour séparer les réseaux et vérifier le blocage des flux.
                             </p>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
-                            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold">ÉTAPE 4 • APPLICATION</span>
-                            <h4 class="font-bold text-white text-sm">Mise en œuvre en Clinique</h4>
+                            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold">ÉTAPE 4</span>
+                            <h4 class="font-bold text-white text-sm">Appliquer en clinique</h4>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                En alternance à la Clinique Montfleuri, je sensibilise les équipes soignantes et applique les bonnes pratiques sur le parc des 17 sites.
+                                En alternance à la Clinique Montfleuri, je sensibilise les utilisateurs au phishing et participe au déploiement de la double authentification.
                             </p>
-                        </div>
-                    </div>
-
-                    <!-- Tableau de Suivi Chronologique des Articles / Bulletins -->
-                    <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/75 border border-emerald-500/25 space-y-5 shadow-xl">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
-                            <div>
-                                <h4 class="text-lg font-bold text-white flex items-center gap-2">
-                                    <i class="fa-solid fa-clock-rotate-left text-emerald-400"></i> Journal de Suivi des Publications & Alertes Retenues
-                                </h4>
-                                <p class="text-xs text-slate-400">Synthèse des articles techniques et juridiques analysés durant mon cursus BTS SIO.</p>
-                            </div>
-                        </div>
-
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
-                                <thead class="bg-slate-950 font-mono text-[11px] text-slate-400 border-b border-slate-800">
-                                    <tr>
-                                        <th class="p-3.5 w-28">Catégorie</th>
-                                        <th class="p-3.5 w-44">Source</th>
-                                        <th class="p-3.5">Sujet / Article analysé</th>
-                                        <th class="p-3.5 w-64">Apport pratique (Lab / Clinique)</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-800 text-slate-300">
-                                    <tr class="hover:bg-slate-800/40 transition">
-                                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 font-mono font-bold text-[10px]">Technologique</span></td>
-                                        <td class="p-3.5 font-semibold text-white">ANSSI / CERT-FR</td>
-                                        <td class="p-3.5">Recommandations relatives à l'administration sécurisée des systèmes d'information (AD & MFA)</td>
-                                        <td class="p-3.5 text-emerald-300">Séparation des comptes admin et durcissement GPO Active Directory</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-800/40 transition">
-                                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 font-mono font-bold text-[10px]">Technologique</span></td>
-                                        <td class="p-3.5 font-semibold text-white">NIST / Le Monde Info</td>
-                                        <td class="p-3.5">Architecture Zero Trust (NIST SP 800-207) : Micro-segmentation et fin des VPN classiques non filtrés</td>
-                                        <td class="p-3.5 text-emerald-300">Segmentation VLAN 802.1Q sur switchs et pare-feu OPNsense / pfSense</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-800/40 transition">
-                                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono font-bold text-[10px]">Juridique</span></td>
-                                        <td class="p-3.5 font-semibold text-white">ANS / Ministère Santé</td>
-                                        <td class="p-3.5">Programme CaRE & Directive NIS 2 : Sécurisation des établissements de santé face aux ransomwares</td>
-                                        <td class="p-3.5 text-amber-300">Audit des accès soignants et protection des postes des 17 cliniques</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-800/40 transition">
-                                        <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono font-bold text-[10px]">Juridique</span></td>
-                                        <td class="p-3.5 font-semibold text-white">CNIL (Guide Santé)</td>
-                                        <td class="p-3.5">Conformité RGPD et référentiel HDS : Gestion des habilitations et confidentialité des dossiers patients</td>
-                                        <td class="p-3.5 text-amber-300">Application stricte du moindre privilège par service médical</td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
 
@@ -2210,20 +2343,43 @@
                             </div>
                             <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
                                 <i class="fa-solid fa-building-shield text-emerald-400 text-xl"></i>
-                                <div class="font-bold text-white text-xs">ANSSI & CERT-FR</div>
-                                <div class="text-[11px] text-slate-400">Guides de bonnes pratiques & alertes</div>
-                            </div>
-                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
-                                <i class="fa-solid fa-scale-balanced text-amber-400 text-xl"></i>
-                                <div class="font-bold text-white text-xs">CNIL & ANS Santé</div>
-                                <div class="text-[11px] text-slate-400">Veille juridique RGPD, HDS & NIS 2</div>
+                                <div class="font-bold text-white text-xs">ANSSI</div>
+                                <div class="text-[11px] text-slate-400">Guides de bonnes pratiques français</div>
                             </div>
                             <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
                                 <i class="fa-solid fa-rss text-orange-400 text-xl"></i>
-                                <div class="font-bold text-white text-xs">Feedly & Presse IT</div>
-                                <div class="text-[11px] text-slate-400">ZDNet, Le Monde Informatique, IT-Connect</div>
+                                <div class="font-bold text-white text-xs">Feedly</div>
+                                <div class="text-[11px] text-slate-400">Agrégateur de flux RSS d'actualité IT</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center space-y-1">
+                                <i class="fa-solid fa-newspaper text-purple-400 text-xl"></i>
+                                <div class="font-bold text-white text-xs">Sites spécialisés IT</div>
+                                <div class="text-[11px] text-slate-400">ZDNet, Clubic Pro, Le Monde Informatique</div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- ======================================================== -->
+                <!-- MODULE 5 : SUJET COMPLÉMENTAIRE (L'IA AU SUPPORT N1)     -->
+                <!-- ======================================================== -->
+                <div class="card-dark-pro rounded-3xl p-6 sm:p-8 bg-slate-900/60 border border-purple-500/20 shadow-xl space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg border border-purple-500/30">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-mono font-bold text-purple-400 uppercase tracking-wider">Deuxième Sujet de Veille • Support & IA</span>
+                            <h4 class="text-lg font-bold text-white">L'IA pour aider le support informatique (Ticketing N1)</h4>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        En plus de la cybersécurité, j'ai suivi l'évolution de l'intelligence artificielle dans les outils de tickets (comme GLPI ou Jira). L'IA permet de comprendre automatiquement les demandes des soignants, d'identifier les pannes urgentes (par exemple un bloc opératoire bloqué), et d'aider à résoudre les problèmes simples comme la réinitialisation de mots de passe oubliés.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs pt-1">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Support informatique</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Gestion des tickets (GLPI)</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-purple-300 border border-slate-700">Gain de temps</span>
                     </div>
                 </div>
 
@@ -2417,9 +2573,7 @@
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('nav-btn-active');
             });
-            // Si on est sur "procedures", activer le menu parent "MES PROJETS"
-            const navTargetId = (categoryId === 'procedures') ? 'nav-projets' : ('nav-' + categoryId);
-            const activeBtn = document.getElementById(navTargetId);
+            const activeBtn = document.getElementById('nav-' + categoryId) || (categoryId === 'procedures' ? document.getElementById('nav-projets') : null);
             if (activeBtn) {
                 activeBtn.classList.add('nav-btn-active');
             }
@@ -2433,61 +2587,6 @@
             window.location.hash = categoryId;
         }
 
-        // Filtrage des sous-catégories de MES PROJETS (Tous, Projets E5, Projets E6)
-        function filterProjects(group) {
-            const groups = document.querySelectorAll('.project-group');
-            groups.forEach(g => {
-                if (group === 'all' || g.getAttribute('data-proj-group') === group) {
-                    g.classList.remove('hidden');
-                } else {
-                    g.classList.add('hidden');
-                }
-            });
-
-            const tabs = {
-                all: document.getElementById('proj-tab-all'),
-                e5: document.getElementById('proj-tab-e5'),
-                e6: document.getElementById('proj-tab-e6')
-            };
-            Object.keys(tabs).forEach(key => {
-                const btn = tabs[key];
-                if (!btn) return;
-                if (key === group) {
-                    btn.className = "proj-tab-btn px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-xs transition shadow-lg";
-                } else {
-                    btn.className = "proj-tab-btn px-5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs transition";
-                }
-            });
-        }
-
-        // Filtrage des sous-catégories de VEILLES (Veille technologique, Veille juridique, Suivi de veille)
-        function showVeilleSub(sub) {
-            const subs = document.querySelectorAll('.veille-sub-group');
-            subs.forEach(s => {
-                if (sub === 'all' || s.getAttribute('data-veille-sub') === sub) {
-                    s.classList.remove('hidden');
-                } else {
-                    s.classList.add('hidden');
-                }
-            });
-
-            const tabs = {
-                all: document.getElementById('veille-tab-all'),
-                tech: document.getElementById('veille-tab-tech'),
-                juridique: document.getElementById('veille-tab-juridique'),
-                suivi: document.getElementById('veille-tab-suivi')
-            };
-            Object.keys(tabs).forEach(key => {
-                const btn = tabs[key];
-                if (!btn) return;
-                if (key === sub) {
-                    btn.className = "veille-tab-btn px-4 py-2.5 rounded-xl bg-fuchsia-600 text-white font-semibold text-xs transition shadow-lg";
-                } else {
-                    btn.className = "veille-tab-btn px-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs transition";
-                }
-            });
-        }
-
         // Défilement fluide vers une sous-section
         function scrollToSection(sectionId) {
             setTimeout(() => {
@@ -2498,12 +2597,89 @@
             }, 100);
         }
 
+        // FILTRE DES PROJETS (TOUS / ENTREPRISE / FORMATION)
+        function filterProjects(category) {
+            const groupEntreprise = document.getElementById('projGroupEntreprise');
+            const groupFormation = document.getElementById('projGroupFormation');
+
+            const btnAll = document.getElementById('projFilterBtn-all');
+            const btnEntreprise = document.getElementById('projFilterBtn-entreprise');
+            const btnFormation = document.getElementById('projFilterBtn-formation');
+
+            const activeClass = "proj-filter-btn px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-md bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-blue-500/20 border border-blue-400/40 cursor-pointer";
+            const inactiveClass = "proj-filter-btn px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-sm bg-slate-900/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 cursor-pointer";
+
+            if (btnAll) btnAll.className = (category === 'all') ? activeClass : inactiveClass;
+            if (btnEntreprise) btnEntreprise.className = (category === 'entreprise') ? activeClass : inactiveClass;
+            if (btnFormation) btnFormation.className = (category === 'formation') ? activeClass : inactiveClass;
+
+            if (category === 'entreprise') {
+                if (groupEntreprise) groupEntreprise.classList.remove('hidden');
+                if (groupFormation) groupFormation.classList.add('hidden');
+            } else if (category === 'formation') {
+                if (groupEntreprise) groupEntreprise.classList.add('hidden');
+                if (groupFormation) groupFormation.classList.remove('hidden');
+            } else {
+                if (groupEntreprise) groupEntreprise.classList.remove('hidden');
+                if (groupFormation) groupFormation.classList.remove('hidden');
+            }
+        }
+
+        // GESTION DU THÈME CLAIR / SOMBRE (STYLE SCREENSHOT 1)
+        function updateThemeIcons(isLight) {
+            const icons = ['themeToggleIcon', 'themeToggleMobileIcon'];
+            icons.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (isLight) {
+                        el.className = "fa-solid fa-moon text-base text-slate-800";
+                    } else {
+                        el.className = "fa-solid fa-sun text-base text-amber-300";
+                    }
+                }
+            });
+        }
+
+        function enableLightMode() {
+            document.body.classList.add('light-mode');
+            try { localStorage.setItem('portfolio-theme', 'light'); } catch(e){}
+            updateThemeIcons(true);
+        }
+
+        function enableDarkMode() {
+            document.body.classList.remove('light-mode');
+            try { localStorage.setItem('portfolio-theme', 'dark'); } catch(e){}
+            updateThemeIcons(false);
+        }
+
+        function toggleTheme() {
+            if (document.body.classList.contains('light-mode')) {
+                enableDarkMode();
+            } else {
+                enableLightMode();
+            }
+        }
+
+        function initTheme() {
+            try {
+                const savedTheme = localStorage.getItem('portfolio-theme');
+                if (savedTheme === 'light') {
+                    enableLightMode();
+                } else {
+                    enableDarkMode();
+                }
+            } catch(e) {
+                enableDarkMode();
+            }
+        }
+        initTheme();
+
         // Gestion de l'URL hash au chargement
         window.addEventListener('load', () => {
             const hash = window.location.hash.replace('#', '') || 'accueil';
-            const validCategories = ['accueil', 'bts-sio', 'a-propos', 'entreprise', 'certifications', 'projets', 'procedures', 'tcs', 'veilles', 'contact'];
-            showCategory(validCategories.includes(hash) ? hash : 'accueil');
+            showCategory(hash);
             initImages();
+            initTheme();
         });
 
         // Mobile Menu Toggle
