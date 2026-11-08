@@ -1625,37 +1625,106 @@
                             </a>
                         </div>
 
-                        <!-- Vue des quatre machines du laboratoire -->
+                        <!-- SCHÉMA RÉSEAU VISUEL INTERACTIF (MÊME STRUCTURE QUE RYAN ATROUN) -->
                         <div class="p-6 sm:p-10 rounded-2xl bg-black/60 border border-slate-800 space-y-6">
-                            <h4 class="text-lg font-bold text-white">Les machines du laboratoire</h4>
-                            <div class="grid sm:grid-cols-2 gap-4">
-                                <div class="p-5 rounded-2xl bg-slate-900 border border-purple-500/40 space-y-2">
-                                    <i class="fa-solid fa-server text-purple-400" aria-hidden="true"></i>
-                                    <h5 class="text-base font-bold text-white">AD1</h5>
-                                    <p class="text-sm text-slate-300">Active Directory</p>
+                            <div class="flex flex-col items-center space-y-3 max-w-xl mx-auto">
+                                
+                                <!-- Nœud 1 : WAN -->
+                                <div class="w-full max-w-md p-4 rounded-2xl bg-slate-900 border-2 border-slate-700 text-center shadow-lg hover:border-blue-400 transition">
+                                    <div class="flex items-center justify-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-wider">
+                                        <i class="fa-solid fa-globe"></i> Internet / WAN
+                                    </div>
+                                    <div class="text-xs font-mono text-slate-300 font-bold mt-1">192.168.50.0/24</div>
                                 </div>
-                                <div class="p-5 rounded-2xl bg-slate-900 border border-purple-500/40 space-y-2">
-                                    <i class="fa-solid fa-server text-purple-400" aria-hidden="true"></i>
-                                    <h5 class="text-base font-bold text-white">AD2</h5>
-                                    <p class="text-sm text-slate-300">Active Directory</p>
+
+                                <!-- Ligne de liaison -->
+                                <div class="w-0.5 h-6 bg-gradient-to-b from-slate-600 to-blue-500"></div>
+
+                                <!-- Nœud 2 : Pare-feu pfSense -->
+                                <div class="w-full max-w-md p-4 rounded-2xl bg-slate-900 border-2 border-blue-500/70 text-center shadow-lg hover:border-blue-400 transition">
+                                    <div class="flex items-center justify-center gap-2 text-blue-300 text-xs font-bold uppercase tracking-wider">
+                                        <i class="fa-solid fa-shield-halved text-cyan-400"></i> Pare-feu pfSense
+                                    </div>
+                                    <div class="text-xs font-mono text-cyan-300 font-bold mt-1">WAN 192.168.50.40 (DHCP)</div>
                                 </div>
-                                <div class="p-5 rounded-2xl bg-slate-900 border border-purple-500/40 space-y-2">
-                                    <i class="fa-solid fa-chart-line text-purple-400" aria-hidden="true"></i>
-                                    <h5 class="text-base font-bold text-white">Debian</h5>
-                                    <p class="text-sm text-slate-300">Zabbix</p>
+
+                                <!-- Ligne de division -->
+                                <div class="w-0.5 h-6 bg-gradient-to-b from-blue-500 to-purple-500"></div>
+
+                                <!-- Division : LAN & VLAN 25 -->
+                                <div class="w-full max-w-md grid grid-cols-2 gap-3 sm:gap-4">
+                                    <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-center shadow">
+                                        <span class="text-[11px] font-bold text-slate-300 uppercase block">LAN</span>
+                                        <span class="text-xs font-mono text-slate-400 font-bold block mt-0.5">10.1.5.1/29</span>
+                                        <span class="text-[10px] text-slate-500 block">Sans DHCP</span>
+                                    </div>
+                                    <div class="p-3.5 rounded-xl bg-purple-950/60 border-2 border-purple-500/70 text-center shadow">
+                                        <span class="text-[11px] font-bold text-purple-300 uppercase block">VLAN 25</span>
+                                        <span class="text-xs font-mono text-purple-200 font-bold block mt-0.5">192.168.25.254/24</span>
+                                        <span class="text-[10px] text-purple-300/80 block">DHCP .100–.200</span>
+                                    </div>
                                 </div>
-                                <div class="p-5 rounded-2xl bg-slate-900 border border-purple-500/40 space-y-2">
-                                    <i class="fa-solid fa-ticket text-purple-400" aria-hidden="true"></i>
-                                    <h5 class="text-base font-bold text-white">Ubuntu Server</h5>
-                                    <p class="text-sm text-slate-300">GLPI</p>
+
+                                <!-- Ligne de liaison -->
+                                <div class="w-0.5 h-6 bg-gradient-to-b from-purple-500 to-emerald-500"></div>
+
+                                <!-- Nœud 3 : Serveur Active Directory & Switch Planet -->
+                                <div class="w-full max-w-md p-4 rounded-2xl bg-emerald-950/40 border-2 border-emerald-500/60 text-center shadow-lg hover:border-emerald-400 transition">
+                                    <div class="flex items-center justify-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                                        <i class="fa-solid fa-server"></i> Serveur Active Directory
+                                    </div>
+                                    <div class="text-xs font-mono text-emerald-300 font-bold mt-1">
+                                        SRV-AD1EX1PLOT5 • 192.168.25.1/24
+                                    </div>
+                                    <div class="text-[11px] text-slate-400 mt-1">
+                                        Switch Planet : Ports 1 à 3 en Access VLAN 25, Port 8 Trunk 802.1Q
+                                    </div>
                                 </div>
+
+                                <!-- Machines ajoutées au laboratoire -->
+                                <div class="w-full max-w-md pt-4 space-y-3">
+                                    <h4 class="text-xs font-bold text-slate-300 text-center">Machines complémentaires</h4>
+                                    <div class="p-4 rounded-2xl bg-emerald-950/40 border-2 border-emerald-500/60 text-center shadow-lg hover:border-emerald-400 transition">
+                                        <div class="flex items-center justify-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                                            <i class="fa-solid fa-server" aria-hidden="true"></i> Serveur Active Directory
+                                        </div>
+                                        <div class="text-xs font-mono text-emerald-300 font-bold mt-1">AD2</div>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-slate-900 border-2 border-purple-500/70 text-center shadow-lg hover:border-purple-400 transition">
+                                        <div class="flex items-center justify-center gap-2 text-purple-300 text-xs font-bold uppercase tracking-wider">
+                                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i> Debian
+                                        </div>
+                                        <div class="text-xs font-mono text-purple-200 font-bold mt-1">Zabbix</div>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-slate-900 border-2 border-blue-500/70 text-center shadow-lg hover:border-blue-400 transition">
+                                        <div class="flex items-center justify-center gap-2 text-blue-300 text-xs font-bold uppercase tracking-wider">
+                                            <i class="fa-solid fa-ticket" aria-hidden="true"></i> Ubuntu Server
+                                        </div>
+                                        <div class="text-xs font-mono text-cyan-300 font-bold mt-1">GLPI</div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <p class="text-xs text-slate-400">Le laboratoire évolue au fil de la formation.</p>
                         </div>
 
-                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2 text-xs">
-                            <h4 class="text-white font-bold">Environnement réseau</h4>
-                            <p class="text-slate-400">Pare-feu pfSense, réseaux LAN et VLAN 25, service DHCP et switch Planet.</p>
+                        <!-- Points techniques récapitulatifs (comme sur le modèle de Ryan) -->
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-1">
+                                <strong class="text-white block font-bold flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-cyan-400"></i> Pare-feu :</strong>
+                                <p class="text-slate-400">pfSense / OPNsense, WAN en DHCP (192.168.50.40) ;</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-1">
+                                <strong class="text-white block font-bold flex items-center gap-1.5"><i class="fa-solid fa-network-wired text-blue-400"></i> Réseau LAN :</strong>
+                                <p class="text-slate-400">10.1.5.0/29, sans DHCP ;</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-1">
+                                <strong class="text-white block font-bold flex items-center gap-1.5"><i class="fa-solid fa-tags text-purple-400"></i> Réseau VLAN 25 :</strong>
+                                <p class="text-slate-400">Passerelle 192.168.25.254, DHCP de .100 à .200 ;</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-1">
+                                <strong class="text-white block font-bold flex items-center gap-1.5"><i class="fa-solid fa-server text-emerald-400"></i> Active Directory :</strong>
+                                <p class="text-slate-400">SRV-AD1EX1PLOT5, 192.168.25.1.</p>
+                            </div>
                         </div>
 
                         <div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-800 text-xs">
