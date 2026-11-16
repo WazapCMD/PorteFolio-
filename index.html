@@ -1498,6 +1498,16 @@ body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid 
                             </div>
                             <h4 class="text-lg font-bold text-white">Brassage réseau</h4>
                             <p class="text-slate-300 text-sm leading-relaxed">Interventions ponctuelles de brassage réseau pour raccorder les équipements.</p>
+                            <div class="grid grid-cols-2 gap-3 pt-1">
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-40 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Brassage réseau - Intérieur de la baie (switch, panneaux de brassage)')">
+                                    <img src="brassage_baie.webp" alt="Intérieur de la baie réseau : switch et panneaux de brassage" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-40 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Brassage réseau - Coffret réseau mural')">
+                                    <img src="brassage_coffret.webp" alt="Coffret réseau mural Legrand avec ses câbles de brassage" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                            </div>
                         </article>
                         <article class="card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
                             <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
