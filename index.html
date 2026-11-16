@@ -22,7 +22,7 @@
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
                         mono: ['JetBrains Mono', 'Menlo', 'monospace']
                     }
                 }
@@ -36,7 +36,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Chargement des assets intégrés en fallback immédiat -->
     <script src="images_data.js"></script>
@@ -444,6 +444,660 @@ body.light-mode .tcs-official{color:#1e293b}body.light-mode .tcs-official .tcs-a
 .tcs-public-grid .tcs-group{background:#064e3b;color:#d1fae5}.tcs-public-grid .tcs-group th{font-size:14px;padding-top:18px;padding-bottom:18px}
 body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid thead{background:#e2e8f0;color:#0f172a}body.light-mode .tcs-public-grid .tcs-group{background:#d1fae5;color:#064e3b}
 
+
+/* ======================================================== */
+/* THÈME V2 « CLINIQUE » — sobre, clair par défaut          */
+/* ======================================================== */
+:root{
+  --bg:#f4f6f8; --surface:#ffffff; --surface-2:#f8fafb; --line:#e2e8ee; --line-strong:#cfd8e1;
+  --ink:#0f1722; --ink-2:#3d4a5c; --ink-3:#6b7889;
+  --acc:#0f766e; --acc-strong:#115e59; --tint:#e8f4f2; --tint-line:#b8dcd6;
+  --ok:#047857; --warn:#b45309; --bad:#b91c1c;
+  --nav:#0b1220; --nav-ink:#c3cbd6; --nav-line:#1c2738; --nav-acc:#5eead4;
+  --radius:14px;
+}
+body:not(.light-mode){
+  --bg:#0b1018; --surface:#111925; --surface-2:#0e151f; --line:#1f2a3a; --line-strong:#2b3a50;
+  --ink:#e6ebf2; --ink-2:#aeb8c6; --ink-3:#7d8a9c;
+  --acc:#2dd4bf; --acc-strong:#5eead4; --tint:rgba(45,212,191,.09); --tint-line:rgba(45,212,191,.28);
+  --ok:#34d399; --warn:#fbbf24; --bad:#f87171;
+}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif !important;background-color:var(--bg) !important;}
+h1,h2,h3{letter-spacing:-0.02em;}
+.page-view h2{font-weight:800;}
+
+/* Fonds de section : à plat, plus de halos colorés */
+.theme-accueil,.theme-apropos,.theme-btssio,.theme-tcs,.theme-projets,.theme-procedures,
+.theme-veilles,.theme-contact,.theme-entreprise,.theme-certifications,
+body.light-mode .theme-accueil,body.light-mode .theme-apropos,body.light-mode .theme-btssio,
+body.light-mode .theme-tcs,body.light-mode .theme-projets,body.light-mode .theme-procedures,
+body.light-mode .theme-veilles,body.light-mode .theme-contact,body.light-mode .theme-entreprise,
+body.light-mode .theme-certifications{background:var(--bg) !important;}
+
+/* Barre de navigation sombre dans les deux modes */
+nav.fixed,body.light-mode nav.fixed{background-color:rgba(11,18,32,.96) !important;border-bottom:1px solid var(--nav-line) !important;box-shadow:none !important;}
+nav.fixed .nav-btn,body.light-mode nav.fixed .nav-btn{color:var(--nav-ink) !important;background:transparent !important;border-radius:0 !important;
+  font-weight:500;font-size:13.5px;letter-spacing:0;text-transform:none;padding:.5rem .7rem !important;position:relative;box-shadow:none !important;}
+nav.fixed .nav-btn:hover,body.light-mode nav.fixed .nav-btn:hover{color:#fff !important;background:transparent !important;}
+nav.fixed .nav-btn-active,body.light-mode nav.fixed .nav-btn-active{color:#fff !important;font-weight:700;}
+nav.fixed .nav-btn-active::after{content:"";position:absolute;left:.7rem;right:.7rem;bottom:-2px;height:2px;background:var(--nav-acc);border-radius:2px;}
+nav.fixed .gradient-brand{background:none !important;-webkit-text-fill-color:#fff !important;color:#fff !important;}
+nav.fixed .text-slate-400{color:var(--nav-acc) !important;}
+nav.fixed .bg-gradient-to-tr{background:var(--nav-acc) !important;color:#0b1220 !important;box-shadow:none !important;border-radius:10px !important;}
+.nav-dropdown > div,body.light-mode .nav-dropdown,body.light-mode .nav-dropdown > div{background:#111a2b !important;border:1px solid var(--nav-line) !important;border-radius:12px !important;box-shadow:0 18px 40px -12px rgba(0,0,0,.5) !important;}
+.nav-dropdown button,.nav-dropdown a,body.light-mode .nav-dropdown button,body.light-mode .nav-dropdown a{color:var(--nav-ink) !important;}
+.nav-dropdown button:hover,.nav-dropdown a:hover,body.light-mode .nav-dropdown button:hover,body.light-mode .nav-dropdown a:hover{background:rgba(94,234,212,.08) !important;color:#fff !important;}
+.nav-dropdown i{color:var(--nav-acc) !important;}
+#themeToggleBtn,#themeToggleMobileBtn,body.light-mode #themeToggleBtn,body.light-mode #themeToggleMobileBtn{background:transparent !important;border:1px solid var(--nav-line) !important;color:var(--nav-ink) !important;box-shadow:none !important;border-radius:10px !important;}
+#themeToggleBtn:hover,#themeToggleMobileBtn:hover{color:#fff !important;border-color:#33445e !important;}
+#mobileMenuBtn{color:var(--nav-ink) !important;}
+#mobileMenu,body.light-mode #mobileMenu{background:#0b1220 !important;border-top-color:var(--nav-line) !important;}
+#mobileMenu button,body.light-mode #mobileMenu button{color:var(--nav-ink) !important;background:transparent !important;text-transform:none;letter-spacing:0;font-size:14px;font-weight:500;}
+#mobileMenu button:hover,body.light-mode #mobileMenu button:hover{background:rgba(255,255,255,.05) !important;color:#fff !important;}
+#mobileMenu button i{color:var(--nav-acc) !important;}
+#mobileMenu .font-mono{color:#7d8a9c !important;}
+#mobileMenu button.bg-blue-600{background:var(--acc) !important;color:#fff !important;}
+
+/* Boutons principaux */
+.btn-gradient,body.light-mode .btn-gradient{background:var(--acc) !important;color:#fff !important;box-shadow:none !important;border-radius:10px !important;}
+.btn-gradient:hover{background:var(--acc-strong) !important;transform:none !important;}
+body:not(.light-mode) .btn-gradient{color:#06201d !important;}
+nav.fixed .btn-gradient{background:var(--nav-acc) !important;color:#0b1220 !important;}
+
+/* Texte en dégradé -> couleur d'accent unie */
+.gradient-brand,.bg-clip-text{background:none !important;-webkit-text-fill-color:currentColor !important;color:var(--acc) !important;}
+
+/* Cartes : surface unie, bord fin, ombre légère */
+.card-dark-pro,body.light-mode .card-dark-pro,
+.bg-slate-900\/60,.bg-slate-900\/70,.bg-slate-900\/75,.bg-slate-900\/80,.bg-slate-900\/85,.bg-slate-900\/90,
+.bg-slate-950\/70,.bg-slate-950\/80,.bg-slate-950\/90,
+body.light-mode .bg-slate-900\/60,body.light-mode .bg-slate-900\/70,body.light-mode .bg-slate-900\/75,body.light-mode .bg-slate-900\/80,
+body.light-mode .bg-slate-900\/85,body.light-mode .bg-slate-900\/90,body.light-mode .bg-slate-950\/70,body.light-mode .bg-slate-950\/80,body.light-mode .bg-slate-950\/90{
+  background-color:var(--surface) !important;border-color:var(--line) !important;backdrop-filter:none !important;
+  box-shadow:0 1px 2px rgba(15,23,34,.04),0 6px 18px -10px rgba(15,23,34,.10) !important;}
+body:not(.light-mode) .card-dark-pro{box-shadow:none !important;}
+.card-dark-pro:hover{transform:translateY(-2px) !important;border-color:var(--tint-line) !important;}
+.rounded-2xl{border-radius:var(--radius) !important;}
+.rounded-3xl{border-radius:18px !important;}
+
+/* Textes neutres */
+body.light-mode .text-white{color:var(--ink) !important;}
+body.light-mode .text-slate-200,body.light-mode .text-slate-300{color:var(--ink-2) !important;}
+body.light-mode .text-slate-400,body.light-mode .text-slate-500{color:var(--ink-3) !important;}
+body.light-mode .border-slate-700,body.light-mode .border-slate-800,body.light-mode [class*="border-slate-700"],body.light-mode [class*="border-slate-800"]{border-color:var(--line) !important;}
+body.light-mode footer,footer{background:var(--surface-2) !important;border-top-color:var(--line) !important;color:var(--ink-3) !important;}
+footer{font-family:'JetBrains Mono',monospace;}
+body.light-mode table thead{background:#eef2f5 !important;color:var(--ink-2) !important;}
+body.light-mode input,body.light-mode textarea{border-color:var(--line-strong) !important;}
+body.light-mode input:focus,body.light-mode textarea:focus{border-color:var(--acc) !important;}
+
+/* Étiquettes (pastilles) : style mono, discret */
+.page-view span.rounded-full.text-xs{font-family:'JetBrains Mono',monospace;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:11px;}
+.page-view span.rounded-full.text-xs i{display:none;}
+
+::-webkit-scrollbar-track{background:var(--bg);} ::-webkit-scrollbar-thumb{background:var(--line-strong);} ::-webkit-scrollbar-thumb:hover{background:var(--acc);}
+
+.text-blue-200,
+.text-blue-300,
+.text-blue-400,
+.text-blue-500,
+.text-blue-600,
+.text-cyan-200,
+.text-cyan-300,
+.text-cyan-400,
+.text-cyan-500,
+.text-cyan-600,
+.text-sky-200,
+.text-sky-300,
+.text-sky-400,
+.text-sky-500,
+.text-sky-600,
+.text-indigo-200,
+.text-indigo-300,
+.text-indigo-400,
+.text-indigo-500,
+.text-indigo-600,
+.text-purple-200,
+.text-purple-300,
+.text-purple-400,
+.text-purple-500,
+.text-purple-600,
+.text-fuchsia-200,
+.text-fuchsia-300,
+.text-fuchsia-400,
+.text-fuchsia-500,
+.text-fuchsia-600,
+.text-violet-200,
+.text-violet-300,
+.text-violet-400,
+.text-violet-500,
+.text-violet-600,
+.text-pink-200,
+.text-pink-300,
+.text-pink-400,
+.text-pink-500,
+.text-pink-600,
+.text-teal-200,
+.text-teal-300,
+.text-teal-400,
+.text-teal-500,
+.text-teal-600{color:var(--acc) !important;}
+.bg-blue-500\/10,
+.bg-blue-500\/15,
+.bg-blue-500\/20,
+.bg-blue-500\/30,
+.bg-blue-950\/10,
+.bg-blue-950\/30,
+.bg-blue-950\/40,
+.bg-blue-600\/30,
+.bg-cyan-500\/10,
+.bg-cyan-500\/15,
+.bg-cyan-500\/20,
+.bg-cyan-500\/30,
+.bg-cyan-950\/10,
+.bg-cyan-950\/30,
+.bg-cyan-950\/40,
+.bg-cyan-600\/30,
+.bg-sky-500\/10,
+.bg-sky-500\/15,
+.bg-sky-500\/20,
+.bg-sky-500\/30,
+.bg-sky-950\/10,
+.bg-sky-950\/30,
+.bg-sky-950\/40,
+.bg-sky-600\/30,
+.bg-indigo-500\/10,
+.bg-indigo-500\/15,
+.bg-indigo-500\/20,
+.bg-indigo-500\/30,
+.bg-indigo-950\/10,
+.bg-indigo-950\/30,
+.bg-indigo-950\/40,
+.bg-indigo-600\/30,
+.bg-purple-500\/10,
+.bg-purple-500\/15,
+.bg-purple-500\/20,
+.bg-purple-500\/30,
+.bg-purple-950\/10,
+.bg-purple-950\/30,
+.bg-purple-950\/40,
+.bg-purple-600\/30,
+.bg-fuchsia-500\/10,
+.bg-fuchsia-500\/15,
+.bg-fuchsia-500\/20,
+.bg-fuchsia-500\/30,
+.bg-fuchsia-950\/10,
+.bg-fuchsia-950\/30,
+.bg-fuchsia-950\/40,
+.bg-fuchsia-600\/30,
+.bg-violet-500\/10,
+.bg-violet-500\/15,
+.bg-violet-500\/20,
+.bg-violet-500\/30,
+.bg-violet-950\/10,
+.bg-violet-950\/30,
+.bg-violet-950\/40,
+.bg-violet-600\/30,
+.bg-pink-500\/10,
+.bg-pink-500\/15,
+.bg-pink-500\/20,
+.bg-pink-500\/30,
+.bg-pink-950\/10,
+.bg-pink-950\/30,
+.bg-pink-950\/40,
+.bg-pink-600\/30,
+.bg-teal-500\/10,
+.bg-teal-500\/15,
+.bg-teal-500\/20,
+.bg-teal-500\/30,
+.bg-teal-950\/10,
+.bg-teal-950\/30,
+.bg-teal-950\/40,
+.bg-teal-600\/30{background-color:color-mix(in srgb,var(--acc) 9%,transparent) !important;}
+.border-blue-400\/20,
+.border-blue-400\/30,
+.border-blue-400\/40,
+.border-blue-400\/50,
+.border-blue-400\/60,
+.border-blue-400\/70,
+.border-blue-500\/20,
+.border-blue-500\/25,
+.border-blue-500\/30,
+.border-blue-500\/40,
+.border-blue-500\/60,
+.border-blue-500\/70,
+.border-cyan-400\/20,
+.border-cyan-400\/30,
+.border-cyan-400\/40,
+.border-cyan-400\/50,
+.border-cyan-400\/60,
+.border-cyan-400\/70,
+.border-cyan-500\/20,
+.border-cyan-500\/25,
+.border-cyan-500\/30,
+.border-cyan-500\/40,
+.border-cyan-500\/60,
+.border-cyan-500\/70,
+.border-sky-400\/20,
+.border-sky-400\/30,
+.border-sky-400\/40,
+.border-sky-400\/50,
+.border-sky-400\/60,
+.border-sky-400\/70,
+.border-sky-500\/20,
+.border-sky-500\/25,
+.border-sky-500\/30,
+.border-sky-500\/40,
+.border-sky-500\/60,
+.border-sky-500\/70,
+.border-indigo-400\/20,
+.border-indigo-400\/30,
+.border-indigo-400\/40,
+.border-indigo-400\/50,
+.border-indigo-400\/60,
+.border-indigo-400\/70,
+.border-indigo-500\/20,
+.border-indigo-500\/25,
+.border-indigo-500\/30,
+.border-indigo-500\/40,
+.border-indigo-500\/60,
+.border-indigo-500\/70,
+.border-purple-400\/20,
+.border-purple-400\/30,
+.border-purple-400\/40,
+.border-purple-400\/50,
+.border-purple-400\/60,
+.border-purple-400\/70,
+.border-purple-500\/20,
+.border-purple-500\/25,
+.border-purple-500\/30,
+.border-purple-500\/40,
+.border-purple-500\/60,
+.border-purple-500\/70,
+.border-fuchsia-400\/20,
+.border-fuchsia-400\/30,
+.border-fuchsia-400\/40,
+.border-fuchsia-400\/50,
+.border-fuchsia-400\/60,
+.border-fuchsia-400\/70,
+.border-fuchsia-500\/20,
+.border-fuchsia-500\/25,
+.border-fuchsia-500\/30,
+.border-fuchsia-500\/40,
+.border-fuchsia-500\/60,
+.border-fuchsia-500\/70,
+.border-violet-400\/20,
+.border-violet-400\/30,
+.border-violet-400\/40,
+.border-violet-400\/50,
+.border-violet-400\/60,
+.border-violet-400\/70,
+.border-violet-500\/20,
+.border-violet-500\/25,
+.border-violet-500\/30,
+.border-violet-500\/40,
+.border-violet-500\/60,
+.border-violet-500\/70,
+.border-pink-400\/20,
+.border-pink-400\/30,
+.border-pink-400\/40,
+.border-pink-400\/50,
+.border-pink-400\/60,
+.border-pink-400\/70,
+.border-pink-500\/20,
+.border-pink-500\/25,
+.border-pink-500\/30,
+.border-pink-500\/40,
+.border-pink-500\/60,
+.border-pink-500\/70,
+.border-teal-400\/20,
+.border-teal-400\/30,
+.border-teal-400\/40,
+.border-teal-400\/50,
+.border-teal-400\/60,
+.border-teal-400\/70,
+.border-teal-500\/20,
+.border-teal-500\/25,
+.border-teal-500\/30,
+.border-teal-500\/40,
+.border-teal-500\/60,
+.border-teal-500\/70{border-color:color-mix(in srgb,var(--acc) 30%,transparent) !important;}
+.border-blue-400,
+.border-blue-500,
+.border-cyan-400,
+.border-cyan-500,
+.border-sky-400,
+.border-sky-500,
+.border-indigo-400,
+.border-indigo-500,
+.border-purple-400,
+.border-purple-500,
+.border-fuchsia-400,
+.border-fuchsia-500,
+.border-violet-400,
+.border-violet-500,
+.border-pink-400,
+.border-pink-500,
+.border-teal-400,
+.border-teal-500{border-color:var(--acc) !important;}
+.bg-blue-400,
+.bg-blue-500,
+.bg-blue-600,
+.bg-blue-500\/80,
+.bg-blue-600\/90,
+.bg-cyan-400,
+.bg-cyan-500,
+.bg-cyan-600,
+.bg-cyan-500\/80,
+.bg-cyan-600\/90,
+.bg-sky-400,
+.bg-sky-500,
+.bg-sky-600,
+.bg-sky-500\/80,
+.bg-sky-600\/90,
+.bg-indigo-400,
+.bg-indigo-500,
+.bg-indigo-600,
+.bg-indigo-500\/80,
+.bg-indigo-600\/90,
+.bg-purple-400,
+.bg-purple-500,
+.bg-purple-600,
+.bg-purple-500\/80,
+.bg-purple-600\/90,
+.bg-fuchsia-400,
+.bg-fuchsia-500,
+.bg-fuchsia-600,
+.bg-fuchsia-500\/80,
+.bg-fuchsia-600\/90,
+.bg-violet-400,
+.bg-violet-500,
+.bg-violet-600,
+.bg-violet-500\/80,
+.bg-violet-600\/90,
+.bg-pink-400,
+.bg-pink-500,
+.bg-pink-600,
+.bg-pink-500\/80,
+.bg-pink-600\/90,
+.bg-teal-400,
+.bg-teal-500,
+.bg-teal-600,
+.bg-teal-500\/80,
+.bg-teal-600\/90{background-color:var(--acc) !important;}
+.text-emerald-200,
+.text-emerald-300,
+.text-emerald-400,
+.text-emerald-500,
+.text-emerald-600,
+.text-green-200,
+.text-green-300,
+.text-green-400,
+.text-green-500,
+.text-green-600,
+.text-lime-200,
+.text-lime-300,
+.text-lime-400,
+.text-lime-500,
+.text-lime-600{color:var(--ok) !important;}
+.bg-emerald-500\/10,
+.bg-emerald-500\/15,
+.bg-emerald-500\/20,
+.bg-emerald-500\/30,
+.bg-emerald-950\/10,
+.bg-emerald-950\/30,
+.bg-emerald-950\/40,
+.bg-emerald-600\/30,
+.bg-green-500\/10,
+.bg-green-500\/15,
+.bg-green-500\/20,
+.bg-green-500\/30,
+.bg-green-950\/10,
+.bg-green-950\/30,
+.bg-green-950\/40,
+.bg-green-600\/30,
+.bg-lime-500\/10,
+.bg-lime-500\/15,
+.bg-lime-500\/20,
+.bg-lime-500\/30,
+.bg-lime-950\/10,
+.bg-lime-950\/30,
+.bg-lime-950\/40,
+.bg-lime-600\/30{background-color:color-mix(in srgb,var(--ok) 9%,transparent) !important;}
+.border-emerald-400\/20,
+.border-emerald-400\/30,
+.border-emerald-400\/40,
+.border-emerald-400\/50,
+.border-emerald-400\/60,
+.border-emerald-400\/70,
+.border-emerald-500\/20,
+.border-emerald-500\/25,
+.border-emerald-500\/30,
+.border-emerald-500\/40,
+.border-emerald-500\/60,
+.border-emerald-500\/70,
+.border-green-400\/20,
+.border-green-400\/30,
+.border-green-400\/40,
+.border-green-400\/50,
+.border-green-400\/60,
+.border-green-400\/70,
+.border-green-500\/20,
+.border-green-500\/25,
+.border-green-500\/30,
+.border-green-500\/40,
+.border-green-500\/60,
+.border-green-500\/70,
+.border-lime-400\/20,
+.border-lime-400\/30,
+.border-lime-400\/40,
+.border-lime-400\/50,
+.border-lime-400\/60,
+.border-lime-400\/70,
+.border-lime-500\/20,
+.border-lime-500\/25,
+.border-lime-500\/30,
+.border-lime-500\/40,
+.border-lime-500\/60,
+.border-lime-500\/70{border-color:color-mix(in srgb,var(--ok) 30%,transparent) !important;}
+.border-emerald-400,
+.border-emerald-500,
+.border-green-400,
+.border-green-500,
+.border-lime-400,
+.border-lime-500{border-color:var(--ok) !important;}
+.bg-emerald-400,
+.bg-emerald-500,
+.bg-emerald-600,
+.bg-emerald-500\/80,
+.bg-emerald-600\/90,
+.bg-green-400,
+.bg-green-500,
+.bg-green-600,
+.bg-green-500\/80,
+.bg-green-600\/90,
+.bg-lime-400,
+.bg-lime-500,
+.bg-lime-600,
+.bg-lime-500\/80,
+.bg-lime-600\/90{background-color:var(--ok) !important;}
+.text-amber-200,
+.text-amber-300,
+.text-amber-400,
+.text-amber-500,
+.text-amber-600,
+.text-yellow-200,
+.text-yellow-300,
+.text-yellow-400,
+.text-yellow-500,
+.text-yellow-600,
+.text-orange-200,
+.text-orange-300,
+.text-orange-400,
+.text-orange-500,
+.text-orange-600{color:var(--warn) !important;}
+.bg-amber-500\/10,
+.bg-amber-500\/15,
+.bg-amber-500\/20,
+.bg-amber-500\/30,
+.bg-amber-950\/10,
+.bg-amber-950\/30,
+.bg-amber-950\/40,
+.bg-amber-600\/30,
+.bg-yellow-500\/10,
+.bg-yellow-500\/15,
+.bg-yellow-500\/20,
+.bg-yellow-500\/30,
+.bg-yellow-950\/10,
+.bg-yellow-950\/30,
+.bg-yellow-950\/40,
+.bg-yellow-600\/30,
+.bg-orange-500\/10,
+.bg-orange-500\/15,
+.bg-orange-500\/20,
+.bg-orange-500\/30,
+.bg-orange-950\/10,
+.bg-orange-950\/30,
+.bg-orange-950\/40,
+.bg-orange-600\/30{background-color:color-mix(in srgb,var(--warn) 9%,transparent) !important;}
+.border-amber-400\/20,
+.border-amber-400\/30,
+.border-amber-400\/40,
+.border-amber-400\/50,
+.border-amber-400\/60,
+.border-amber-400\/70,
+.border-amber-500\/20,
+.border-amber-500\/25,
+.border-amber-500\/30,
+.border-amber-500\/40,
+.border-amber-500\/60,
+.border-amber-500\/70,
+.border-yellow-400\/20,
+.border-yellow-400\/30,
+.border-yellow-400\/40,
+.border-yellow-400\/50,
+.border-yellow-400\/60,
+.border-yellow-400\/70,
+.border-yellow-500\/20,
+.border-yellow-500\/25,
+.border-yellow-500\/30,
+.border-yellow-500\/40,
+.border-yellow-500\/60,
+.border-yellow-500\/70,
+.border-orange-400\/20,
+.border-orange-400\/30,
+.border-orange-400\/40,
+.border-orange-400\/50,
+.border-orange-400\/60,
+.border-orange-400\/70,
+.border-orange-500\/20,
+.border-orange-500\/25,
+.border-orange-500\/30,
+.border-orange-500\/40,
+.border-orange-500\/60,
+.border-orange-500\/70{border-color:color-mix(in srgb,var(--warn) 30%,transparent) !important;}
+.border-amber-400,
+.border-amber-500,
+.border-yellow-400,
+.border-yellow-500,
+.border-orange-400,
+.border-orange-500{border-color:var(--warn) !important;}
+.bg-amber-400,
+.bg-amber-500,
+.bg-amber-600,
+.bg-amber-500\/80,
+.bg-amber-600\/90,
+.bg-yellow-400,
+.bg-yellow-500,
+.bg-yellow-600,
+.bg-yellow-500\/80,
+.bg-yellow-600\/90,
+.bg-orange-400,
+.bg-orange-500,
+.bg-orange-600,
+.bg-orange-500\/80,
+.bg-orange-600\/90{background-color:var(--warn) !important;}
+.text-red-200,
+.text-red-300,
+.text-red-400,
+.text-red-500,
+.text-red-600,
+.text-rose-200,
+.text-rose-300,
+.text-rose-400,
+.text-rose-500,
+.text-rose-600{color:var(--bad) !important;}
+.bg-red-500\/10,
+.bg-red-500\/15,
+.bg-red-500\/20,
+.bg-red-500\/30,
+.bg-red-950\/10,
+.bg-red-950\/30,
+.bg-red-950\/40,
+.bg-red-600\/30,
+.bg-rose-500\/10,
+.bg-rose-500\/15,
+.bg-rose-500\/20,
+.bg-rose-500\/30,
+.bg-rose-950\/10,
+.bg-rose-950\/30,
+.bg-rose-950\/40,
+.bg-rose-600\/30{background-color:color-mix(in srgb,var(--bad) 9%,transparent) !important;}
+.border-red-400\/20,
+.border-red-400\/30,
+.border-red-400\/40,
+.border-red-400\/50,
+.border-red-400\/60,
+.border-red-400\/70,
+.border-red-500\/20,
+.border-red-500\/25,
+.border-red-500\/30,
+.border-red-500\/40,
+.border-red-500\/60,
+.border-red-500\/70,
+.border-rose-400\/20,
+.border-rose-400\/30,
+.border-rose-400\/40,
+.border-rose-400\/50,
+.border-rose-400\/60,
+.border-rose-400\/70,
+.border-rose-500\/20,
+.border-rose-500\/25,
+.border-rose-500\/30,
+.border-rose-500\/40,
+.border-rose-500\/60,
+.border-rose-500\/70{border-color:color-mix(in srgb,var(--bad) 30%,transparent) !important;}
+.border-red-400,
+.border-red-500,
+.border-rose-400,
+.border-rose-500{border-color:var(--bad) !important;}
+.bg-red-400,
+.bg-red-500,
+.bg-red-600,
+.bg-red-500\/80,
+.bg-red-600\/90,
+.bg-rose-400,
+.bg-rose-500,
+.bg-rose-600,
+.bg-rose-500\/80,
+.bg-rose-600\/90{background-color:var(--bad) !important;}
+.bg-blue-600,.bg-purple-600,.bg-indigo-600,.bg-cyan-600,.bg-fuchsia-600,.bg-violet-600,.bg-sky-600,.bg-teal-600{background-color:var(--acc) !important;color:#fff !important;}
+body:not(.light-mode) .bg-blue-600,body:not(.light-mode) .bg-purple-600,body:not(.light-mode) .bg-indigo-600{color:#06201d !important;}
+
+nav.fixed .btn-gradient{text-transform:none !important;letter-spacing:0 !important;font-size:13px !important;}
+
+/* Correctifs mode clair */
+body.light-mode .bg-slate-950,body.light-mode .bg-slate-800\/60,body.light-mode .bg-slate-800\/80{background-color:var(--surface-2) !important;}
+body.light-mode .shadow-inner.bg-slate-950{background-color:#0b1018 !important;border-color:#1f2a3a !important;}
+body.light-mode table thead[class]{background:#eef2f5 !important;color:var(--ink-2) !important;}
+#themeToggleBtn i,#themeToggleMobileBtn i{color:#fbbf24 !important;}
+@media (max-width:1279px){#themeToggleBtn{display:none !important;}}
+body #mobileMenu button.bg-blue-600,body.light-mode #mobileMenu button.bg-blue-600{background:var(--nav-acc) !important;color:#0b1220 !important;font-weight:700;}
+/* Dégradés pleins (boutons, barres) -> accent uni */
+body [class*="bg-gradient-to"].from-blue-400,body [class*="bg-gradient-to"].from-blue-500,body [class*="bg-gradient-to"].from-blue-600,body [class*="bg-gradient-to"].from-cyan-400,body [class*="bg-gradient-to"].from-cyan-500,body [class*="bg-gradient-to"].from-cyan-600,body [class*="bg-gradient-to"].from-sky-400,body [class*="bg-gradient-to"].from-sky-500,body [class*="bg-gradient-to"].from-sky-600,body [class*="bg-gradient-to"].from-indigo-400,body [class*="bg-gradient-to"].from-indigo-500,body [class*="bg-gradient-to"].from-indigo-600,body [class*="bg-gradient-to"].from-purple-400,body [class*="bg-gradient-to"].from-purple-500,body [class*="bg-gradient-to"].from-purple-600,body [class*="bg-gradient-to"].from-fuchsia-400,body [class*="bg-gradient-to"].from-fuchsia-500,body [class*="bg-gradient-to"].from-fuchsia-600,body [class*="bg-gradient-to"].from-violet-400,body [class*="bg-gradient-to"].from-violet-500,body [class*="bg-gradient-to"].from-violet-600,body [class*="bg-gradient-to"].from-pink-400,body [class*="bg-gradient-to"].from-pink-500,body [class*="bg-gradient-to"].from-pink-600,body [class*="bg-gradient-to"].from-teal-400,body [class*="bg-gradient-to"].from-teal-500,body [class*="bg-gradient-to"].from-teal-600{background-image:none !important;background-color:var(--acc) !important;color:#fff !important;box-shadow:none !important;border-color:transparent !important;}
+body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mode) [class*="bg-gradient-to"].from-blue-500{color:#06201d !important;}
+
+
 </style>
 </head>
 <body class="selection:bg-blue-600 selection:text-white antialiased">
@@ -467,11 +1121,11 @@ body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid 
                 </a>
 
                 <!-- Liens Desktop aérés et bien espacés -->
-                <div class="hidden xl:flex items-center justify-center gap-2 xl:gap-3 2xl:gap-5 flex-1 mx-4 2xl:mx-8 font-bold text-slate-300 text-xs tracking-wider uppercase">
+                <div class="hidden xl:flex items-center justify-center gap-2 xl:gap-3 2xl:gap-5 flex-1 mx-4 2xl:mx-8 text-slate-300">
                     
                     <!-- 1. ACCUEIL -->
                     <button onclick="showCategory('accueil')" id="nav-accueil" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition nav-btn-active">
-                        ACCUEIL
+                        Accueil
                     </button>
 
                     <!-- 2. BTS SIO -->
@@ -481,23 +1135,23 @@ body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid 
 
                     <!-- 3. À PROPOS DE MOI -->
                     <button onclick="showCategory('a-propos')" id="nav-a-propos" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
-                        À PROPOS DE MOI
+                        À propos de moi
                     </button>
 
                     <!-- 4. ENTREPRISE -->
                     <button onclick="showCategory('entreprise')" id="nav-entreprise" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
-                        ENTREPRISE
+                        Entreprise
                     </button>
 
                     <!-- 5. MES CERTIFICATIONS -->
                     <button onclick="showCategory('certifications')" id="nav-certifications" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
-                        MES CERTIFICATIONS
+                        Mes certifications
                     </button>
 
                     <!-- 6. MES PROJETS avec Dropdown (Uniquement En entreprise et En formation) -->
                     <div class="relative group">
                         <button onclick="showCategory('projets'); filterProjects('entreprise')" id="nav-projets" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
-                            MES PROJETS <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200"></i>
+                            Mes projets <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
                         <div class="nav-dropdown absolute top-full left-0 w-48 pt-2 z-50">
                             <div class="bg-[#0f172a] rounded-2xl shadow-2xl border border-slate-700/80 p-1.5 space-y-1 normal-case tracking-normal">
@@ -519,7 +1173,7 @@ body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid 
                     <!-- 8. VEILLES avec Dropdown -->
                     <div class="relative group">
                         <button onclick="showCategory('veilles')" id="nav-veilles" class="nav-btn px-3.5 xl:px-4 py-2 rounded-xl flex items-center gap-1.5 hover:text-white hover:bg-slate-800/80 transition">
-                            VEILLES <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200"></i>
+                            Veilles <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-80 group-hover:rotate-180 transition-transform duration-200"></i>
                         </button>
                         <div class="nav-dropdown absolute top-full right-0 w-64 pt-2 z-50">
                             <div class="bg-[#0f172a] rounded-2xl shadow-2xl border border-slate-700/80 p-2 space-y-1 normal-case tracking-normal">
@@ -576,15 +1230,15 @@ body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid 
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobileMenu" class="hidden xl:hidden border-t border-slate-800 bg-[#070b16] px-4 pt-3 pb-6 space-y-1.5 shadow-2xl max-h-[85vh] overflow-y-auto">
-            <button onclick="showCategory('accueil')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">ACCUEIL</button>
+            <button onclick="showCategory('accueil')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">Accueil</button>
             <button onclick="showCategory('bts-sio')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">BTS SIO</button>
-            <button onclick="showCategory('a-propos')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">À PROPOS DE MOI</button>
-            <button onclick="showCategory('entreprise')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-blue-400 bg-blue-500/10 hover:bg-blue-500/20">ENTREPRISE</button>
-            <button onclick="showCategory('certifications')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-amber-400 bg-amber-500/10 hover:bg-amber-500/20">MES CERTIFICATIONS</button>
+            <button onclick="showCategory('a-propos')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-slate-200 hover:bg-slate-800 hover:text-white">À propos de moi</button>
+            <button onclick="showCategory('entreprise')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-blue-400 bg-blue-500/10 hover:bg-blue-500/20">Entreprise</button>
+            <button onclick="showCategory('certifications')" class="w-full text-left px-3 py-2 rounded-lg font-bold text-xs uppercase tracking-wider text-amber-400 bg-amber-500/10 hover:bg-amber-500/20">Mes certifications</button>
             
             <!-- Projets Mobile -->
             <div class="pt-1 pb-1 border-y border-slate-800/80 my-1">
-                <div class="px-3 py-1 text-[11px] font-mono uppercase text-slate-400 font-bold">MES PROJETS</div>
+                <div class="px-3 py-1 text-[11px] font-mono uppercase text-slate-400 font-bold">Mes projets</div>
                 <button onclick="showCategory('projets'); filterProjects('entreprise')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-blue-300 hover:bg-slate-800 flex items-center gap-2">
                     <i class="fa-solid fa-building text-xs text-blue-400"></i> En entreprise
                 </button>
@@ -597,7 +1251,7 @@ body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid 
 
             <!-- Veilles Mobile -->
             <div class="pt-1 pb-1 border-b border-slate-800/80 my-1">
-                <div class="px-3 py-1 text-[11px] font-mono uppercase text-slate-400 font-bold">VEILLES</div>
+                <div class="px-3 py-1 text-[11px] font-mono uppercase text-slate-400 font-bold">Veilles</div>
                 <button onclick="showCategory('veilles'); showVeilleSub('tech'); scrollToSection('veille-technologique')" class="w-full text-left pl-6 pr-3 py-2 rounded-lg font-medium text-sm text-fuchsia-300 hover:bg-slate-800 flex items-center gap-2">
                     <i class="fa-solid fa-microchip text-xs"></i> Veille technologique (Zero Trust)
                 </button>
@@ -612,7 +1266,7 @@ body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid 
                 </button>
             </div>
 
-            <button onclick="showCategory('contact')" class="w-full py-2.5 rounded-lg font-bold text-center text-white bg-blue-600 mt-2">ME CONTACTER</button>
+            <button onclick="showCategory('contact')" class="w-full py-2.5 rounded-lg font-bold text-center text-white bg-blue-600 mt-2">Me contacter</button>
         </div>
     </nav>
 
@@ -2609,13 +3263,13 @@ body.light-mode .tcs-public-grid{color:#1e293b}body.light-mode .tcs-public-grid 
         function initTheme() {
             try {
                 const savedTheme = localStorage.getItem('portfolio-theme');
-                if (savedTheme === 'light') {
-                    enableLightMode();
-                } else {
+                if (savedTheme === 'dark') {
                     enableDarkMode();
+                } else {
+                    enableLightMode();
                 }
             } catch(e) {
-                enableDarkMode();
+                enableLightMode();
             }
         }
         initTheme();
