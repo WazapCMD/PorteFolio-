@@ -1546,7 +1546,7 @@ body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mo
                                 <i class="fa-solid fa-screwdriver-wrench"></i>
                             </div>
                             <h4 class="text-lg font-bold text-white group-hover:text-teal-300 transition-colors">Procédures Techniques</h4>
-                            <p class="text-xs text-slate-400">Proxmox Pools, pfSense VLAN/DHCP & Switch 802.1Q</p>
+                            <p class="text-xs text-slate-400">Proxmox, pfSense, switch 802.1Q, FOG, Kali, UniFi et XiVO</p>
                             <div class="w-10 h-1 bg-teal-500 rounded-full mx-auto group-hover:w-16 transition-all duration-300"></div>
                         </div>
 
@@ -2231,7 +2231,7 @@ body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mo
                         </div>
                         <div class="flex flex-wrap gap-2 text-xs">
                             <span class="px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-300 border border-purple-500/30">Lab M2S Formation</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">3 Procédures pas à pas</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">7 Procédures pas à pas</span>
                         </div>
                     </div>
 
@@ -2309,11 +2309,11 @@ body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mo
                                 <i class="fa-solid fa-file-lines text-cyan-400"></i> Mes procédures techniques détaillées
                             </h3>
                             <p class="text-xs text-slate-400 mt-1">
-                                Retrouvez mes 3 fiches de procédures réelles pas à pas avec commandes CLI, tests de validation et documents PDF officiels.
+                                Retrouvez mes 7 fiches de procédures réelles pas à pas avec commandes CLI, tests de validation et documents PDF officiels.
                             </p>
                         </div>
 
-                        <div class="grid md:grid-cols-3 gap-6">
+                        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
 
                             <!-- Procédure 1 : Configuration & Segmentation VLAN sur Switch -->
                             <div class="card-dark-pro rounded-2xl p-6 space-y-4 flex flex-col justify-between bg-slate-900/70 border border-cyan-500/25 shadow-xl">
@@ -2390,6 +2390,111 @@ body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mo
                                     <a href="Procedure_PF_sense.pdf" target="_blank" class="w-full py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center justify-center gap-2 transition">
                                         <i class="fa-solid fa-file-pdf text-red-400"></i> Fiche PDF Nael Talbi
                                     </a>
+                                </div>
+                            </div>
+
+                            <!-- Procédure 4 : Installation de FOG sur Debian 13 -->
+                            <div class="card-dark-pro rounded-2xl p-6 space-y-4 flex flex-col justify-between bg-slate-900/70 border border-emerald-500/30 hover:border-emerald-500/60 transition shadow-xl">
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold font-mono border border-emerald-500/30">Fiche #04</span>
+                                        <span class="text-xs text-slate-400 font-medium"><i class="fa-regular fa-file-lines mr-1"></i>13 pages</span>
+                                    </div>
+                                    <h4 class="font-bold text-white text-base">Installation de FOG sur Debian 13</h4>
+                                    <p class="text-xs text-slate-400 leading-relaxed">
+                                        Serveur de déploiement d'images : installation FOG 1.6, DHCP Windows et relais pfSense, options 066/067 pour le démarrage PXE UEFI.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1 text-[11px] font-medium text-slate-300">
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700 text-emerald-300">FOG 1.6</span>
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">PXE UEFI</span>
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">DHCP 066/067</span>
+                                    </div>
+                                </div>
+                                <div class="pt-2 space-y-2">
+                                    <button onclick="openProcedureModal(4)" class="w-full py-2.5 rounded-xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-600 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer">
+                                        Lire la procédure complète <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                    </button>
+                                    <a href="Procedure_FOG_Debian13.pdf" target="_blank" class="w-full py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center justify-center gap-2 transition">
+                                        <i class="fa-solid fa-file-pdf text-red-400"></i> Fiche PDF Nael Talbi
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Procédure 5 : Installation de Kali Linux sur Proxmox -->
+                            <div class="card-dark-pro rounded-2xl p-6 space-y-4 flex flex-col justify-between bg-slate-900/70 border border-rose-500/30 hover:border-rose-500/60 transition shadow-xl">
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 text-xs font-bold font-mono border border-rose-500/30">Fiche #05</span>
+                                        <span class="text-xs text-slate-400 font-medium"><i class="fa-regular fa-file-lines mr-1"></i>14 pages</span>
+                                    </div>
+                                    <h4 class="font-bold text-white text-base">Installation de Kali Linux sur Proxmox</h4>
+                                    <p class="text-xs text-slate-400 leading-relaxed">
+                                        VM de tests d'intrusion : installation graphique, partitionnement assisté, bureau Xfce, GRUB et contrôles réseau après installation.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1 text-[11px] font-medium text-slate-300">
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700 text-rose-300">Kali Linux</span>
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Proxmox VE</span>
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">GRUB</span>
+                                    </div>
+                                </div>
+                                <div class="pt-2 space-y-2">
+                                    <button onclick="openProcedureModal(5)" class="w-full py-2.5 rounded-xl bg-rose-600/20 border border-rose-500/40 text-rose-300 hover:bg-rose-600 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer">
+                                        Lire la procédure complète <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                    </button>
+                                    <a href="Procedure_Kali_Proxmox.pdf" target="_blank" class="w-full py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center justify-center gap-2 transition">
+                                        <i class="fa-solid fa-file-pdf text-red-400"></i> Fiche PDF Nael Talbi
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Procédure 6 : Installation d'UniFi OS Server -->
+                            <div class="card-dark-pro rounded-2xl p-6 space-y-4 flex flex-col justify-between bg-slate-900/70 border border-sky-500/30 hover:border-sky-500/60 transition shadow-xl">
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 text-xs font-bold font-mono border border-sky-500/30">Fiche #06</span>
+                                        <span class="text-xs text-slate-400 font-medium"><i class="fa-regular fa-file-lines mr-1"></i>5 pages</span>
+                                    </div>
+                                    <h4 class="font-bold text-white text-base">Installation d'UniFi OS Server</h4>
+                                    <p class="text-xs text-slate-400 leading-relaxed">
+                                        Contrôleur Wi-Fi sur Debian 13 en CLI : IP statique, correctif /tmp, conteneurs Podman et service uosserver.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1 text-[11px] font-medium text-slate-300">
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700 text-sky-300">UniFi OS 5.1</span>
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Debian 13 CLI</span>
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Podman</span>
+                                    </div>
+                                </div>
+                                <div class="pt-2 space-y-2">
+                                    <button onclick="openProcedureModal(6)" class="w-full py-2.5 rounded-xl bg-sky-600/20 border border-sky-500/40 text-sky-300 hover:bg-sky-600 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer">
+                                        Lire la procédure complète <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                    </button>
+                                    <a href="Procedure_UniFi_OS_Server.pdf" target="_blank" class="w-full py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center justify-center gap-2 transition">
+                                        <i class="fa-solid fa-file-pdf text-red-400"></i> Fiche PDF Nael Talbi
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Procédure 7 : Installation de XiVO (téléphonie IP) -->
+                            <div class="card-dark-pro rounded-2xl p-6 space-y-4 flex flex-col justify-between bg-slate-900/70 border border-amber-500/30 hover:border-amber-500/60 transition shadow-xl">
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold font-mono border border-amber-500/30">Fiche #07</span>
+                                        <span class="text-xs text-slate-400 font-medium"><i class="fa-regular fa-file-lines mr-1"></i>9 pages</span>
+                                    </div>
+                                    <h4 class="font-bold text-white text-base">Installation de XiVO (téléphonie IP)</h4>
+                                    <p class="text-xs text-slate-400 leading-relaxed">
+                                        Serveur IPBX sur Debian : script d'installation XiVO, locales UTF-8, assistant Web, entité et contextes d'appels.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1 text-[11px] font-medium text-slate-300">
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700 text-amber-300">XiVO IPBX</span>
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Asterisk</span>
+                                        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">VoIP</span>
+                                    </div>
+                                </div>
+                                <div class="pt-2 space-y-2">
+                                    <button onclick="openProcedureModal(7)" class="w-full py-2.5 rounded-xl bg-amber-600/20 border border-amber-500/40 text-amber-300 hover:bg-amber-600 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer">
+                                        Lire la procédure complète <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -3144,6 +3249,63 @@ Switch(config-if)# switchport trunk allowed vlan 10,20</code></pre>
 
                     </div>
                 `
+            },
+            4: {
+                badge: "PROCÉDURE #04 • DÉPLOIEMENT PXE",
+                title: "Installation de FOG sur Debian 13 (SRV-FOG)",
+                content: `<div class="flex items-center justify-between flex-wrap gap-2 p-3.5 rounded-xl bg-blue-950/30 border border-blue-800/40 mb-4"><div class="text-xs text-blue-200"><span class="font-bold text-white"><i class="fa-solid fa-user-gear mr-1"></i> Document réalisé par :</span> Talbi Nael (SIO SISR)</div><a href="Procedure_FOG_Debian13.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow transition"><i class="fa-solid fa-file-pdf"></i> Ouvrir la Fiche PDF (13 pages)</a></div><div class="text-xs text-slate-300 mb-4"><p><strong>Contexte &amp; Objectif :</strong> installer un serveur de déploiement d'images FOG 1.6 (canal stable) sur Debian 13, en s'appuyant sur le DHCP Windows existant et le relais DHCP de pfSense pour le démarrage réseau (PXE) des postes UEFI.</p></div><div class="space-y-5 text-xs"><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 1</span> CONFIGURATION RETENUE</h5><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Paramètre</th><th class="p-2 border-b border-slate-800">Valeur</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">Système</td><td class="p-2 font-mono text-cyan-300">Debian 13</td></tr><tr><td class="p-2 text-slate-300">Version de FOG</td><td class="p-2 font-mono text-cyan-300">1.6 (canal stable)</td></tr><tr><td class="p-2 text-slate-300">Nom / IP</td><td class="p-2 font-mono text-cyan-300">SRV-FOG · 192.168.25.8/24 (ens18)</td></tr><tr><td class="p-2 text-slate-300">Mode</td><td class="p-2 font-mono text-cyan-300">Serveur normal</td></tr><tr><td class="p-2 text-slate-300">DHCP</td><td class="p-2 font-mono text-cyan-300">Windows 192.168.25.1 (DHCP FOG désactivé)</td></tr><tr><td class="p-2 text-slate-300">Relais DHCP</td><td class="p-2 font-mono text-cyan-300">pfSense → 192.168.25.1</td></tr><tr><td class="p-2 text-slate-300">Images</td><td class="p-2 font-mono text-cyan-300">/images</td></tr></tbody></table></div></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 2</span> PRÉPARER DEBIAN ET LANCER L&#x27;INSTALLATEUR</h5><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>su -
+apt update
+apt full-upgrade -y
+apt install -y curl ca-certificates
+ip -br address &amp;&amp; ip route
+
+curl -fsSL https://raw.githubusercontent.com/FOGProject/fogproject/stable/bin/bootstrap.sh | bash -s -- --channel stable</code></pre></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 3</span> RÉPONSES À L&#x27;INSTALLATEUR</h5><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Question</th><th class="p-2 border-b border-slate-800">Réponse</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">Famille Linux</td><td class="p-2 font-mono text-cyan-300">2 (Debian Based)</td></tr><tr><td class="p-2 text-slate-300">Mode d&#x27;installation</td><td class="p-2 font-mono text-cyan-300">N (Normal Server)</td></tr><tr><td class="p-2 text-slate-300">Interface réseau</td><td class="p-2 font-mono text-cyan-300">ens18</td></tr><tr><td class="p-2 text-slate-300">DHCP intégré à FOG</td><td class="p-2 font-mono text-cyan-300">N (DHCP déjà sur Windows)</td></tr><tr><td class="p-2 text-slate-300">Langues supplémentaires</td><td class="p-2 font-mono text-cyan-300">Y</td></tr><tr><td class="p-2 text-slate-300">Changer le nom SRV-FOG ?</td><td class="p-2 font-mono text-cyan-300">N</td></tr><tr><td class="p-2 text-slate-300">Portée des certificats / télémétrie</td><td class="p-2 font-mono text-cyan-300">N / N</td></tr><tr><td class="p-2 text-slate-300">Mode HTTPS &amp; Secure Boot</td><td class="p-2 font-mono text-cyan-300">1 (standard)</td></tr><tr><td class="p-2 text-slate-300">Schéma de base de données</td><td class="p-2 font-mono text-cyan-300">Y</td></tr></tbody></table></div></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 4</span> CHAÎNE PXE : DHCP WINDOWS + RELAIS PFSENSE</h5><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>Client PXE -&gt; relais DHCP pfSense -&gt; DHCP Windows 192.168.25.1 -&gt; FOG 192.168.25.8</code></pre><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Option d'étendue</th><th class="p-2 border-b border-slate-800">Valeur</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">066 · Serveur de démarrage</td><td class="p-2 font-mono text-cyan-300">192.168.25.8</td></tr><tr><td class="p-2 text-slate-300">067 · Fichier UEFI 64 bits</td><td class="p-2 font-mono text-cyan-300">secureboot/snponly-shimx64.efi</td></tr></tbody></table></div><div class="p-3 rounded-xl bg-amber-950/30 border border-amber-800/40 text-amber-200"><strong>UEFI uniquement :</strong> l'ancienne valeur BIOS Legacy <code>undionly.kkpxe</code> est retirée de l'option 067. Si WDS n'est pas utilisé, l'option 060 PXEClient ne doit pas être définie.</div></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 5</span> VALIDATION</h5><ol class="list-decimal pl-5 space-y-1 text-slate-300"><li>Portail : <code>https://192.168.25.8/fog/management</code> (certificat de l'autorité FOG privée).</li><li>Première connexion avec le compte par défaut <code>fog</code>, puis changement immédiat du mot de passe (User Administration → Password).</li><li>Démarrage PXE d'un poste : adresse reçue du DHCP Windows, fichier UEFI téléchargé depuis 192.168.25.8, menu FOG affiché.</li><li>Nœud de stockage DefaultMember conservé tel quel (192.168.25.8, ens18, Master, /images).</li></ol></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 6</span> DÉPANNAGE</h5><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Symptôme</th><th class="p-2 border-b border-slate-800">Action</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">Le client ne démarre pas sur FOG</td><td class="p-2 font-mono text-cyan-300">Vérifier options 66/67, absence de 060, TFTP vers 192.168.25.8, relais pfSense</td></tr><tr><td class="p-2 text-slate-300">Installation en échec</td><td class="p-2 font-mono text-cyan-300">/root/fogproject/bin/error_logs/foginstall.log</td></tr><tr><td class="p-2 text-slate-300">Mise à jour de FOG</td><td class="p-2 font-mono text-cyan-300">cd /root/fogproject/bin &amp;&amp; ./updatefog.sh</td></tr></tbody></table></div></div></div>`
+            },
+            5: {
+                badge: "PROCÉDURE #05 • SÉCURITÉ OFFENSIVE",
+                title: "Installation de Kali Linux sur Proxmox VE",
+                content: `<div class="flex items-center justify-between flex-wrap gap-2 p-3.5 rounded-xl bg-blue-950/30 border border-blue-800/40 mb-4"><div class="text-xs text-blue-200"><span class="font-bold text-white"><i class="fa-solid fa-user-gear mr-1"></i> Document réalisé par :</span> Talbi Nael (SIO SISR)</div><a href="Procedure_Kali_Proxmox.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow transition"><i class="fa-solid fa-file-pdf"></i> Ouvrir la Fiche PDF (14 pages)</a></div><div class="text-xs text-slate-300 mb-4"><p><strong>Contexte &amp; Objectif :</strong> installer Kali Linux dans une machine virtuelle Proxmox du laboratoire, pour des tests réalisés uniquement dans le périmètre autorisé par l'établissement.</p></div><div class="space-y-5 text-xs"><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 1</span> PRÉREQUIS ET PARAMÈTRES</h5><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Paramètre</th><th class="p-2 border-b border-slate-800">Valeur</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">VM Proxmox</td><td class="p-2 font-mono text-cyan-300">2 vCPU min. · 4 Gio RAM · 40 Gio disque</td></tr><tr><td class="p-2 text-slate-300">Image</td><td class="p-2 font-mono text-cyan-300">Kali Linux Installer amd64 (vérifiée)</td></tr><tr><td class="p-2 text-slate-300">Mode d&#x27;installation</td><td class="p-2 font-mono text-cyan-300">Graphical install</td></tr><tr><td class="p-2 text-slate-300">Langue / pays / clavier</td><td class="p-2 font-mono text-cyan-300">Français / France / Français</td></tr><tr><td class="p-2 text-slate-300">Nom de machine</td><td class="p-2 font-mono text-cyan-300">KALI (ou plan de nommage)</td></tr><tr><td class="p-2 text-slate-300">Partitionnement</td><td class="p-2 font-mono text-cyan-300">Assisté, disque entier, une seule partition</td></tr><tr><td class="p-2 text-slate-300">Bureau</td><td class="p-2 font-mono text-cyan-300">Xfce uniquement</td></tr><tr><td class="p-2 text-slate-300">Chargeur de démarrage</td><td class="p-2 font-mono text-cyan-300">GRUB sur /dev/sda</td></tr></tbody></table></div></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 2</span> INSTALLATION</h5><ol class="list-decimal pl-5 space-y-1 text-slate-300"><li>Démarrer la VM sur l'ISO et choisir <strong>Graphical install</strong>.</li><li>Choisir la langue, le pays et le clavier, puis saisir le nom de machine.</li><li>Créer le compte utilisateur avec un mot de passe unique, jamais visible sur une capture partagée.</li><li>Partitionnement assisté sur le disque QEMU de la VM : partition ext4 sur / et swap, puis appliquer.</li><li>Sélection des logiciels : Xfce seul (décocher KDE Plasma), outils par défaut.</li><li>Installer GRUB sur le disque entier <code>/dev/sda</code> (pas sur une partition).</li></ol><div class="p-3 rounded-xl bg-amber-950/30 border border-amber-800/40 text-amber-200"><strong>Attention :</strong> le partitionnement assisté efface tout le disque virtuel sélectionné. Vérifier qu'il appartient bien à la VM Kali.</div></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 3</span> FIN D&#x27;INSTALLATION ET CONTRÔLES</h5><ol class="list-decimal pl-5 space-y-1 text-slate-300"><li>Éjecter l'ISO dans Proxmox (Do not use any media) et placer le disque en premier dans l'ordre de démarrage.</li><li>Ouvrir une session et vérifier le bureau Xfce.</li></ol><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>hostnamectl
+ip -br address
+ip route
+cat /etc/resolv.conf
+sudo apt update &amp;&amp; sudo apt full-upgrade -y</code></pre></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 4</span> DÉPANNAGE</h5><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Symptôme</th><th class="p-2 border-b border-slate-800">Action</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">Retour au menu d&#x27;installation</td><td class="p-2 font-mono text-cyan-300">Éjecter l&#x27;ISO, disque en premier dans l&#x27;ordre de démarrage</td></tr><tr><td class="p-2 text-slate-300">Pas d&#x27;adresse IP</td><td class="p-2 font-mono text-cyan-300">Vérifier le bridge Proxmox, le VLAN, le DHCP ou l&#x27;IP statique</td></tr><tr><td class="p-2 text-slate-300">Pas de résolution DNS</td><td class="p-2 font-mono text-cyan-300">Vérifier /etc/resolv.conf</td></tr><tr><td class="p-2 text-slate-300">GRUB ne démarre pas</td><td class="p-2 font-mono text-cyan-300">GRUB sur /dev/sda, mode BIOS cohérent</td></tr></tbody></table></div></div></div>`
+            },
+            6: {
+                badge: "PROCÉDURE #06 • WI-FI",
+                title: "Installation d'UniFi OS Server (SRV-UNIFI)",
+                content: `<div class="flex items-center justify-between flex-wrap gap-2 p-3.5 rounded-xl bg-blue-950/30 border border-blue-800/40 mb-4"><div class="text-xs text-blue-200"><span class="font-bold text-white"><i class="fa-solid fa-user-gear mr-1"></i> Document réalisé par :</span> Talbi Nael (SIO SISR)</div><a href="Procedure_UniFi_OS_Server.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs shadow transition"><i class="fa-solid fa-file-pdf"></i> Ouvrir la Fiche PDF (5 pages)</a></div><div class="text-xs text-slate-300 mb-4"><p><strong>Contexte &amp; Objectif :</strong> déployer le contrôleur Wi-Fi UniFi OS Server sur une VM Debian 13 (Trixie) en ligne de commande uniquement.</p></div><div class="space-y-5 text-xs"><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 1</span> PARAMÈTRES TECHNIQUES</h5><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Paramètre</th><th class="p-2 border-b border-slate-800">Valeur</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">Nom d&#x27;hôte / domaine</td><td class="p-2 font-mono text-cyan-300">SRV-UNIFI · frizzcorp.local</td></tr><tr><td class="p-2 text-slate-300">Système</td><td class="p-2 font-mono text-cyan-300">Debian 13 (Trixie) · amd64</td></tr><tr><td class="p-2 text-slate-300">Interface / IP</td><td class="p-2 font-mono text-cyan-300">ens18 · 192.168.25.7/24</td></tr><tr><td class="p-2 text-slate-300">Passerelle</td><td class="p-2 font-mono text-cyan-300">192.168.25.254</td></tr><tr><td class="p-2 text-slate-300">DNS</td><td class="p-2 font-mono text-cyan-300">192.168.25.1 puis 8.8.8.8</td></tr><tr><td class="p-2 text-slate-300">Version</td><td class="p-2 font-mono text-cyan-300">UniFi OS Server 5.1.42 (linux-x64)</td></tr><tr><td class="p-2 text-slate-300">Administration Web</td><td class="p-2 font-mono text-cyan-300">https://192.168.25.7:11443</td></tr></tbody></table></div></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 2</span> PRÉPARATION DE DEBIAN</h5><p class="text-slate-300">Installation sans environnement graphique (serveur SSH + utilitaires usuels), puis IP statique dans <code>/etc/network/interfaces</code> :</p><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>auto ens18
+iface ens18 inet static
+    address 192.168.25.7/24
+    gateway 192.168.25.254
+    dns-nameservers 192.168.25.1 8.8.8.8</code></pre><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>systemctl restart networking
+ping -c 3 8.8.8.8
+apt install -y openssh-server &amp;&amp; systemctl enable --now ssh</code></pre></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 3</span> PRÉREQUIS D&#x27;UNIFI OS SERVER</h5><p class="text-slate-300">Sous Debian 13, <code>/tmp</code> est en mémoire (tmpfs) : l'installateur, qui a besoin de plus de 2 Go, ne peut pas s'y extraire. On le remet sur le disque, puis on installe Podman :</p><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>systemctl mask tmp.mount
+umount -l /tmp
+apt install -y ca-certificates curl podman slirp4netns passt
+dpkg --print-architecture   # attendu : amd64</code></pre></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 4</span> INSTALLATION ET VÉRIFICATION</h5><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>curl -fL &quot;&lt;lien officiel UniFi OS Server 5.1.42 linux-x64&gt;&quot; -o unifi-os-server-installer
+chmod +x unifi-os-server-installer
+./unifi-os-server-installer
+systemctl enable --now uosserver
+systemctl status uosserver --no-pager
+rm -f unifi-os-server-installer</code></pre><p class="text-slate-300">Accès à <code>https://192.168.25.7:11443</code>, acceptation du certificat auto-signé puis assistant de configuration initiale.</p></div></div>`
+            },
+            7: {
+                badge: "PROCÉDURE #07 • TÉLÉPHONIE IP",
+                title: "Installation de XiVO (SRV-XIVO)",
+                content: `<div class="flex items-center justify-between flex-wrap gap-2 p-3.5 rounded-xl bg-blue-950/30 border border-blue-800/40 mb-4"><div class="text-xs text-blue-200"><span class="font-bold text-white"><i class="fa-solid fa-user-gear mr-1"></i> Document réalisé par :</span> Talbi Nael (SIO SISR)</div><span class="text-xs text-slate-400"><i class="fa-solid fa-lock mr-1"></i> PDF non publié (mot de passe à retirer)</span></div><div class="text-xs text-slate-300 mb-4"><p><strong>Contexte &amp; Objectif :</strong> déployer un serveur de téléphonie sur IP (IPBX) XiVO sur une VM Debian en ligne de commande, puis le configurer avec l'assistant Web.</p></div><div class="space-y-5 text-xs"><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 1</span> PARAMÈTRES TECHNIQUES</h5><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Paramètre</th><th class="p-2 border-b border-slate-800">Valeur</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">Nom d&#x27;hôte / domaine</td><td class="p-2 font-mono text-cyan-300">SRV-XIVO · frizzcorp.local</td></tr><tr><td class="p-2 text-slate-300">Interface / IP</td><td class="p-2 font-mono text-cyan-300">ens18 · 192.168.25.6/24</td></tr><tr><td class="p-2 text-slate-300">Passerelle</td><td class="p-2 font-mono text-cyan-300">192.168.25.254</td></tr><tr><td class="p-2 text-slate-300">DNS</td><td class="p-2 font-mono text-cyan-300">192.168.25.1 puis 8.8.8.8</td></tr><tr><td class="p-2 text-slate-300">Entité XiVO</td><td class="p-2 font-mono text-cyan-300">Frizz Corp</td></tr><tr><td class="p-2 text-slate-300">Compte administrateur Web</td><td class="p-2 font-mono text-cyan-300">root · mot de passe &lt;MDP&gt;</td></tr></tbody></table></div></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 2</span> PRÉPARATION DE DEBIAN</h5><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>auto ens18
+iface ens18 inet static
+    address 192.168.25.6/24
+    gateway 192.168.25.254
+    dns-nameservers 192.168.25.1 8.8.8.8</code></pre><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>systemctl restart networking
+apt install -y openssh-server &amp;&amp; systemctl enable --now ssh</code></pre></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 3</span> INSTALLATION EN LIGNE DE COMMANDE</h5><pre class="bg-black/90 text-cyan-300 p-4 rounded-xl text-xs font-mono overflow-x-auto border border-slate-800 leading-relaxed"><code>apt install -y wget curl gnupg2 ca-certificates locales
+export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
+sed -i &#x27;s/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/&#x27; /etc/locale.gen
+sed -i &#x27;s/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/&#x27; /etc/locale.gen
+locale-gen
+
+cd /tmp
+wget http://mirror.xivo.solutions/xivo_install.sh
+chmod +x xivo_install.sh &amp;&amp; ./xivo_install.sh</code></pre></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 4</span> ASSISTANT WEB (https://192.168.25.6)</h5><div class="overflow-x-auto"><table class="w-full text-left border border-slate-800 rounded-lg overflow-hidden text-[11px]"><thead class="bg-slate-950 text-slate-400 font-mono"><tr><th class="p-2 border-b border-slate-800">Étape</th><th class="p-2 border-b border-slate-800">Réglage</th></tr></thead><tbody class="divide-y divide-slate-800"><tr><td class="p-2 text-slate-300">1. Langue</td><td class="p-2 font-mono text-cyan-300">Français</td></tr><tr><td class="p-2 text-slate-300">2. Licence</td><td class="p-2 font-mono text-cyan-300">GNU GPLv3 acceptée</td></tr><tr><td class="p-2 text-slate-300">3. Serveur et réseau</td><td class="p-2 font-mono text-cyan-300">SRV-XIVO, frizzcorp.local, VoIP 192.168.25.6 (ens18), configuration France</td></tr><tr><td class="p-2 text-slate-300">4. Entité et contextes</td><td class="p-2 font-mono text-cyan-300">Frizz Corp · appels internes 1000-1999 · entrants · sortants</td></tr><tr><td class="p-2 text-slate-300">5. Validation</td><td class="p-2 font-mono text-cyan-300">Récapitulatif vérifié puis validé</td></tr></tbody></table></div></div><div class="border-l-2 border-blue-500 pl-3 space-y-2"><h5 class="font-bold text-white text-sm flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono text-[11px]">PARTIE 5</span> VÉRIFICATION</h5><p class="text-slate-300">Connexion à l'interface d'administration, page <strong>Informations système</strong> : l'adresse 192.168.25.6 est active et les services <code>asterisk</code>, <code>agid</code>, <code>asterisk-odbc</code>, <code>confgend</code> sont <strong>Démarré / Accessible</strong>.</p></div></div>`
             }
         };
 
