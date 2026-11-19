@@ -2262,7 +2262,7 @@ html body #mobileMenuBtn{color:var(--ink) !important}
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <article class="md:col-span-2 card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
+                        <article class="md:col-span-2 lg:col-span-3 card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
                             <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
                                 <i class="fa-solid fa-desktop" aria-hidden="true"></i>
                             </div>
@@ -2287,12 +2287,32 @@ html body #mobileMenuBtn{color:var(--ink) !important}
                                 </button>
                             </div>
                         </article>
-                        <article class="card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
+                        <article class="md:col-span-2 lg:col-span-3 card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
                             <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
                                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                             </div>
                             <h4 class="text-lg font-bold text-white">Attribution des boîtes mail</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed">Attribution aux utilisateurs de boîtes mail déjà créées sur OVHcloud.</p>
+                            <p class="text-slate-300 text-sm leading-relaxed">Les boîtes mail sont créées sur OVHcloud. Mon rôle : les attribuer aux utilisateurs en configurant le compte dans Outlook, sur leur poste.</p>
+                            <ul class="text-slate-300 text-sm leading-relaxed space-y-1 list-disc pl-5">
+                                <li><strong>Compte POP3</strong> : serveur entrant <code>pop.mail.ovh.net</code>, serveur sortant <code>smtp.mail.ovh.net</code>, identifiant = adresse mail complète.</li>
+                                <li><strong>Connexions chiffrées SSL/TLS</strong> : port 995 en réception et 465 en envoi, au lieu des ports 110 et 25 qui font passer le mot de passe et les messages en clair.</li>
+                                <li><strong>Copie conservée 31 jours sur le serveur</strong> : en POP3, les messages sont téléchargés dans un fichier .pst sur le poste. Garder une copie sur le serveur permet de les récupérer si le poste tombe en panne.</li>
+                                <li><strong>Test automatique</strong> des paramètres (envoi et réception) à la validation du compte.</li>
+                            </ul>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-32 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Outlook : comptes de messagerie configurés sur le poste (adresses floutées)')">
+                                    <img src="mail_comptes_outlook.webp" alt="Fenêtre Paramètres du compte d’Outlook avec deux comptes de messagerie, adresses floutées" loading="lazy" class="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-32 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Paramètres POP3 : serveurs OVH entrant et sortant (adresses floutées)')">
+                                    <img src="mail_parametres_pop.webp" alt="Paramètres du compte POP3 avec les serveurs pop.mail.ovh.net et smtp.mail.ovh.net, adresses floutées" loading="lazy" class="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-32 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Options avancées : ports 995 et 465 en SSL/TLS, copie conservée 31 jours sur le serveur')">
+                                    <img src="mail_ports_ssl.webp" alt="Options avancées : ports 995 et 465 chiffrés en SSL/TLS, copie des messages gardée 31 jours" loading="lazy" class="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                            </div>
                         </article>
                         <article class="card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
                             <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
@@ -2301,7 +2321,7 @@ html body #mobileMenuBtn{color:var(--ink) !important}
                             <h4 class="text-lg font-bold text-white">Installation et dépannage des imprimantes</h4>
                             <p class="text-slate-300 text-sm leading-relaxed">Installation des pilotes d’imprimantes et résolution des problèmes d’impression rencontrés par les utilisateurs.</p>
                         </article>
-                        <article class="card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
+                        <article class="lg:col-span-2 card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
                             <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
                                 <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
                             </div>
@@ -2317,13 +2337,6 @@ html body #mobileMenuBtn{color:var(--ink) !important}
                                     <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
                                 </button>
                             </div>
-                        </article>
-                        <article class="card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
-                            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
-                                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-                            </div>
-                            <h4 class="text-lg font-bold text-white">Liaison VPN avec le siège</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed">Configuration du routeur de mon bureau pour permettre la communication avec le siège via un VPN.</p>
                         </article>
                         <article class="lg:col-span-3 md:col-span-2 card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-amber-500/30 shadow-lg grid md:grid-cols-[auto_1fr] gap-5 items-start">
                             <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center border border-amber-500/30">
@@ -2695,7 +2708,7 @@ html body #mobileMenuBtn{color:var(--ink) !important}
                                 <p>Les données de santé vivent sur le serveur du site. Une première copie y est faite chaque jour.</p>
                                 <span class="dg-tag">copie 1 · disque local</span>
                             </div>
-                            <div class="dg-link"><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>liaison VPN</div>
+                            <div class="dg-link"><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>envoi hors site</div>
                             <div class="dg-node">
                                 <div class="dg-ic"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
                                 <strong>Siège</strong>
@@ -2719,7 +2732,6 @@ html body #mobileMenuBtn{color:var(--ink) !important}
                             <p class="text-slate-300 text-sm leading-relaxed">Mes missions en alternance touchent directement la chaîne de sauvegarde d'un groupe de 17 cliniques.</p>
                             <ul class="space-y-2 text-sm text-slate-300">
                                 <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span><strong>Préparation des postes et accès aux serveurs</strong> : un fichier enregistré sur le serveur du site est sauvegardé, un fichier laissé sur le poste ne l'est pas. Bien configurer l'accès aux serveurs, c'est déjà protéger les données.</span></li>
-                                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span><strong>Liaison VPN avec le siège</strong> : elle relie chaque site au siège. Une copie de sauvegarde envoyée hors du site doit rester isolée, pour qu'une clinique compromise ne puisse pas l'effacer à distance.</span></li>
                                 <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span><strong>Surveillance des 17 cliniques</strong> : suivre l'état des liens et des équipements, c'est aussi pouvoir repérer un site qui ne remonte plus ses sauvegardes.</span></li>
                                 <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1" aria-hidden="true"></i><span><strong>Tickets utilisateurs</strong> : une demande de restauration de fichier est l'occasion de vérifier qu'une sauvegarde se restaure vraiment, le « 0 erreur » de la règle 3-2-1-1-0.</span></li>
                             </ul>
@@ -2818,7 +2830,7 @@ html body #mobileMenuBtn{color:var(--ink) !important}
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
                             <span class="text-xs font-mono font-bold text-emerald-400">3. RELIER AU TERRAIN</span>
-                            <p class="text-sm text-slate-300 leading-relaxed">Je rapproche chaque sujet de ce que je vois en clinique : postes, accès aux serveurs, liaison VPN, tickets.</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">Je rapproche chaque sujet de ce que je vois en clinique : postes, accès aux serveurs, surveillance des sites, tickets.</p>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
                             <span class="text-xs font-mono font-bold text-emerald-400">4. DATER</span>
