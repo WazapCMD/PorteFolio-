@@ -1862,7 +1862,7 @@ body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mo
                             <p class="text-xs text-slate-400 max-w-3xl">Logiciel de soins et de gestion des médicaments développé par le siège, installé en local sur le serveur de chaque clinique. Réinstallation du client sur le poste concerné :</p>
                             <div class="grid md:grid-cols-3 gap-6">
                             <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col hover:border-emerald-400/70 transition">
-                                <button type="button" class="relative block overflow-hidden h-56 sm:h-64 bg-slate-900 cursor-zoom-in" onclick="openLightbox(this.querySelector('img').src, 'Axila : partage d'installation sur le serveur de la clinique')">
+                                <button type="button" class="relative block overflow-hidden h-56 sm:h-64 bg-slate-900 cursor-zoom-in" onclick="openLightbox(this.querySelector('img').src, 'Axila : partage d\'installation sur le serveur de la clinique')">
                                     <img src="journee_axila_1.webp" alt="Partage réseau du serveur Axila de la clinique avec le programme d'installation" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
                                     <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-black/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
                                 </button>
@@ -2224,19 +2224,30 @@ body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mo
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <article class="card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
+                        <article class="md:col-span-2 card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
                             <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
                                 <i class="fa-solid fa-desktop" aria-hidden="true"></i>
                             </div>
-                            <h4 class="text-lg font-bold text-white">Préparation et configuration des postes</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed">Préparation des postes en sélectionnant puis en exécutant, selon le site, les scripts BAT écrits par mon administrateur réseau.</p>
-                        </article>
-                        <article class="card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
-                            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
-                                <i class="fa-solid fa-server" aria-hidden="true"></i>
+                            <h4 class="text-lg font-bold text-white">Préparation des postes et accès aux serveurs</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">Préparation des postes en sélectionnant puis en exécutant, selon le site, les scripts BAT de configuration. Ils optimisent Windows, bloquent les éléments indésirables (réseaux Wi-Fi non autorisés, lancement automatique de OneDrive) et s'appuient sur le fichier hosts, qui contient les adresses IP des serveurs. C'est ce qui permet ensuite au poste d'accéder aux serveurs du site concerné.</p>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-32 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Scripts de préparation des postes : Start_config, Start_User, Start_User_Admin')">
+                                    <img src="postes_scripts_liste.webp" alt="Liste des scripts de préparation : Start_config, Start_User et Start_User_Admin" loading="lazy" class="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-32 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Start_config.bat : services Windows, filtrage Wi-Fi et règles d\'accès à distance (SSID floutés)')">
+                                    <img src="postes_script_config.webp" alt="Extrait du script Start_config : services, filtrage des réseaux Wi-Fi, règles du pare-feu Windows (identifiants Wi-Fi floutés)" loading="lazy" class="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-32 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Start_User_Admin.bat : optimisation de la session Windows par le registre')">
+                                    <img src="postes_script_user.webp" alt="Extrait du script Start_User_Admin : réglages de l'explorateur et de la session dans le registre" loading="lazy" class="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <button type="button" class="group relative overflow-hidden rounded-xl border border-slate-700/80 bg-slate-950 h-32 hover:border-blue-400/70 transition" onclick="openLightbox(this.querySelector('img').src, 'Fichier hosts : noms des serveurs du site (adresses IP floutées)')">
+                                    <img src="postes_fichier_hosts.webp" alt="Fichier hosts du poste avec les noms des serveurs (adresses IP floutées)" loading="lazy" class="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-2 left-2 text-[11px] font-bold text-blue-300 flex items-center gap-1 bg-black/60 px-2 py-0.5 rounded-lg"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
                             </div>
-                            <h4 class="text-lg font-bold text-white">Accès aux serveurs</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed">Adaptation de la configuration des postes pour leur permettre d’accéder aux serveurs du site concerné.</p>
                         </article>
                         <article class="card-dark-pro rounded-2xl p-6 bg-slate-900/80 border border-blue-500/25 space-y-3 shadow-lg">
                             <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
