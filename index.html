@@ -1810,6 +1810,90 @@ body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mo
                             </p>
                         </div>
                     </div>
+                
+                    <!-- Illustrations : un ticket réel de bout en bout -->
+                    <div class="pt-8 border-t border-slate-800 space-y-8">
+                        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-3">
+                            <div class="space-y-1">
+                                <span class="text-xs font-mono font-bold text-blue-400 uppercase tracking-wider">Exemple réel</span>
+                                <h4 class="text-xl sm:text-2xl font-extrabold text-white">Un ticket de bout en bout : « Accès Axila »</h4>
+                            </div>
+                            <p class="text-xs text-slate-400 max-w-xl">Les noms des personnes sont floutés. Aucune donnée patient n'apparaît sur les captures.</p>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h5 class="text-sm font-bold text-white flex items-center gap-2"><i class="fa-solid fa-ticket text-blue-400" aria-hidden="true"></i> Jira Service Management : la gestion de nos tickets</h5>
+                            <div class="grid md:grid-cols-3 gap-6">
+                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col hover:border-blue-400/70 transition">
+                                <button type="button" class="relative block overflow-hidden h-56 sm:h-64 bg-slate-900 cursor-zoom-in" onclick="openLightbox(this.querySelector('img').src, 'Jira : ticket « Accès Axila »')">
+                                    <img src="journee_jira_1.webp" alt="Ticket Jira « Accès Axila » : le PC de l'IDEC ne se connecte plus à Axila (nom du demandeur flouté)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-black/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                    <span class="text-sm font-bold text-white block">1. Réception du ticket</span>
+                                    <span class="text-xs text-slate-400 leading-snug block">Demande créée depuis le portail : le PC de l'IDEC ne se connecte plus à Axila.</span>
+                                </div>
+                            </div>
+                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col hover:border-blue-400/70 transition">
+                                <button type="button" class="relative block overflow-hidden h-56 sm:h-64 bg-slate-900 cursor-zoom-in" onclick="openLightbox(this.querySelector('img').src, 'Jira : SLA et détails du ticket')">
+                                    <img src="journee_jira_2.webp" alt="Détails du ticket Jira : SLA, priorité, type de demande (rapporteur flouté)" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-black/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                    <span class="text-sm font-bold text-white block">2. Suivi et SLA</span>
+                                    <span class="text-xs text-slate-400 leading-snug block">Priorité, type de demande et délais SLA : première réponse sous 2 h, résolution sous 160 h.</span>
+                                </div>
+                            </div>
+                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col hover:border-blue-400/70 transition">
+                                <button type="button" class="relative block overflow-hidden h-56 sm:h-64 bg-slate-900 cursor-zoom-in" onclick="openLightbox(this.querySelector('img').src, 'Jira : résolution du ticket')">
+                                    <img src="journee_jira_3.webp" alt="Fenêtre de résolution d'un ticket Jira avec la résolution Terminé" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-black/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                    <span class="text-sm font-bold text-white block">3. Résolution</span>
+                                    <span class="text-xs text-slate-400 leading-snug block">Clôture du ticket avec la résolution « Terminé » et une note interne sur l'intervention.</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h5 class="text-sm font-bold text-white flex items-center gap-2"><i class="fa-solid fa-notes-medical text-emerald-400" aria-hidden="true"></i> Axila : le logiciel de soins des cliniques</h5>
+                            <p class="text-xs text-slate-400 max-w-3xl">Logiciel de soins et de gestion des médicaments développé par le siège, installé en local sur le serveur de chaque clinique. Réinstallation du client sur le poste concerné :</p>
+                            <div class="grid md:grid-cols-3 gap-6">
+                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col hover:border-emerald-400/70 transition">
+                                <button type="button" class="relative block overflow-hidden h-56 sm:h-64 bg-slate-900 cursor-zoom-in" onclick="openLightbox(this.querySelector('img').src, 'Axila : partage d'installation sur le serveur de la clinique')">
+                                    <img src="journee_axila_1.webp" alt="Partage réseau du serveur Axila de la clinique avec le programme d'installation" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-black/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                    <span class="text-sm font-bold text-white block">1. Partage du serveur Axila</span>
+                                    <span class="text-xs text-slate-400 leading-snug block">Ouverture du partage \\SRV-AXILA\axila de la clinique, qui contient le programme d'installation du client.</span>
+                                </div>
+                            </div>
+                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col hover:border-emerald-400/70 transition">
+                                <button type="button" class="relative block overflow-hidden h-56 sm:h-64 bg-slate-900 cursor-zoom-in" onclick="openLightbox(this.querySelector('img').src, 'Axila : paramétrage de la connexion à la base de données')">
+                                    <img src="journee_axila_2.webp" alt="Assistant d'installation d'Axila : paramétrage de la connexion à la base HFSQL" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-black/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                    <span class="text-sm font-bold text-white block">2. Connexion à la base</span>
+                                    <span class="text-xs text-slate-400 leading-snug block">Assistant d'installation : base HFSQL client/serveur sur srv-axila, port 4900, test des paramètres.</span>
+                                </div>
+                            </div>
+                            <div class="group rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 flex flex-col hover:border-emerald-400/70 transition">
+                                <button type="button" class="relative block overflow-hidden h-56 sm:h-64 bg-slate-900 cursor-zoom-in" onclick="openLightbox(this.querySelector('img').src, 'Axila : application fonctionnelle sur le poste')">
+                                    <img src="journee_axila_3.webp" alt="Écran d'accueil d'Axila après installation, sans patient sélectionné" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                                    <span class="absolute bottom-3 left-3 text-xs font-bold text-white bg-black/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Agrandir</span>
+                                </button>
+                                <div class="p-4 bg-slate-900/70 border-t border-slate-800 space-y-1">
+                                    <span class="text-sm font-bold text-white block">3. Axila opérationnel</span>
+                                    <span class="text-xs text-slate-400 leading-snug block">Le poste accède de nouveau aux modules : planification, admission, gestion des soins, pharmacie…</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- SECTION LOGICIEL ST AVEC LES 3 CAPTURES -->
