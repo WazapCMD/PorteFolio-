@@ -1129,6 +1129,44 @@ body:not(.light-mode) [class*="bg-gradient-to"].from-blue-600,body:not(.light-mo
 .src-list li{display:flex;gap:10px;align-items:baseline;}
 .src-list li i{color:var(--ink-3);width:16px;text-align:center;flex:none;}
 
+
+/* ======================================================== */
+/* BARRE DU HAUT TRANSPARENTE + FOND EN DÉGRADÉ (style de base) */
+/* ======================================================== */
+html body.light-mode{background:linear-gradient(180deg,#e6edf6 0%,#eef2f7 38%,#f4f6f8 75%) fixed !important;background-color:#f4f6f8 !important}
+html body:not(.light-mode){background:linear-gradient(180deg,#132033 0%,#0e1622 40%,#0b1018 75%) fixed !important;background-color:#0b1018 !important}
+html body .theme-accueil,html body .theme-apropos,html body .theme-btssio,html body .theme-tcs,html body .theme-projets,html body .theme-procedures,html body .theme-veilles,html body .theme-contact,html body .theme-entreprise,html body .theme-certifications,
+html body.light-mode .theme-accueil,html body.light-mode .theme-apropos,html body.light-mode .theme-btssio,html body.light-mode .theme-tcs,html body.light-mode .theme-projets,html body.light-mode .theme-procedures,html body.light-mode .theme-veilles,html body.light-mode .theme-contact,html body.light-mode .theme-entreprise,html body.light-mode .theme-certifications{background:transparent !important}
+html body footer,html body.light-mode footer{background:transparent !important}
+
+html body.light-mode nav.fixed,html body nav.fixed{background:transparent !important;background-color:transparent !important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line) !important;box-shadow:none !important}
+html body nav.fixed .h-16{height:60px !important}
+html body main.pt-16{padding-top:60px !important}
+html body.light-mode nav.fixed .nav-btn,html body nav.fixed .nav-btn{color:var(--ink-3) !important;font-size:13.5px;font-weight:500;padding:.4rem .6rem !important}
+html body.light-mode nav.fixed .nav-btn:hover,html body nav.fixed .nav-btn:hover{color:var(--ink) !important}
+html body.light-mode nav.fixed .nav-btn-active,html body nav.fixed .nav-btn-active{color:var(--ink) !important;font-weight:650}
+html body nav.fixed .nav-btn-active::after{background:var(--acc) !important;height:2px !important;bottom:-1px !important}
+html body nav.fixed .gradient-brand{-webkit-text-fill-color:var(--ink) !important;color:var(--ink) !important}
+html body nav.fixed .text-slate-400{color:var(--ink-3) !important}
+html body nav.fixed .bg-gradient-to-tr{background:var(--acc) !important;color:#fff !important;border-radius:8px !important;width:34px !important;height:34px !important;font-size:12px !important}
+html body:not(.light-mode) nav.fixed .bg-gradient-to-tr{color:#06201d !important}
+html body.light-mode nav.fixed .btn-gradient,html body nav.fixed .btn-gradient,html body.light-mode nav.fixed .btn-gradient.text-white{background:transparent !important;color:var(--acc) !important;border:1px solid var(--acc) !important;border-radius:8px !important;padding:.4rem .9rem !important;font-size:12.5px !important;box-shadow:none !important}
+html body nav.fixed .btn-gradient:hover,html body.light-mode nav.fixed .btn-gradient.text-white:hover{background:var(--acc) !important;color:#fff !important}
+html body:not(.light-mode) nav.fixed .btn-gradient:hover{color:#06201d !important}
+html body nav.fixed .btn-gradient i{color:inherit !important}
+html body #themeToggleBtn,html body #themeToggleMobileBtn,html body.light-mode #themeToggleBtn,html body.light-mode #themeToggleMobileBtn{background:transparent !important;border:1px solid var(--line) !important;color:var(--ink-3) !important}
+html body .nav-dropdown > div,html body.light-mode .nav-dropdown > div{background:var(--surface) !important;border:1px solid var(--line) !important;box-shadow:0 14px 34px -18px rgba(15,23,34,.35) !important}
+html body .nav-dropdown button,html body .nav-dropdown a{color:var(--ink-2) !important}
+html body .nav-dropdown button:hover,html body .nav-dropdown a:hover{background:var(--surface-2) !important;color:var(--ink) !important}
+html body .nav-dropdown i{color:var(--acc) !important}
+html body #mobileMenu,html body.light-mode #mobileMenu{background:var(--surface) !important;border-top-color:var(--line) !important}
+html body #mobileMenu button,html body.light-mode #mobileMenu button{color:var(--ink-2) !important}
+html body #mobileMenu button:hover{background:var(--surface-2) !important;color:var(--ink) !important}
+html body #mobileMenu button i{color:var(--acc) !important}
+html body #mobileMenu .font-mono{color:var(--ink-3) !important}
+html body #mobileMenu button.bg-blue-600,html body.light-mode #mobileMenu button.bg-blue-600{background:var(--acc) !important;color:#fff !important}
+html body #mobileMenuBtn{color:var(--ink) !important}
+
 </style>
 </head>
 <body class="selection:bg-blue-600 selection:text-white antialiased">
