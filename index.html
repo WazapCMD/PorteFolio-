@@ -1156,8 +1156,9 @@ html body:not(.light-mode) nav.fixed .btn-gradient:hover{color:#06201d !importan
 html body nav.fixed .btn-gradient i{color:inherit !important}
 html body #themeToggleBtn,html body #themeToggleMobileBtn,html body.light-mode #themeToggleBtn,html body.light-mode #themeToggleMobileBtn{background:transparent !important;border:1px solid var(--line) !important;color:var(--ink-3) !important}
 html body .nav-dropdown > div,html body.light-mode .nav-dropdown > div{background:var(--surface) !important;border:1px solid var(--line) !important;box-shadow:0 14px 34px -18px rgba(15,23,34,.35) !important}
-html body .nav-dropdown button,html body .nav-dropdown a{color:var(--ink-2) !important}
-html body .nav-dropdown button:hover,html body .nav-dropdown a:hover{background:var(--surface-2) !important;color:var(--ink) !important}
+html body .nav-dropdown,html body.light-mode .nav-dropdown{background:transparent !important;background-color:transparent !important}
+html body.light-mode nav .nav-dropdown button,html body.light-mode nav .nav-dropdown a,html body:not(.light-mode) nav .nav-dropdown button,html body:not(.light-mode) nav .nav-dropdown a{color:var(--ink) !important;font-weight:600 !important}
+html body.light-mode nav .nav-dropdown button:hover,html body.light-mode nav .nav-dropdown a:hover,html body:not(.light-mode) nav .nav-dropdown button:hover,html body:not(.light-mode) nav .nav-dropdown a:hover{background:var(--surface-2) !important;color:var(--acc) !important}
 html body .nav-dropdown i{color:var(--acc) !important}
 html body #mobileMenu,html body.light-mode #mobileMenu{background:var(--surface) !important;border-top-color:var(--line) !important}
 html body #mobileMenu button,html body.light-mode #mobileMenu button{color:var(--ink-2) !important}
